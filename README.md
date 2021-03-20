@@ -83,3 +83,9 @@ module.exports = {
 With traditional ESLint configs, you end up having cascading rules, where plugins, extends all get piled on top of each other.
 By having no base config, and _only_ targeting files matching patterns, we can have much more control over what lint rules
 we work with, and avoid the problem of disabling rules for specific files in too many places.
+
+## Why is prettier bundlede in here?
+
+I want a decent formatter, and since there is an integration with ESLint, it makes
+my life setting up apps, addons, libraries, etc much easier.
+One less thing to think about and make sure is configured correctly.

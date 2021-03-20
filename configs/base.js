@@ -10,7 +10,9 @@ const base = {
 
     'no-console': [
       'error',
-      { allow: ['debug', 'warn', 'error', 'info', 'group', 'groupEnd', 'groupCollapsed'] },
+      {
+        allow: ['debug', 'warn', 'error', 'info', 'group', 'groupEnd', 'groupCollapsed'],
+      },
     ],
 
     // people should know that no return is undefined in JS
@@ -89,7 +91,7 @@ const moduleImports = {
 
 const baseRulesAppliedLast = {
   // prettier
-  'prettier/prettier': 'error',
+  'prettier/prettier': ['error', { singleQuote: true, printWidth: 100, trailingComma: 'es5' }],
 };
 
 const jsBase = {
@@ -133,4 +135,11 @@ const tsBase = {
   },
 };
 
-module.exports = { moduleImports, moduleBase, scriptBase, baseRulesAppliedLast, jsBase, tsBase };
+module.exports = {
+  moduleImports,
+  moduleBase,
+  scriptBase,
+  baseRulesAppliedLast,
+  jsBase,
+  tsBase,
+};
