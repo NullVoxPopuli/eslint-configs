@@ -1,5 +1,7 @@
 # ESLint Configs
 
+[![npm version](https://badge.fury.io/js/%40nullvoxpopuli%2Feslint-configs.svg)](https://badge.fury.io/js/%40nullvoxpopuli%2Feslint-configs)
+
 ESLint has grown complicated for projects with variance:
  - JavaScript or TypeScript
  - Node or Browser
