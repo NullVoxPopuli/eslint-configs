@@ -16,7 +16,7 @@ jobs:
   # TODO: repo needs to use this package first
   tests:
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
-    name: "Test | emberclear"
+    name: "Test: emberclear"
     timeout-minutes: 5
     runs-on: ubuntu-latest
 
@@ -24,22 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: volta-cli/action@v1
       - run: yarn install --frozen-lockfile
-
-      - name: lint:js
-        run: |
-          yarn link
-          git clone https://github.com/NullVoxPopuli/emberclear.git
-          cd emberclear/client/web
-          yarn install --frozen-lockfile
-          yarn link @nullvoxpopuli/eslint-configs
-
-          # Info
-          yarn list @nullvoxpopuli/eslint-configs
-          yarn why @nullvoxpopuli/eslint-configs
-          ls -la node_modules/@nullvoxpopuli/eslint-configs
-
-          # Actually lint
-          eslint . --quiet
+      - run: ./partner-tests/emberclear.sh
 
   ember-cli-update:
     if: github.event_name == 'pull_request' && github.event.pusher.name == 'renovate-bot'
