@@ -16,18 +16,15 @@ jobs:
   # TODO: repo needs to use this package first
   tests:
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
-    name: "Test | emberclear"
+    name: "Test: emberclear"
     timeout-minutes: 5
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo 'TBD'
-  #     - uses: actions/checkout@v2
-  #     - uses: volta-cli/action@v1
-  #     - run: yarn install --frozen-lockfile
-
-  #     - name: lint:js
-  #       run: yarn ember test
+      - uses: actions/checkout@v2
+      - uses: volta-cli/action@v1
+      - run: yarn install --frozen-lockfile
+      - run: ./partner-tests/emberclear.sh
 
   ember-cli-update:
     if: github.event_name == 'pull_request' && github.event.pusher.name == 'renovate-bot'
