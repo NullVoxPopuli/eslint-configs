@@ -21,13 +21,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo 'TBD'
-  #     - uses: actions/checkout@v2
-  #     - uses: volta-cli/action@v1
-  #     - run: yarn install --frozen-lockfile
+      - uses: actions/checkout@v2
+      - uses: volta-cli/action@v1
+      - run: yarn install --frozen-lockfile
 
-  #     - name: lint:js
-  #       run: yarn ember test
+      - name: lint:js
+        run: |
+          yarn link
+          git clone https://github.com/NullVoxPopuli/emberclear.git
+          cd emberclear/client/web
+          yarn install --frozen-lockfile
+          yarn link @nullvoxpopuli/eslint-configs
+
+          # Info
+          yarn list @nullvoxpopuli/eslint-configs
+          yarn why @nullvoxpopuli/eslint-configs
+          ls -la node_modules/@nullvoxpopuli/eslint-configs
+
+          # Actually lint
+          eslint . --quiet
 
   ember-cli-update:
     if: github.event_name == 'pull_request' && github.event.pusher.name == 'renovate-bot'
