@@ -14,7 +14,14 @@ This project aims to simplify both configuring and overriding ESLint configs.
 
 ```bash
 yarn add --dev @nullvoxpopuli/eslint-configs
+# or 
+npm install --dev @nullvoxpopuli/eslint-configs
 ```
+
+And due to how ESLint resolves plugins, 
+you'll need to ensure that all the dependencies of `@nullvoxpopuli/eslint-configs` are installed in the root `node_modules` directory.
+
+This is easier with either yarn workspaces or npm. Standalone yarn with non-monorepos nests `node_modules` which confuses eslint.
 
 ## Usage
 
@@ -76,6 +83,13 @@ module.exports = {
     // see: https://eslint.org/docs/user-guide/configuring/configuration-files#how-do-overrides-work
   ]
 }
+```
+
+## Debugging
+
+To see what the resolved config looks like for a file
+```bash
+node_modules/.bin/eslint --print-config path/to/file 
 ```
 
 ## Why use overrides for everything?
