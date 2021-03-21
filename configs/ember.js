@@ -119,6 +119,7 @@ const nodeJS = {
     '.prettierrc.js',
     '.template-lintrc.js',
     'stylelint.config.js',
+    'tailwind.config.js',
     'ember-cli-build.js',
     'index.js',
     'src/ember-intl.js',
