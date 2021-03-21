@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.0.0...v1.1.0) (2021-03-21)
+
+
+### Features
+
+* **ember:** add tailwind config entry to the list of node files for ember projects ([b066db3](https://github.com/NullVoxPopuli/eslint-configs/commit/b066db3bd7387adbda10096dde32529ddc711e3c))
+
 # 1.0.0 (2021-03-20)
 
 
