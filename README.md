@@ -15,7 +15,7 @@ This project aims to simplify both configuring and overriding ESLint configs.
 ```bash
 yarn add --dev @nullvoxpopuli/eslint-configs
 # or 
-npm install --dev @nullvoxpopuli/eslint-configs
+npm install --save-dev @nullvoxpopuli/eslint-configs
 ```
 
 And due to how ESLint resolves plugins, 
