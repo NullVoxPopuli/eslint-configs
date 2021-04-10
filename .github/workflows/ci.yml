@@ -15,7 +15,7 @@ env:
 jobs:
   tests:
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
-    name: "Test: ${{ mattrix.name }}"
+    name: "Test: ${{ matrix.name }}"
     timeout-minutes: 5
     runs-on: ubuntu-latest
     strategy:
