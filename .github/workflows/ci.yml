@@ -13,18 +13,22 @@ env:
   CI: true
 
 jobs:
-  # TODO: repo needs to use this package first
   tests:
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
-    name: "Test: emberclear"
+    name: "Test: ${{ mattrix.name }}"
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        name:
+          - 'emberclear'
+          - 'highlightjs-glimmer'
 
     steps:
       - uses: actions/checkout@v2
       - uses: volta-cli/action@v1
       - run: yarn install --frozen-lockfile
-      - run: ./partner-tests/emberclear.sh
+      - run: ./partner-tests/${{ matrix.name }}.sh
 
   ember-cli-update:
     if: github.event_name == 'pull_request' && github.event.pusher.name == 'renovate-bot'

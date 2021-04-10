@@ -6,8 +6,8 @@
 
 set -a
 
-REPO="https://github.com/NullVoxPopuli/emberclear.git"
-TEST_DIR="emberclear/client/web"
+REPO="https://github.com/NullVoxPopuli/highlightjs-glimmer.git"
+TEST_DIR="highlightjs-glimmer"
 
 source "$(dirname "${BASH_SOURCE[0]}")/-helpers.sh"
 
