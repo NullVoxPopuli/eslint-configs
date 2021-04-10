@@ -6,7 +6,7 @@
 set -ex
 
 REPO="https://github.com/NullVoxPopuli/highlightjs-glimmer.git"
-TEST_DIR="emberclear/client/web"
+TEST_DIR="."
 
 function quietYarn() {
   # removes warnings from CLI output

@@ -25,6 +25,7 @@ jobs:
       - uses: volta-cli/action@v1
       - run: yarn install --frozen-lockfile
       - run: ./partner-tests/emberclear.sh
+      - run: ./partner-tests/highlightjs-glimmer.sh
 
   ember-cli-update:
     if: github.event_name == 'pull_request' && github.event.pusher.name == 'renovate-bot'
