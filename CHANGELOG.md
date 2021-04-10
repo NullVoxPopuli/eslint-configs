@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.1.2...v1.1.3) (2021-04-10)
+
+
+### Bug Fixes
+
+* **node engines:** revert and fix node engines to 12 ([3dd41f0](https://github.com/NullVoxPopuli/eslint-configs/commit/3dd41f0ad2ed4dc7ea1a71d2b7ece17b8bcc5618))
+
 ## [1.1.2](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.1.1...v1.1.2) (2021-03-29)
 
 
