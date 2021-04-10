@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.1.3...v1.1.4) (2021-04-10)
+
+
+### Bug Fixes
+
+* **internal:** fix CI workflow definition ([64250a8](https://github.com/NullVoxPopuli/eslint-configs/commit/64250a83c9629dbcfbc3f9797977416eb93edc4f))
+
 ## [1.1.3](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.1.2...v1.1.3) (2021-04-10)
 
 
