@@ -24,9 +24,41 @@ const baseConfig = {
   },
 };
 
-const nodeJS = {
+const baseModulesConfig = {
   ...baseConfig,
-  files: ['**/*.js'],
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: '2021',
+  },
+  rules: {
+    ...baseConfig.rules,
+
+    'import/exports-last': 'off',
+    'node/no-unsupported-features/es-syntax': 'off',
+    'node/no-unpublished-import': 'off', // common-tags is totally published
+  },
 };
 
-module.exports = { baseConfig, node: [nodeJS] };
+const cjs = [
+  {
+    ...baseConfig,
+    files: ['**/*.js', '**/*.cjs'],
+  },
+  {
+    ...baseModulesConfig,
+    files: ['**/*.mjs'],
+  },
+];
+
+const mjs = [
+  {
+    ...baseConfig,
+    files: ['**/*.cjs'],
+  },
+  {
+    ...baseModulesConfig,
+    files: ['**/*.js', '**/*.mjs'],
+  },
+];
+
+module.exports = { baseConfig, node: [...cjs], nodeCJS: [...cjs], nodeESModules: [...mjs] };
