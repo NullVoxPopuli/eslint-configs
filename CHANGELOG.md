@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.1.4...v1.2.0) (2021-04-10)
+
+
+### Features
+
+* **node:** support mjs ([a008ddb](https://github.com/NullVoxPopuli/eslint-configs/commit/a008ddbb026af74aa9c27af66aa09a57e989c0a2))
+
 ## [1.1.4](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.1.3...v1.1.4) (2021-04-10)
 
 
