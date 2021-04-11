@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.2.0...v1.2.1) (2021-04-11)
+
+
+### Bug Fixes
+
+* **deps:** update lint dependencies ([937beb2](https://github.com/NullVoxPopuli/eslint-configs/commit/937beb2b2ceb40971b77879375db6900063f5f3a))
+
 # [1.2.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.1.4...v1.2.0) (2021-04-10)
 
 
