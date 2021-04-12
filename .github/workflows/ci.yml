@@ -23,6 +23,7 @@ jobs:
         name:
           - 'emberclear'
           - 'highlightjs-glimmer'
+          # - 'limber'
 
     steps:
       - uses: actions/checkout@v2
