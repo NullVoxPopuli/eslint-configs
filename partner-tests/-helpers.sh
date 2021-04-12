@@ -41,12 +41,16 @@ function lint() {
   git clone $REPO
   cd $TEST_DIR
 
+  set +x
+
   echo ""
   echo "  npm: $(npm --version)"
   echo "  yarn: $(yarn --version)"
   echo "  Node: $(node --version)"
   echo "  PWD: $PWD"
   echo ""
+
+  set -x
 
   time  ${install_command}
   ${link_command} @nullvoxpopuli/eslint-configs

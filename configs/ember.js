@@ -20,7 +20,6 @@ const appTS = {
     'plugin:decorator-position/ember',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    'prettier/@typescript-eslint',
   ],
   rules: {
     ...tsBase.rules,
