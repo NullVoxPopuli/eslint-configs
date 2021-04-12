@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.2.1...v1.2.2) (2021-04-12)
+
+
+### Bug Fixes
+
+* **partner:** issue with Limber -- test will be enabled after release ([bec0f75](https://github.com/NullVoxPopuli/eslint-configs/commit/bec0f75ef5e1486300db9f4f2e8f776e7a89e68b))
+
 ## [1.2.1](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.2.0...v1.2.1) (2021-04-11)
 
 
