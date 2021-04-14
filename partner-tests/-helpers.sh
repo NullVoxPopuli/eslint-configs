@@ -1,5 +1,7 @@
 # -e : exits if any command fails
 # -x : print each command before running it
+LINT_PACKAGE="@nullvoxpopuli/eslint-configs"
+LINT_DIR="$PWD"
 
 function quietYarn() {
   # removes warnings from CLI output
@@ -16,16 +18,13 @@ function lint() {
   echo ""
   echo ""
 
-  local install_command;
   local link_command;
 
   case $PACKAGE_MANAGER in
     npm)
-      install_command="npm install"
       link_command="npm link"
       ;;
     *)
-      install_command="quietYarn --frozen-lockfile"
       link_command="quietYarn link"
       ;;
   esac
@@ -49,20 +48,23 @@ function lint() {
   echo "  Node: $(node --version)"
   echo "  PWD: $PWD"
   echo ""
+  echo "  LINT_PACKAGE: $LINT_PACKAGE"
+  echo "  LINT_DIR: $LINT_DIR"
+  echo "  TEST_DIR: $TEST_DIR"
+  echo ""
 
   set -x
 
-  time  ${install_command}
-  ${link_command} @nullvoxpopuli/eslint-configs
-
   case $PACKAGE_MANAGER in
     npm)
-      npm explain @nullvoxpopuli/eslint-configs
-      time npm exec eslint -- . --quiet
+      time npm install
+      # Somehow link doesn't work?
+      cp $LINT_DIR/* node_modules/$LINT_PACKAGE/ -r
+      time npm run lint:js
     ;;
     *)
-      quietYarn list @nullvoxpopuli/eslint-configs
-      quietYarn why @nullvoxpopuli/eslint-configs
+      time quietYarn install
+      quietYarn link $LINT_PACKAGE
       time quietYarn eslint . --quiet
     ;;
   esac
