@@ -42,11 +42,7 @@ const baseModulesConfig = {
 const baseTSModulesConfig = {
   ...tsBase,
   plugins: [tsBase.plugins, moduleImports.plugins, '@typescript-eslint'].flat(),
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   rules: {
     ...tsBase.rules,
     ...moduleImports.rules,
@@ -81,7 +77,7 @@ const mjs = [
   {
     ...baseTSModulesConfig,
     files: ['**/*.ts'],
-  }
+  },
 ];
 
 module.exports = {
