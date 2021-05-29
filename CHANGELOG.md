@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.2.5...v1.3.0) (2021-05-29)
+
+
+### Features
+
+* **node:** add TS support ([3fdffca](https://github.com/NullVoxPopuli/eslint-configs/commit/3fdffca691341648d2a072bdf85ba0c786f478d5))
+
 ## [1.2.5](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.2.4...v1.2.5) (2021-04-15)
 
 
