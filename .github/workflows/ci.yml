@@ -24,6 +24,7 @@ jobs:
           - 'emberclear'
           - 'highlightjs-glimmer'
           - 'limber'
+          - 'gg'
 
     steps:
       - uses: actions/checkout@v2

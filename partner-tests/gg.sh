@@ -6,9 +6,9 @@
 
 set -a
 
-REPO="https://github.com/NullVoxPopuli/limber.git"
-TEST_DIR="limber/frontend"
-PACKAGE_MANAGER="yarn"
+REPO="https://github.com/NullVoxPopuli/gg.git"
+TEST_DIR="gg"
+PACKAGE_MANAGER="npm"
 
 source "$(dirname "${BASH_SOURCE[0]}")/-helpers.sh"
 

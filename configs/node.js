@@ -1,6 +1,6 @@
 'use strict';
 
-const { scriptBase, baseRulesAppliedLast } = require('./base');
+const { scriptBase, baseRulesAppliedLast, tsBase, moduleImports } = require('./base');
 
 const baseConfig = {
   env: {
@@ -39,6 +39,21 @@ const baseModulesConfig = {
   },
 };
 
+const baseTSModulesConfig = {
+  ...tsBase,
+  plugins: [tsBase.plugins, moduleImports.plugins, '@typescript-eslint'].flat(),
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  rules: {
+    ...tsBase.rules,
+    ...moduleImports.rules,
+
+    // much concise
+    '@typescript-eslint/prefer-optional-chain': 'error',
+
+    ...baseRulesAppliedLast,
+  },
+};
+
 const cjs = [
   {
     ...baseConfig,
@@ -61,4 +76,19 @@ const mjs = [
   },
 ];
 
-module.exports = { baseConfig, node: [...cjs], nodeCJS: [...cjs], nodeESModules: [...mjs] };
+const mts = [
+  {
+    ...baseTSModulesConfig,
+    files: ['**/*.ts'],
+  },
+];
+
+module.exports = {
+  baseConfig,
+  baseModulesConfig,
+  baseTSModulesConfig,
+  node: [...cjs],
+  nodeCJS: [...cjs],
+  nodeESModules: [...mjs],
+  nodeMTS: [...mts],
+};
