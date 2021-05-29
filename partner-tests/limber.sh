@@ -8,7 +8,7 @@ set -a
 
 REPO="https://github.com/NullVoxPopuli/limber.git"
 TEST_DIR="limber/frontend"
-PACKAGE_MANAGER="npm"
+PACKAGE_MANAGER="yarn"
 
 source "$(dirname "${BASH_SOURCE[0]}")/-helpers.sh"
 
