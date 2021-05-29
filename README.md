@@ -74,8 +74,19 @@ module.exports = configs.node();
 
 const { configs } = require('@nullvoxpopuli/eslint-configs');
 
-// accommodates: JS, TS
+// accommodates: JS
 module.exports = configs.nodeES();
+```
+
+**Node (ES Modules in TypeScript)**
+```js
+// .eslintrc.js
+'use strict';
+
+const { configs } = require('@nullvoxpopuli/eslint-configs');
+
+// accommodates: JS, TS
+module.exports = configs.nodeESTS();
 ```
 
 _overriding_
