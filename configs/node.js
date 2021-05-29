@@ -74,6 +74,9 @@ const mjs = [
     ...baseModulesConfig,
     files: ['**/*.js', '**/*.mjs'],
   },
+];
+
+const mts = [
   {
     ...baseTSModulesConfig,
     files: ['**/*.ts'],
@@ -87,4 +90,5 @@ module.exports = {
   node: [...cjs],
   nodeCJS: [...cjs],
   nodeESModules: [...mjs],
+  nodeMTS: [...mts],
 };
