@@ -32,7 +32,7 @@
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-qunit": "6.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "prettier": "2.2.1"
+    "prettier": "2.3.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
