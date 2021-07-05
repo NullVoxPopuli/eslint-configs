@@ -9,11 +9,11 @@
   "author": "NullVoxPopuli",
   "license": "MIT",
   "volta": {
-    "node": "14.16.1",
+    "node": "14.17.3",
     "yarn": "1.22.10"
   },
   "engines": {
-    "node": ">= v12.22.3"
+    "node": ">= v14.17.3"
   },
   "scripts": {
     "lint:js": "eslint ."
