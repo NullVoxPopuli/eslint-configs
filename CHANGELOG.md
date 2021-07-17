@@ -1,3 +1,10 @@
+## [1.3.13](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.12...v1.3.13) (2021-07-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v7.31.0 ([c5ef8a2](https://github.com/NullVoxPopuli/eslint-configs/commit/c5ef8a273508d6109580dfc8d49b3af462a468e4))
+
 ## [1.3.12](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.11...v1.3.12) (2021-07-12)
 
 
