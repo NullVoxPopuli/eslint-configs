@@ -9,6 +9,10 @@
   "masterIssue": true,
   "rangeStrategy": "bump",
   "packageRules": [
+    {
+      "packageNames": ["node"],
+      "enabled": false
+    }
     ////////////////////////////////////////
     // Grouping namespaced packages together
     //
