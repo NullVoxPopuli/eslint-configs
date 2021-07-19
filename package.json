@@ -13,7 +13,7 @@
     "yarn": "1.22.10"
   },
   "engines": {
-    "node": ">= v14.17.3"
+    "node": ">= v12.0.0"
   },
   "scripts": {
     "lint:js": "eslint ."
