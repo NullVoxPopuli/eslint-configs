@@ -1,3 +1,10 @@
+## [1.3.14](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.13...v1.3.14) (2021-07-19)
+
+
+### Bug Fixes
+
+* **engines:** revert node change ([ef1bbc0](https://github.com/NullVoxPopuli/eslint-configs/commit/ef1bbc02d82e64ff84b7d647bf3642904904c071))
+
 ## [1.3.13](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.12...v1.3.13) (2021-07-17)
 
 
