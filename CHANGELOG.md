@@ -1,3 +1,10 @@
+## [1.3.26](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.25...v1.3.26) (2021-08-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-import to ^2.24.1 ([57576f4](https://github.com/NullVoxPopuli/eslint-configs/commit/57576f4c66dde404c9a9258482d54329d1d3c9e1))
+
 ## [1.3.25](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.24...v1.3.25) (2021-08-17)
 
 
