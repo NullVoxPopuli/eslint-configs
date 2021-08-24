@@ -1,3 +1,10 @@
+## [1.3.29](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.28...v1.3.29) (2021-08-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-ember to v10.5.4 ([f80158a](https://github.com/NullVoxPopuli/eslint-configs/commit/f80158a80d269edbb6dc0bf7a85f5374851b802a))
+
 ## [1.3.28](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.27...v1.3.28) (2021-08-23)
 
 
