@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.30...v1.4.0) (2021-08-29)
+
+
+### Features
+
+* **ember, json:** use relative paths, where applicable ([7dc5146](https://github.com/NullVoxPopuli/eslint-configs/commit/7dc514683a9317363644db2b2e420cb67b781b63))
+
 ## [1.3.30](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.3.29...v1.3.30) (2021-08-25)
 
 
