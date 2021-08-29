@@ -12,11 +12,14 @@ const withCommentsConfig = {
 
 const packageJson = {
   ...baseConfig,
-  files: ['package.json'],
+  files: ['./package.json'],
 };
 
 const tsConfig = {
   ...withCommentsConfig,
+  // match any tsconfig, not just at the root directory (no preceeding ./)
+  // this is so that projects can have multiple tsconfigs, like if they need to manage
+  // their own composite projects w/ references in a monorepo
   files: ['tsconfig.json', 'tsconfig*.json'],
 };
 

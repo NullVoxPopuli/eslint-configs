@@ -12,7 +12,7 @@ const emberLintRules = {
 
 const appTS = {
   ...tsBase,
-  files: ['app/**/*.ts'],
+  files: ['./app/**/*.ts'],
   plugins: [tsBase.plugins, moduleImports.plugins, 'ember', '@typescript-eslint'].flat(),
   extends: [
     'eslint:recommended',
@@ -37,7 +37,7 @@ const appTS = {
 
 const appJS = {
   ...jsBase,
-  files: ['app/**/*.js'],
+  files: ['./app/**/*.js'],
   plugins: [moduleBase.plugins, moduleImports.plugins, 'ember', 'decorator-position'].flat(),
   extends: [
     'eslint:recommended',
@@ -54,15 +54,15 @@ const appJS = {
 };
 const addonTS = {
   ...appTS,
-  files: ['addon/**/*.ts', 'addon-test-support/**/*.ts'],
+  files: ['./addon/**/*.ts', './addon-test-support/**/*.ts'],
 };
 const addonJS = {
   ...appJS,
-  files: ['addon/**/*.js', 'addon-test-support/**/*.js'],
+  files: ['./addon/**/*.js', './addon-test-support/**/*.js'],
 };
 const testsTS = {
   ...appTS,
-  files: ['tests/**/*.ts'],
+  files: ['./tests/**/*.ts'],
   excludedFiles: ['tests/dummy/declarations/**'],
   plugins: [...appTS.plugins, 'qunit'],
   extends: [...appTS.extends, 'plugin:qunit/recommended'],
@@ -85,7 +85,7 @@ const testsTS = {
 };
 const testsJS = {
   ...appJS,
-  files: ['tests/**/*.js'],
+  files: ['./tests/**/*.js'],
   plugins: [...appJS.plugins, 'qunit'],
   extends: [...appJS.extends, 'plugin:qunit/recommended'],
   env: {
@@ -103,7 +103,7 @@ const testsJS = {
 };
 const typeDeclarations = {
   ...tsBase,
-  files: ['types/**', '*.d.ts'],
+  files: ['./types/**', '*.d.ts'],
   rules: {
     ...tsBase.rules,
     // custom type declarations get wonky
@@ -113,21 +113,21 @@ const typeDeclarations = {
 const nodeJS = {
   ...require('./node').baseConfig,
   files: [
-    '.ember-cli.js',
-    '.eslintrc.js',
-    '.prettierrc.js',
-    '.template-lintrc.js',
-    'stylelint.config.js',
-    'tailwind.config.js',
-    'ember-cli-build.js',
-    'index.js',
-    'src/ember-intl.js',
-    'testem.js',
-    'blueprints/*/index.js',
-    'config/**/*.js',
-    'lib/**/*.js',
-    'tests/dummy/config/**/*.js',
-    'scripts/**/*.js',
+    './.ember-cli.js',
+    './.eslintrc.js',
+    './.prettierrc.js',
+    './.template-lintrc.js',
+    './stylelint.config.js',
+    './tailwind.config.js',
+    './ember-cli-build.js',
+    './index.js',
+    './src/ember-intl.js',
+    './testem.js',
+    './blueprints/*/index.js',
+    './config/**/*.js',
+    './lib/**/*.js',
+    './tests/dummy/config/**/*.js',
+    './scripts/**/*.js',
   ],
 };
 
