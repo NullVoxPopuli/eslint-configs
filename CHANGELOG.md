@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.1...v1.4.2) (2021-08-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-prettier to v4 ([66bc6ae](https://github.com/NullVoxPopuli/eslint-configs/commit/66bc6aecca4c2b27293e7021a9823046398910e6))
+
 ## [1.4.1](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.0...v1.4.1) (2021-08-30)
 
 
