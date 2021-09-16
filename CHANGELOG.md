@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.5...v1.4.6) (2021-09-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to v2.4.1 ([e82c0e9](https://github.com/NullVoxPopuli/eslint-configs/commit/e82c0e903b001d34b72936fd917701a98b8e4279))
+
 ## [1.4.5](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.4...v1.4.5) (2021-09-13)
 
 
