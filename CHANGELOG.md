@@ -1,3 +1,10 @@
+## [1.4.9](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.8...v1.4.9) (2021-09-27)
+
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo to v4.32.0 ([1fa99b5](https://github.com/NullVoxPopuli/eslint-configs/commit/1fa99b5971860193f597bbdfb3a719ef193f4e2f))
+
 ## [1.4.8](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.7...v1.4.8) (2021-09-21)
 
 
