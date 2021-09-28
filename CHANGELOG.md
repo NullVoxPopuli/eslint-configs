@@ -1,3 +1,10 @@
+## [1.4.10](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.9...v1.4.10) (2021-09-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-decorator-position to v4 ([8f906d6](https://github.com/NullVoxPopuli/eslint-configs/commit/8f906d6da84c34c9a6d9bce12b56afcf38968a6b))
+
 ## [1.4.9](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.8...v1.4.9) (2021-09-27)
 
 
