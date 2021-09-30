@@ -1,3 +1,10 @@
+## [1.4.12](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.11...v1.4.12) (2021-09-30)
+
+
+### Bug Fixes
+
+* **ember:** apply baseConfig to './*.js' files ([7df7bca](https://github.com/NullVoxPopuli/eslint-configs/commit/7df7bca26decb08a853c31e70535631f9cb94d06))
+
 ## [1.4.11](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.10...v1.4.11) (2021-09-29)
 
 
