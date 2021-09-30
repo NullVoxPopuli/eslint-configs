@@ -113,16 +113,7 @@ const typeDeclarations = {
 const nodeJS = {
   ...require('./node').baseConfig,
   files: [
-    './.ember-cli.js',
-    './.eslintrc.js',
-    './.prettierrc.js',
-    './.template-lintrc.js',
-    './stylelint.config.js',
-    './tailwind.config.js',
-    './ember-cli-build.js',
-    './index.js',
-    './src/ember-intl.js',
-    './testem.js',
+    './*.js',
     './blueprints/*/index.js',
     './config/**/*.js',
     './lib/**/*.js',
