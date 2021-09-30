@@ -10,7 +10,7 @@
   "license": "MIT",
   "volta": {
     "node": "14.17.3",
-    "yarn": "1.22.13"
+    "yarn": "1.22.15"
   },
   "engines": {
     "node": ">= v12.0.0"
