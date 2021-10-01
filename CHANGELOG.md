@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.12...v1.5.0) (2021-10-01)
+
+
+### Features
+
+* **ember:** support deprecation-workflow.js files ([a272077](https://github.com/NullVoxPopuli/eslint-configs/commit/a2720775e849fe7645cb0b37fd0e894e7c4530f0))
+
 ## [1.4.12](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.4.11...v1.4.12) (2021-09-30)
 
 
