@@ -122,6 +122,31 @@ const nodeJS = {
   ],
 };
 
+const deprecationWorkflow = {
+  ...jsBase,
+  parserOptions: {
+    ...jsBase.parserOptions,
+    sourceType: 'script',
+  },
+  files: ['tests/dummy/config/deprecation-workflow.js', 'config/deprecation-workflow.js'],
+  plugins: [moduleBase.plugins].flat(),
+  extends: ['eslint:recommended', 'prettier'],
+  rules: {
+    ...jsBase.rules,
+    ...baseRulesAppliedLast,
+  },
+};
+
 module.exports = {
-  ember: [appTS, appJS, addonTS, addonJS, testsTS, testsJS, typeDeclarations, nodeJS],
+  ember: [
+    appTS,
+    appJS,
+    addonTS,
+    addonJS,
+    testsTS,
+    testsJS,
+    typeDeclarations,
+    nodeJS,
+    deprecationWorkflow,
+  ],
 };
