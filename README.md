@@ -77,6 +77,8 @@ module.exports = {
 ```
 
 **Node**
+
+This config is native ES Modules, and cjs is allowed via files with the *.cjs extension.
 ```js
 // .eslintrc.js
 'use strict';
@@ -87,7 +89,9 @@ const { configs } = require('@nullvoxpopuli/eslint-configs');
 module.exports = configs.node();
 ```
 
-**Node (ES Modules)**
+**Node (CJS as defaultl)**
+
+This config is for when *.js is cjs, and ES Modules are used via the *.mjs extension.
 ```js
 // .eslintrc.js
 'use strict';
@@ -95,7 +99,7 @@ module.exports = configs.node();
 const { configs } = require('@nullvoxpopuli/eslint-configs');
 
 // accommodates: JS
-module.exports = configs.nodeES();
+module.exports = configs.nodeCJS();
 ```
 
 **Node (ES Modules in TypeScript)**
@@ -106,7 +110,7 @@ module.exports = configs.nodeES();
 const { configs } = require('@nullvoxpopuli/eslint-configs');
 
 // accommodates: JS, TS
-module.exports = configs.nodeESTS();
+module.exports = configs.nodeTS();
 ```
 
 _overriding_

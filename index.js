@@ -6,10 +6,20 @@ const { json } = require('./configs/json');
 const { configCreator } = require('./utils');
 
 module.exports = {
+  // by using getters here we don't force projects to install
+  // dependencies of each of these configs if they are not needed
   configs: {
-    ember: configCreator(ember, json),
-    node: configCreator(nodeCJS, json),
-    nodeES: configCreator(nodeESModules, json),
-    nodeESTS: configCreator(nodeESModules, nodeMTS, json),
+    get ember() {
+      return configCreator(ember, json);
+    },
+    get nodeCJS() {
+      return configCreator(nodeCJS, json);
+    },
+    get node() {
+      return configCreator(nodeESModules, json);
+    },
+    get nodeTS() {
+      return configCreator(nodeESModules, nodeMTS, json);
+    },
   },
 };

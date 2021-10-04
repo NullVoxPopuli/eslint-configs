@@ -60,6 +60,15 @@ const addonJS = {
   ...appJS,
   files: ['./addon/**/*.js', './addon-test-support/**/*.js'],
 };
+const addonV2JS = {
+  ...appJS,
+  files: ['./src/**/*.js'],
+};
+const addonV2TS = {
+  ...appTS,
+  files: ['./src/**/*.ts'],
+};
+
 const testsTS = {
   ...appTS,
   files: ['./tests/**/*.ts'],
