@@ -1,6 +1,6 @@
 {
   "name": "@nullvoxpopuli/eslint-configs",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "eslint configs for the NullVoxPopuli's projects",
   "main": "index.js",
   "repository": {

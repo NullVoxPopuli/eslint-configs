@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.5.6...v1.5.7) (2021-10-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-qunit to v7 ([c3fda85](https://github.com/NullVoxPopuli/eslint-configs/commit/c3fda850b425268aa659b06ed3bd00b0b27841cc))
+
 ## [1.5.6](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.5.5...v1.5.6) (2021-10-19)
 
 
