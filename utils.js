@@ -20,7 +20,7 @@ function configCreator(...overrides) {
  * configured or `extends` specified that come from libraries that are not installed,
  * we need to remove those so ESLint doesn't have conniptions.
  *
- * @param {...Override[]} overrides
+ * @param {...(Override)[]} overrides
  * @returns {Config}
  */
 function createConfig(...overrides) {
