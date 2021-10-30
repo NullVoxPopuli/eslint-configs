@@ -147,11 +147,26 @@ const deprecationWorkflow = {
 };
 
 module.exports = {
+  parts: {
+    appTS,
+    appJS,
+    addonTS,
+    addonJS,
+    addonV2JS,
+    addonV2TS,
+    testsTS,
+    testsJS,
+    typeDeclarations,
+    nodeJS,
+    deprecationWorkflow,
+  },
   ember: [
     appTS,
     appJS,
     addonTS,
     addonJS,
+    addonV2JS,
+    addonV2TS,
     testsTS,
     testsJS,
     typeDeclarations,
