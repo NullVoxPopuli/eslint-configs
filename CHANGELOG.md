@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.5.8...v2.0.0) (2021-10-30)
+
+
+### Features
+
+* **ember:** add the addonV2 format to the ember config ([c5af74f](https://github.com/NullVoxPopuli/eslint-configs/commit/c5af74fff635e9758d993d401544abc4497c80f1))
+* switch configs to be getters for lazy evaluation ([e774bb2](https://github.com/NullVoxPopuli/eslint-configs/commit/e774bb263a068c843225b620d6daa8bb37379db5))
+
+
+### BREAKING CHANGES
+
+* additionally, the node configs have been renamed:
+  - node -> nodeCJS
+  - nodeES -> node
+  - nodeESTS -> nodeTS
+
 ## [1.5.8](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.5.7...v1.5.8) (2021-10-25)
 
 
