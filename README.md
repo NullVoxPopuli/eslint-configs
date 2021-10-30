@@ -131,6 +131,16 @@ module.exports = {
 }
 ```
 
+## Gaining additional lints with 0 config
+
+This lint config meta package is setup to lazily detect which plugins and configurations you have installed and automatically add them to your lint config.
+
+This has the following benefits:
+ - No need to install dependencies you don't use (typescript, for example)
+ - No need to force prettier on your projects if you don't have it installed
+ - Progressive enhancement as you decide you want more behaviors / lints
+ - Minimal impact to node_modules so that local dev and C.I. are not unnecessarily hit with extra dependencies
+
 ## Debugging
 
 To see what the resolved config looks like for a file

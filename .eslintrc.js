@@ -2,4 +2,4 @@
 
 const { configs } = require('./index');
 
-module.exports = configs.node();
+module.exports = configs.nodeCJS();
