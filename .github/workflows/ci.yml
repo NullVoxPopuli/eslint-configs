@@ -30,12 +30,22 @@ jobs:
     name: "Test: ${{ matrix.name }}"
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.allow-failure }}
     strategy:
+      fail-fast: false
       matrix:
         name:
           - 'emberclear'
           - 'highlightjs-glimmer'
           - 'limber'
+        allow-failure: [true]
+        # include:
+        #   - name: emberclear
+        #     allow-failure: true
+        #   - name: highlightjs-glimmer
+        #     allow-failure: true
+        #   - name: limber
+        #     allow-failure: true
 
     steps:
       - uses: actions/checkout@v2
