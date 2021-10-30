@@ -77,6 +77,8 @@ module.exports = {
 ```
 
 **Node**
+
+This config is native ES Modules, and cjs is allowed via files with the *.cjs extension.
 ```js
 // .eslintrc.js
 'use strict';
@@ -87,7 +89,9 @@ const { configs } = require('@nullvoxpopuli/eslint-configs');
 module.exports = configs.node();
 ```
 
-**Node (ES Modules)**
+**Node (CJS as defaultl)**
+
+This config is for when *.js is cjs, and ES Modules are used via the *.mjs extension.
 ```js
 // .eslintrc.js
 'use strict';
@@ -95,7 +99,7 @@ module.exports = configs.node();
 const { configs } = require('@nullvoxpopuli/eslint-configs');
 
 // accommodates: JS
-module.exports = configs.nodeES();
+module.exports = configs.nodeCJS();
 ```
 
 **Node (ES Modules in TypeScript)**
@@ -106,7 +110,7 @@ module.exports = configs.nodeES();
 const { configs } = require('@nullvoxpopuli/eslint-configs');
 
 // accommodates: JS, TS
-module.exports = configs.nodeESTS();
+module.exports = configs.nodeTS();
 ```
 
 _overriding_
@@ -126,6 +130,16 @@ module.exports = {
   ]
 }
 ```
+
+## Gaining additional lints with 0 config
+
+This lint config meta package is setup to lazily detect which plugins and configurations you have installed and automatically add them to your lint config.
+
+This has the following benefits:
+ - No need to install dependencies you don't use (typescript, for example)
+ - No need to force prettier on your projects if you don't have it installed
+ - Progressive enhancement as you decide you want more behaviors / lints
+ - Minimal impact to node_modules so that local dev and C.I. are not unnecessarily hit with extra dependencies
 
 ## Debugging
 

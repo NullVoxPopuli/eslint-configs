@@ -60,6 +60,15 @@ const addonJS = {
   ...appJS,
   files: ['./addon/**/*.js', './addon-test-support/**/*.js'],
 };
+const addonV2JS = {
+  ...appJS,
+  files: ['./src/**/*.js'],
+};
+const addonV2TS = {
+  ...appTS,
+  files: ['./src/**/*.ts'],
+};
+
 const testsTS = {
   ...appTS,
   files: ['./tests/**/*.ts'],
@@ -138,11 +147,26 @@ const deprecationWorkflow = {
 };
 
 module.exports = {
+  parts: {
+    appTS,
+    appJS,
+    addonTS,
+    addonJS,
+    addonV2JS,
+    addonV2TS,
+    testsTS,
+    testsJS,
+    typeDeclarations,
+    nodeJS,
+    deprecationWorkflow,
+  },
   ember: [
     appTS,
     appJS,
     addonTS,
     addonJS,
+    addonV2JS,
+    addonV2TS,
     testsTS,
     testsJS,
     typeDeclarations,

@@ -87,8 +87,7 @@ module.exports = {
   baseConfig,
   baseModulesConfig,
   baseTSModulesConfig,
-  node: [...cjs],
   nodeCJS: [...cjs],
-  nodeESModules: [...mjs],
+  nodeESM: [...mjs],
   nodeMTS: [...mts],
 };
