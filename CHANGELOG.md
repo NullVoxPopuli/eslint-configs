@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.0.0...v2.1.0) (2021-10-31)
+
+
+### Features
+
+* **ember:** allow ember's node files to be CJS or ESM ([24c7f3e](https://github.com/NullVoxPopuli/eslint-configs/commit/24c7f3ec99db27e5c49e9d671741f0279da1c28c))
+
 # [2.0.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v1.5.8...v2.0.0) (2021-10-30)
 
 
