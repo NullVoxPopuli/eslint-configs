@@ -34,6 +34,12 @@ const baseModulesConfig = {
     ...baseConfig.rules,
 
     'import/exports-last': 'off',
+
+    // Does not respect npm packages...
+    'import/no-unresolved': 'off',
+    'node/no-missing-import': 'off',
+
+    // This is ESM...
     'node/no-unsupported-features/es-syntax': 'off',
     'node/no-unpublished-import': 'off', // common-tags is totally published
   },
