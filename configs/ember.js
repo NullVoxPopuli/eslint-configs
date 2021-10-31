@@ -119,17 +119,41 @@ const typeDeclarations = {
     '@typescript-eslint/no-explicit-any': 'off',
   },
 };
-const nodeJS = {
-  ...require('./node').baseConfig,
-  files: [
-    './*.js',
-    './blueprints/*/index.js',
-    './config/**/*.js',
-    './lib/**/*.js',
-    './tests/dummy/config/**/*.js',
-    './scripts/**/*.js',
-  ],
-};
+
+const { baseConfig, baseModulesConfig } = require('./node');
+
+const packagePath = require.resolve(process.cwd() + '/package.json');
+const isModules = require(packagePath).type === 'module';
+const nodeFiles = [
+  './*.js',
+  './blueprints/*/index.js',
+  './config/**/*.js',
+  './lib/**/*.js',
+  './tests/dummy/config/**/*.js',
+  './scripts/**/*.js',
+];
+
+const nodeConfigs = isModules
+  ? [
+      {
+        ...baseConfig,
+        files: nodeFiles.map((filePath) => filePath.replace('.js', '.cjs')),
+      },
+      {
+        ...baseModulesConfig,
+        files: [...nodeFiles, ...nodeFiles.map((filePath) => filePath.replace('.js', '.mjs'))],
+      },
+    ]
+  : [
+      {
+        ...baseConfig,
+        files: [...nodeFiles, ...nodeFiles.map((filePath) => filePath.replace('.js', '.cjs'))],
+      },
+      {
+        ...baseModulesConfig,
+        files: nodeFiles.map((filePath) => filePath.replace('.js', '.mjs')),
+      },
+    ];
 
 const deprecationWorkflow = {
   ...jsBase,
@@ -157,7 +181,7 @@ module.exports = {
     testsTS,
     testsJS,
     typeDeclarations,
-    nodeJS,
+    nodeConfigs,
     deprecationWorkflow,
   },
   ember: [
@@ -170,7 +194,7 @@ module.exports = {
     testsTS,
     testsJS,
     typeDeclarations,
-    nodeJS,
+    ...nodeConfigs,
     deprecationWorkflow,
   ],
 };
