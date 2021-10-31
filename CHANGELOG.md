@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.1.0...v2.1.1) (2021-10-31)
+
+
+### Bug Fixes
+
+* **node, ESM:** disable invalid rules ([7d1eb4f](https://github.com/NullVoxPopuli/eslint-configs/commit/7d1eb4f5b2dd321bb4dcb3d85136ce6429311665))
+
 # [2.1.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.0.0...v2.1.0) (2021-10-31)
 
 
