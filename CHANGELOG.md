@@ -1,3 +1,10 @@
+## [2.1.13](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.1.12...v2.1.13) (2021-12-26)
+
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo to v5.8.0 ([1f8e8cd](https://github.com/NullVoxPopuli/eslint-configs/commit/1f8e8cd3c17c33e90e15a4638506c4d307c1ac09))
+
 ## [2.1.12](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.1.11...v2.1.12) (2021-12-16)
 
 
