@@ -123,7 +123,8 @@ const typeDeclarations = {
 const { baseConfig, baseModulesConfig } = require('./node');
 
 const packagePath = require.resolve(process.cwd() + '/package.json');
-const isModules = require(packagePath).type === 'module';
+const packageJson = require(packagePath);
+const isModules = packageJson.type === 'module' || packageJson['ember-addon']?.version === 2;
 const nodeFiles = [
   './*.js',
   './blueprints/*/index.js',
