@@ -1,3 +1,10 @@
+## [2.1.19](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.1.18...v2.1.19) (2022-02-05)
+
+
+### Bug Fixes
+
+* **ember:** v2 addons may *not* be type=modules, but still ESM ([ae2c319](https://github.com/NullVoxPopuli/eslint-configs/commit/ae2c319e1c3577dec25addc7f05c29117eab115b))
+
 ## [2.1.18](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.1.17...v2.1.18) (2022-01-17)
 
 
