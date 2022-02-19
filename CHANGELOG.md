@@ -1,3 +1,10 @@
+## [2.1.24](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.1.23...v2.1.24) (2022-02-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-config-prettier to v8.4.0 ([d443420](https://github.com/NullVoxPopuli/eslint-configs/commit/d443420963fcc8613ae04d77d16b2bedebbeb7ba))
+
 ## [2.1.23](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.1.22...v2.1.23) (2022-02-15)
 
 
