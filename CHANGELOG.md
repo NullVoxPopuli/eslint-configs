@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.1.25...v2.2.0) (2022-02-22)
+
+
+### Features
+
+* be lazier and don't require unless we need to ([5f92b4b](https://github.com/NullVoxPopuli/eslint-configs/commit/5f92b4b1222ceb39265e5236e335c502b7f1fa01))
+
 ## [2.1.25](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.1.24...v2.1.25) (2022-02-21)
 
 
