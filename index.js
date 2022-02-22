@@ -1,9 +1,6 @@
 // @ts-check
 'use strict';
 
-const { ember } = require('./configs/ember');
-const { nodeCJS, nodeESM, nodeMTS } = require('./configs/node');
-const { json } = require('./configs/json');
 const { configCreator } = require('./utils');
 
 module.exports = {
@@ -11,15 +8,27 @@ module.exports = {
   // dependencies of each of these configs if they are not needed
   configs: {
     get ember() {
+      const { ember } = require('./configs/ember');
+      const { json } = require('./configs/json');
+
       return configCreator(ember, json);
     },
     get nodeCJS() {
+      const { nodeCJS } = require('./configs/node');
+      const { json } = require('./configs/json');
+
       return configCreator(nodeCJS, json);
     },
     get node() {
+      const { nodeESM } = require('./configs/node');
+      const { json } = require('./configs/json');
+
       return configCreator(nodeESM, json);
     },
     get nodeTS() {
+      const { nodeESM, nodeMTS } = require('./configs/node');
+      const { json } = require('./configs/json');
+
       return configCreator(nodeESM, nodeMTS, json);
     },
   },
