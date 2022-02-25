@@ -12,7 +12,7 @@ const emberLintRules = {
 
 const appTS = {
   ...tsBase,
-  files: ['./app/**/*.ts'],
+  files: ['./app/**/*.{ts,gts}'],
   plugins: [tsBase.plugins, moduleImports.plugins, 'ember', '@typescript-eslint'].flat(),
   extends: [
     'eslint:recommended',
@@ -37,7 +37,7 @@ const appTS = {
 
 const appJS = {
   ...jsBase,
-  files: ['./app/**/*.js'],
+  files: ['./app/**/*.{js,gjs}'],
   plugins: [moduleBase.plugins, moduleImports.plugins, 'ember', 'decorator-position'].flat(),
   extends: [
     'eslint:recommended',
@@ -54,24 +54,24 @@ const appJS = {
 };
 const addonTS = {
   ...appTS,
-  files: ['./addon/**/*.ts', './addon-test-support/**/*.ts'],
+  files: ['./addon/**/*.{ts,gts}', './addon-test-support/**/*.ts'],
 };
 const addonJS = {
   ...appJS,
-  files: ['./addon/**/*.js', './addon-test-support/**/*.js'],
+  files: ['./addon/**/*.{js,gjs}', './addon-test-support/**/*.js'],
 };
 const addonV2JS = {
   ...appJS,
-  files: ['./src/**/*.js'],
+  files: ['./src/**/*.{js,gjs}'],
 };
 const addonV2TS = {
   ...appTS,
-  files: ['./src/**/*.ts'],
+  files: ['./src/**/*.{ts,gts}'],
 };
 
 const testsTS = {
   ...appTS,
-  files: ['./tests/**/*.ts'],
+  files: ['./tests/**/*.{ts,gts}'],
   excludedFiles: ['tests/dummy/declarations/**'],
   plugins: [...appTS.plugins, 'qunit'],
   extends: [...appTS.extends, 'plugin:qunit/recommended'],
@@ -94,7 +94,7 @@ const testsTS = {
 };
 const testsJS = {
   ...appJS,
-  files: ['./tests/**/*.js'],
+  files: ['./tests/**/*.{js,gjs}'],
   plugins: [...appJS.plugins, 'qunit'],
   extends: [...appJS.extends, 'plugin:qunit/recommended'],
   env: {
