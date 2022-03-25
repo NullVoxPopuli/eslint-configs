@@ -1,3 +1,10 @@
+## [2.2.7](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.2.6...v2.2.7) (2022-03-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to v2.6.1 ([7470a3b](https://github.com/NullVoxPopuli/eslint-configs/commit/7470a3b20c3c47a576734f561955fbfec806b043))
+
 ## [2.2.6](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.2.5...v2.2.6) (2022-03-21)
 
 
