@@ -1,3 +1,10 @@
+## [2.2.16](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.2.15...v2.2.16) (2022-05-05)
+
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo to v5.22.0 ([0539441](https://github.com/NullVoxPopuli/eslint-configs/commit/0539441b3579b4eac15cd9af7e9fb78bf210d0b1))
+
 ## [2.2.15](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.2.14...v2.2.15) (2022-05-04)
 
 
