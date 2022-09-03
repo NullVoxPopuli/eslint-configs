@@ -1,3 +1,10 @@
+## [2.2.54](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.2.53...v2.2.54) (2022-09-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-simple-import-sort to v8 ([008e91b](https://github.com/NullVoxPopuli/eslint-configs/commit/008e91bbde9fd0d850a65bf1206ffb98dd683c9d))
+
 ## [2.2.53](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.2.52...v2.2.53) (2022-08-30)
 
 
