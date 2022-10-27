@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.3.0...v2.3.1) (2022-10-27)
+
+
+### Bug Fixes
+
+* **files:** added gjs/gts to ember file extension support ([aac0be4](https://github.com/NullVoxPopuli/eslint-configs/commit/aac0be43983b735bd8696af1d9f254791ffda3f3))
+
 # [2.3.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.2.63...v2.3.0) (2022-10-27)
 
 
