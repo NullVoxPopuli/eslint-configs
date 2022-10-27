@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.3.1...v2.3.2) (2022-10-27)
+
+
+### Bug Fixes
+
+* **ember:** set top level ember config so preproccessors are registered ([723a94c](https://github.com/NullVoxPopuli/eslint-configs/commit/723a94c557a8f11396a013cb158ba89842c1fc68))
+
 ## [2.3.1](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.3.0...v2.3.1) (2022-10-27)
 
 
