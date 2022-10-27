@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.2.63...v2.3.0) (2022-10-27)
+
+
+### Features
+
+* **eslint-plugin-ember:** upgrade to 11.2.0 for gjs/gts support ([b2d5813](https://github.com/NullVoxPopuli/eslint-configs/commit/b2d5813f89fee4ce949df2dc3b09cd556c002bb9))
+
 ## [2.2.63](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.2.62...v2.2.63) (2022-10-24)
 
 
