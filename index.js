@@ -11,7 +11,15 @@ module.exports = {
       const { ember } = require('./configs/ember');
       const { json } = require('./configs/json');
 
-      return configCreator(ember, json);
+      let defaultConfig = configCreator(ember, json);
+
+      return () => {
+        return {
+          plugins: ['ember'],
+          extends: ['plugin:ember/recommended'],
+          ...defaultConfig(),
+        };
+      };
     },
     get nodeCJS() {
       const { nodeCJS } = require('./configs/node');
