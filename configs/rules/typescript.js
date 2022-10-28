@@ -1,0 +1,34 @@
+'use strict';
+
+/**
+ * @type {import('../types').PartialConfig}
+ */
+const rule = {
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  extends: ['plugin:@typescript-eslint/recommended'],
+  rules: {
+    // this isn't C#
+    '@typescript-eslint/interface-name-prefix': 'off',
+
+    // type imports are removed in builds
+    '@typescript-eslint/consistent-type-imports': 'error',
+
+    // prefer inference, but it is recommended to declare
+    // return types around public API
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+
+    // much concise
+    '@typescript-eslint/prefer-optional-chain': 'error',
+
+    // Maximum strictness
+    '@typescript-eslint/no-non-null-assertion': 'error',
+
+    // Allows placeholder args to still be defined for
+    // documentation or "for later" purposes
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+  },
+};
+
+module.exports = { rule };

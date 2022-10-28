@@ -1,201 +1,161 @@
 'use strict';
 
-const { tsBase, jsBase, moduleBase, moduleImports, baseRulesAppliedLast } = require('./base');
+const { merge, hasDep, pipe, configFor, forFiles } = require('./-utils');
 
-const emberLintRules = {
-  // this is a silly convention from back in the rails days
-  // it has no place in JS where things are camelCase
-  'ember/routes-segments-snake-case': 'off',
-  // co-located test files are filtered out of production bundle
-  'ember/no-test-support-import': 'off',
+/**
+ * @param {import('./types').Options} [options]
+ * @returns {import('eslint').Linter.Config}
+ */
+module.exports = (options = {}) => {
+  let config = configBuilder(options);
+
+  return configFor([
+    // ----------------------
+    // Project Files
+    forFiles(
+      [
+        '{src,app,addon,addon-test-support,tests}/**/*.{gjs,js}',
+        'tests/dummy/config/deprecation-workflow.js',
+        'config/deprecation-workflow.js',
+      ],
+      config.modules.browser.js
+    ),
+    forFiles(
+      '{src,app,addon,addon-test-support,tests,types}/**/*.{gts,ts}',
+      config.modules.browser.ts
+    ),
+    forFiles('**/*.d.ts', config.modules.browser.declarations),
+
+    // ----------------------
+    // Tests
+    forFiles('tests/**/*-test.{gjs,js}', config.modules.tests.js),
+    forFiles('tests/**/*-test.{gts,ts}', config.modules.tests.ts),
+
+    // ----------------------
+    // Config files, usually
+    forFiles(
+      [
+        './*.{cjs,js}',
+        './config/**/*.js',
+        './lib/*/index.js',
+        './server/**/*.js',
+        './blueprints/*/index.js',
+      ],
+      config.commonjs.node.js
+    ),
+  ]);
 };
 
-const appTS = {
-  ...tsBase,
-  files: ['./app/**/*.ts', './app/**/*.gts'],
-  plugins: [tsBase.plugins, moduleImports.plugins, 'ember', '@typescript-eslint'].flat(),
-  extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended',
-    'plugin:decorator-position/ember',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
-  rules: {
-    ...tsBase.rules,
-    ...emberLintRules,
-    ...moduleImports.rules,
+/**
+ * @param {import('./types').Options} [options]
+ */
+function configBuilder(options = {}) {
+  let hasTypeScript = hasDep('typescript');
 
-    // not applicable due to how the runtime is
-    '@typescript-eslint/no-use-before-define': 'off',
-    // much concise
-    '@typescript-eslint/prefer-optional-chain': 'error',
+  let personalPreferences = pipe(
+    {},
+    (config) => merge(config, require('./base').base),
+    (config) => merge(config, require('./rules/decorator-position'))
+  );
 
-    ...baseRulesAppliedLast,
-  },
-};
+  if (options.prettierIntegration) {
+    personalPreferences = merge(personalPreferences, require('./rules/prettier').resolveRule());
+  }
 
-const appJS = {
-  ...jsBase,
-  files: ['./app/**/*.js', './app/**/*.gjs'],
-  plugins: [moduleBase.plugins, moduleImports.plugins, 'ember', 'decorator-position'].flat(),
-  extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended',
-    'plugin:decorator-position/ember',
-    'prettier',
-  ],
-  rules: {
-    ...jsBase.rules,
-    ...emberLintRules,
-    ...moduleImports.rules,
-    ...baseRulesAppliedLast,
-  },
-};
-const addonTS = {
-  ...appTS,
-  files: ['./addon/**/*.ts', './addon/**/*.gts', './addon-test-support/**/*.ts'],
-};
-const addonJS = {
-  ...appJS,
-  files: ['./addon/**/*.js', './addon/**/*.gjs', './addon-test-support/**/*.js'],
-};
-const addonV2JS = {
-  ...appJS,
-  files: ['./src/**/*.js', './src/**/*.gjs'],
-};
-const addonV2TS = {
-  ...appTS,
-  files: ['./src/**/*.ts', './src/**/*.gts'],
-};
+  const configBuilder = {
+    modules: {
+      browser: {
+        get js() {
+          return pipe(
+            {
+              parser: '@babel/eslint-parser',
+              parserOptions: {
+                requireConnfigFile: false,
+                babelOptions: {
+                  babelrc: false,
+                  configFile: false,
+                },
+              },
+              env: {
+                browser: true,
+              },
+            },
+            (config) => merge(config, personalPreferences),
+            (config) => merge(config, require('./rules/ember'))
+          );
+        },
+        get ts() {
+          if (!hasTypeScript) return;
 
-const testsTS = {
-  ...appTS,
-  files: ['./tests/**/*.ts', './tests/**/*.gts'],
-  excludedFiles: ['tests/dummy/declarations/**'],
-  plugins: [...appTS.plugins, 'qunit'],
-  extends: [...appTS.extends, 'plugin:qunit/recommended'],
-  env: {
-    ...appTS.env,
-    embertest: true,
-  },
-  rules: {
-    ...appTS.rules,
+          return pipe(
+            {
+              env: {
+                browser: true,
+              },
+            },
+            (config) => merge(config, personalPreferences),
+            (config) => merge(config, require('./rules/ember')),
+            (config) => merge(config, require('./rules/typescript'))
+          );
+        },
+        get declarations() {
+          if (!hasTypeScript) return;
 
-    // doesn't support deep nesting
-    'qunit/no-identical-names': 'warn',
-    // this rule is incomplete
-    'ember/no-test-import-export': 'off',
-
-    // handy to do this sort of thing in tests
-    '@typescript-eslint/no-empty-function': 'off',
-    '@typescript-eslint/no-floating-promises': 'off',
-  },
-};
-const testsJS = {
-  ...appJS,
-  files: ['./tests/**/*.js', './tests/**/*.gjs'],
-  plugins: [...appJS.plugins, 'qunit'],
-  extends: [...appJS.extends, 'plugin:qunit/recommended'],
-  env: {
-    ...appJS.env,
-    embertest: true,
-  },
-  rules: {
-    ...appJS.rules,
-
-    // doesn't support deep nesting
-    'qunit/no-identical-names': 'warn',
-    // this rule is incomplete
-    'ember/no-test-import-export': 'off',
-  },
-};
-const typeDeclarations = {
-  ...tsBase,
-  files: ['./types/**', '*.d.ts'],
-  rules: {
-    ...tsBase.rules,
-    // custom type declarations get wonky
-    '@typescript-eslint/no-explicit-any': 'off',
-  },
-};
-
-const { baseConfig, baseModulesConfig } = require('./node');
-
-const packagePath = require.resolve(process.cwd() + '/package.json');
-const packageJson = require(packagePath);
-const isModules = packageJson.type === 'module' || packageJson['ember-addon']?.version === 2;
-const nodeFiles = [
-  './*.js',
-  './blueprints/*/index.js',
-  './config/**/*.js',
-  './lib/**/*.js',
-  './tests/dummy/config/**/*.js',
-  './scripts/**/*.js',
-];
-
-const nodeConfigs = isModules
-  ? [
-      {
-        ...baseConfig,
-        files: nodeFiles.map((filePath) => filePath.replace('.js', '.cjs')),
+          return pipe(
+            {
+              env: {
+                browser: true,
+              },
+            },
+            (config) => merge(config, personalPreferences),
+            (config) => merge(config, require('./rules/typescript-declarations'))
+          );
+        },
       },
-      {
-        ...baseModulesConfig,
-        files: [...nodeFiles, ...nodeFiles.map((filePath) => filePath.replace('.js', '.mjs'))],
-      },
-    ]
-  : [
-      {
-        ...baseConfig,
-        files: [...nodeFiles, ...nodeFiles.map((filePath) => filePath.replace('.js', '.cjs'))],
-      },
-      {
-        ...baseModulesConfig,
-        files: nodeFiles.map((filePath) => filePath.replace('.js', '.mjs')),
-      },
-    ];
+      tests: {
+        get js() {
+          let browserJS = configBuilder.modules.browser.js;
 
-const deprecationWorkflow = {
-  ...jsBase,
-  parserOptions: {
-    ...jsBase.parserOptions,
-    sourceType: 'script',
-  },
-  files: ['tests/dummy/config/deprecation-workflow.js', 'config/deprecation-workflow.js'],
-  plugins: [moduleBase.plugins].flat(),
-  extends: ['eslint:recommended', 'prettier'],
-  rules: {
-    ...jsBase.rules,
-    ...baseRulesAppliedLast,
-  },
-};
+          return {
+            ...browserJS,
+            extends: [...browserJS.extends, 'plugin:qunit/recommended'],
+          };
+        },
+        get ts() {
+          if (!hasTypeScript) return;
 
-module.exports = {
-  parts: {
-    appTS,
-    appJS,
-    addonTS,
-    addonJS,
-    addonV2JS,
-    addonV2TS,
-    testsTS,
-    testsJS,
-    typeDeclarations,
-    nodeConfigs,
-    deprecationWorkflow,
-  },
-  ember: [
-    appTS,
-    appJS,
-    addonTS,
-    addonJS,
-    addonV2JS,
-    addonV2TS,
-    testsTS,
-    testsJS,
-    typeDeclarations,
-    ...nodeConfigs,
-    deprecationWorkflow,
-  ],
-};
+          let browserTS = configBuilder.modules.browser.ts;
+
+          return {
+            ...browserTS,
+            extends: [...browserTS.extends, 'plugin:qunit/recommended'],
+          };
+        },
+      },
+    },
+    commonjs: {
+      node: {
+        get js() {
+          return pipe(
+            {
+              parserOptions: {
+                sourceType: 'script',
+                ecmaVersion: 'latest',
+              },
+              env: {
+                browser: false,
+                node: true,
+                es6: true,
+              },
+              plugins: ['n'],
+              extends: ['plugin:n/recommended'],
+            },
+            (config) => merge(config, personalPreferences)
+          );
+        },
+      },
+    },
+  };
+
+  return configBuilder;
+}

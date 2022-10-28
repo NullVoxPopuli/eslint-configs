@@ -1,43 +1,39 @@
 // @ts-check
 'use strict';
 
-const { configCreator } = require('./utils');
+const { merge, pipe } = require('./configs/-utils');
 
 module.exports = {
-  // by using getters here we don't force projects to install
-  // dependencies of each of these configs if they are not needed
+  merge,
+  pipe,
   configs: {
-    get ember() {
-      const { ember } = require('./configs/ember');
-      const { json } = require('./configs/json');
-
-      let defaultConfig = configCreator(ember, json);
-
-      return () => {
-        return {
-          plugins: ['ember'],
-          extends: ['plugin:ember/recommended'],
-          ...defaultConfig(),
-        };
-      };
+    /**
+     * @param {import('./configs/types').Options} [ options ]
+     * @returns {import('eslint').Linter.Config}
+     */
+    ember(options = {}) {
+      return require('./configs/ember')(options);
     },
-    get nodeCJS() {
-      const { nodeCJS } = require('./configs/node');
-      const { json } = require('./configs/json');
-
-      return configCreator(nodeCJS, json);
+    /**
+     * @param {import('./configs/types').Options} [ options ]
+     * @returns {import('eslint').Linter.Config}
+     */
+    node(options = {}) {
+      return require('./configs/node').node(options);
     },
-    get node() {
-      const { nodeESM } = require('./configs/node');
-      const { json } = require('./configs/json');
-
-      return configCreator(nodeESM, json);
+    /**
+     * @param {import('./configs/types').Options} [ options ]
+     * @returns {import('eslint').Linter.Config}
+     */
+    nodeCJS(options = {}) {
+      return require('./configs/node').nodeCJS(options);
     },
-    get nodeTS() {
-      const { nodeESM, nodeMTS } = require('./configs/node');
-      const { json } = require('./configs/json');
-
-      return configCreator(nodeESM, nodeMTS, json);
+    /**
+     * @param {import('./configs/types').Options} [ options ]
+     * @returns {import('eslint').Linter.Config}
+     */
+    nodeESM(options = {}) {
+      return require('./configs/node').nodeESM(options);
     },
   },
 };
