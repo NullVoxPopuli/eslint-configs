@@ -29,15 +29,3 @@ jobs:
       - name: ESLint
         run: yarn lint:js
 
-  commits:
-    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
-    name: Commit Messages
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-
-    - uses: volta-cli/action@v4
-    - uses: wagoid/commitlint-github-action@v5.2.2
