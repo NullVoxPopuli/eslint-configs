@@ -36,7 +36,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-qunit": "7.3.4",
     "eslint-plugin-simple-import-sort": "^8.0.0",
-    "prettier": "2.7.1"
+    "prettier": "2.8.1"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
