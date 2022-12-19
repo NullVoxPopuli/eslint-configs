@@ -131,6 +131,38 @@ module.exports = {
 }
 ```
 
+**Configure babel parser of js files**
+
+*.js files are now parsed with @babel/eslint-parser. Config file if disabled by default by eslint-configs.
+
+```js
+// .eslintrc.js
+'use strict';
+
+const { configs } = require('@nullvoxpopuli/eslint-configs');
+const config = configs.node();
+
+module.exports = {
+  ...config,
+  overrides: [
+    ...config.overrides,
+    {
+      files: ['**/*.js'],
+      parserOptions: {
+        // Enable babel config file
+        requireConfigFile: true,
+      },
+    },
+  ]
+}
+```
+
+```js
+// .babelrc.js
+
+// This is the babel config file
+```
+
 ## Gaining additional lints with 0 config
 
 This lint config meta package is setup to lazily detect which plugins and configurations you have installed and automatically add them to your lint config.
