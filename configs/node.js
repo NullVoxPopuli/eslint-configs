@@ -7,10 +7,11 @@ const baseConfig = {
     browser: false,
     node: true,
   },
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     sourceType: 'script',
     ecmaVersion: 2018,
+    requireConfigFile: false,
   },
   plugins: ['node', ...scriptBase.plugins],
   rules: {
