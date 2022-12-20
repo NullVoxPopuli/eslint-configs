@@ -29,7 +29,7 @@
     "eslint": "8.30.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-decorator-position": "5.0.1",
-    "eslint-plugin-ember": "11.2.1",
+    "eslint-plugin-ember": "11.3.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-node": "11.1.0",
