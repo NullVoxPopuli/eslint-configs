@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
 import { configs } from '../index.js';
-import { findRule } from './-helpers.cjs';
+import { findRule } from './-helpers.js';
 
 describe('configs', () => {
   describe('accessing each of the configs builds a valid ESLint config without error', () => {
