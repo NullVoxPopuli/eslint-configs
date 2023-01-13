@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.0.1
+
+### Patch Changes
+
+- [#319](https://github.com/NullVoxPopuli/eslint-configs/pull/319) [`e29a127`](https://github.com/NullVoxPopuli/eslint-configs/commit/e29a1277b3f4183840eec87ac5d19b67f86d2250) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - in ember's deprecation-worflow.js, allow the "self" global
+
 ## 3.0.0
 
 ### Major Changes
