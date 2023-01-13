@@ -1,8 +1,8 @@
 import { getOwner } from '@ember/application';
+import { assert } from '@ember/debug';
 import { scheduleOnce } from '@ember/runloop';
 import Service, { inject as service } from '@ember/service';
 import { isEmpty } from '@ember/utils';
-import { assert } from '@ember/debug';
 
 let isFastBoot = typeof FastBoot !== 'undefined';
 
@@ -15,13 +15,11 @@ const RouterEvent = {
   @extends Ember.Service
  */
 export default class PageTitleService extends Service {
-  @service('router')
-  router;
+  @service('router') router;
 
   // in fastboot context "document" is instance of
   // ember-fastboot/simple-dom document
-  @service('-document')
-  document;
+  @service('-document') document;
 
   tokens = [];
 
@@ -41,6 +39,7 @@ export default class PageTitleService extends Service {
     this._validateExistingTitleElement();
 
     let config = getOwner(this).resolveRegistration('config:environment');
+
     if (config.pageTitle) {
       ['separator', 'prepend', 'replace'].forEach((key) => {
         if (!isEmpty(config.pageTitle[key])) {
@@ -48,6 +47,7 @@ export default class PageTitleService extends Service {
         }
       });
     }
+
     this.router.on(RouterEvent.ROUTE_DID_CHANGE, this.scheduleTitleUpdate);
   }
 
@@ -71,6 +71,7 @@ export default class PageTitleService extends Service {
 
   inheritFromPrevious(token) {
     let previous = token.previous;
+
     if (previous) {
       if (token.separator == null) {
         token.separator = previous.separator;
@@ -84,10 +85,12 @@ export default class PageTitleService extends Service {
 
   push(token) {
     let tokenForId = this._findTokenById(token.id);
+
     if (tokenForId) {
       let index = this.tokens.indexOf(tokenForId);
       let tokens = [...this.tokens];
       let previous = tokenForId.previous;
+
       token.previous = previous;
       token.next = tokenForId.next;
       this.inheritFromPrevious(token);
@@ -95,10 +98,12 @@ export default class PageTitleService extends Service {
 
       tokens.splice(index, 1, token);
       this.tokens = tokens;
+
       return;
     }
 
     let previous = this.tokens.slice(-1)[0];
+
     if (previous) {
       token.previous = previous;
       previous.next = token;
@@ -112,6 +117,7 @@ export default class PageTitleService extends Service {
   remove(id) {
     let token = this._findTokenById(id);
     let { next, previous } = token;
+
     if (next) {
       next.previous = previous;
     }
@@ -123,6 +129,7 @@ export default class PageTitleService extends Service {
     token.previous = token.next = null;
 
     let tokens = [...this.tokens];
+
     tokens.splice(tokens.indexOf(token), 1);
     this.tokens = tokens;
   }
@@ -131,15 +138,19 @@ export default class PageTitleService extends Service {
     let tokens = this.tokens;
     let i = tokens ? tokens.length : 0;
     let visible = [];
+
     while (i--) {
       let token = tokens[i];
+
       if (token.replace) {
         visible.unshift(token);
+
         break;
       } else {
         visible.unshift(token);
       }
     }
+
     return visible;
   }
 
@@ -149,6 +160,7 @@ export default class PageTitleService extends Service {
     let group = [];
     let groups = [group];
     let frontGroups = [];
+
     visible.forEach((token) => {
       if (token.front) {
         frontGroups.unshift(token);
@@ -158,11 +170,14 @@ export default class PageTitleService extends Service {
           group = [];
           groups.push(group);
         }
+
         let lastToken = group[0];
+
         if (lastToken) {
           token = { ...token };
           token.separator = lastToken.separator;
         }
+
         group.unshift(token);
       } else {
         if (!appending) {
@@ -170,6 +185,7 @@ export default class PageTitleService extends Service {
           group = [];
           groups.push(group);
         }
+
         group.push(token);
       }
     });
@@ -184,15 +200,19 @@ export default class PageTitleService extends Service {
   toString() {
     let tokens = this.sortedTokens;
     let title = [];
+
     for (let i = 0, len = tokens.length; i < len; i++) {
       let token = tokens[i];
+
       if (token.title) {
         title.push(token.title);
+
         if (i + 1 < len) {
           title.push(token.separator);
         }
       }
     }
+
     return title.join('');
   }
 
@@ -232,6 +252,7 @@ export default class PageTitleService extends Service {
     if (isFastBoot) {
       return;
     }
+
     assert(
       '[ember-page-title]: Multiple title elements found. Check for other addons like ember-cli-head updating <title> as well.',
       document.head.querySelectorAll('title').length <= 1
@@ -256,12 +277,14 @@ export default class PageTitleService extends Service {
     if (!isFastBoot) {
       return;
     }
+
     const headElement = this.document.head;
     const headChildNodes = headElement.childNodes;
 
     // Remove existing title elements from previous render cycle
     for (let i = 0; i < headChildNodes.length; i++) {
       let node = headChildNodes[i];
+
       if (node.nodeName.toLowerCase() === 'title') {
         headElement.removeChild(node);
       }
@@ -270,6 +293,7 @@ export default class PageTitleService extends Service {
     // Add title element with latest value
     let titleEl = this.document.createElement('title');
     let titleContents = this.document.createTextNode(toBeTitle);
+
     titleEl.appendChild(titleContents);
     headElement.appendChild(titleEl);
   }

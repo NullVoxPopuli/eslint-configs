@@ -8,5 +8,6 @@ export function getPageTitle(doc) {
   let element = [
     ...(doc || window.document).querySelectorAll('head title'),
   ].pop();
+
   return element && element.innerText.trim().replace(/^\(\d+\/\d+\)/, '');
 }

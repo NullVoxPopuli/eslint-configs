@@ -62,20 +62,23 @@ function configBuilder(options = {}) {
     personalPreferences = merge(personalPreferences, require('./rules/prettier').resolveRule());
   }
 
+  const babelParser = {
+    parser: '@babel/eslint-parser',
+    parserOptions: {
+      requireConnfigFile: false,
+      babelOptions: {
+        plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
+      },
+    },
+  };
+
   const configBuilder = {
     modules: {
       browser: {
         get js() {
           return pipe(
             {
-              parser: '@babel/eslint-parser',
-              parserOptions: {
-                requireConnfigFile: false,
-                babelOptions: {
-                  babelrc: false,
-                  configFile: false,
-                },
-              },
+              ...babelParser,
               env: {
                 browser: true,
               },

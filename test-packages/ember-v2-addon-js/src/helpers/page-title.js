@@ -1,6 +1,6 @@
-import { inject as service } from '@ember/service';
 import Helper from '@ember/component/helper';
 import { guidFor } from '@ember/object/internals';
+import { inject as service } from '@ember/service';
 
 /**
   `{{page-title}}` helper used to set the title of the current route context.
@@ -9,8 +9,7 @@ import { guidFor } from '@ember/object/internals';
   @method page-title
  */
 export default class PageTitle extends Helper {
-  @service('page-title')
-  tokens;
+  @service('page-title') tokens;
 
   get tokenId() {
     return guidFor(this);
@@ -30,6 +29,7 @@ export default class PageTitle extends Helper {
 
     this.tokens.push(hash);
     this.tokens.scheduleTitleUpdate();
+
     return '';
   }
 
