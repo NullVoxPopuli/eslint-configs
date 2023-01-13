@@ -1,0 +1,15 @@
+{
+  "name": "@nullvoxpopuli/ember-v2-addon-ts",
+  "private": true,
+  "scripts": {
+    "lint:js": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "8.31.0",
+    "@nullvoxpopuli/eslint-configs": "workspace:../..",
+    "typescript": "^4.9.4"
+  },
+  "engines": {
+    "node": ">= 16"
+  }
+}
