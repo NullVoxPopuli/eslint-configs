@@ -53,6 +53,14 @@ importers:
       typescript: 4.9.4
       vitest: 0.26.3
 
+  test-packages/ember-v2-addon-js:
+    specifiers:
+      '@nullvoxpopuli/eslint-configs': workspace:../..
+      eslint: 8.31.0
+    devDependencies:
+      '@nullvoxpopuli/eslint-configs': link:../..
+      eslint: 8.31.0
+
   test-packages/ember-v2-addon-ts:
     specifiers:
       '@nullvoxpopuli/eslint-configs': workspace:../..
