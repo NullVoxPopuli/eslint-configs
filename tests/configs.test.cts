@@ -49,7 +49,7 @@ describe('with settings', () => {
         'prettier/prettier'
       );
 
-      expect(matches).toHaveLength(6);
+      expect(matches).toHaveLength(7);
     });
 
     test('nodeESM', () => {
