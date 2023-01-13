@@ -7,14 +7,14 @@ on:
       - main
       - master
   schedule:
-    - cron: "0 3 * * 0" # every Sunday at 3am
+    - cron: '0 3 * * 0' # every Sunday at 3am
 
 env:
   CI: true
 
 jobs:
   own_tests:
-    name: "Own Tests"
+    name: 'Own Tests'
     timeout-minutes: 5
     runs-on: ubuntu-latest
 
@@ -32,6 +32,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: volta-cli/action@v4
       - uses: ./.github/actions/pnpm
+
+      - name: Formatting
+        run: pnpm format
 
       - name: ESLint
         run: pnpm lint:js
@@ -56,9 +59,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: volta-cli/action@v4
       - uses: ./.github/actions/pnpm
-
-      - name: Prettier
-        run: pnpm lint:all:js
 
 
   # lint_types:

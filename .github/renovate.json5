@@ -1,22 +1,19 @@
 // Docs:
 // https://docs.renovatebot.com/configuration-options/
 {
-  "extends": [
-    "config:base",
-    ":semanticCommits"
-  ],
-  "automerge": true,
-  "masterIssue": true,
-  "rangeStrategy": "bump",
-  "packageRules": [
+  extends: ['config:base', ':semanticCommits'],
+  automerge: true,
+  masterIssue: true,
+  rangeStrategy: 'bump',
+  packageRules: [
     {
-      "packageNames": ["node"],
-      "enabled": false
-    }
+      packageNames: ['node'],
+      enabled: false,
+    },
     ////////////////////////////////////////
     // Grouping namespaced packages together
     //
     // This reduces overall PR count
     ////////////////////////////////////////
-  ]
+  ],
 }
