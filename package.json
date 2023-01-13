@@ -19,6 +19,7 @@
   "scripts": {
     "release": "changeset publish",
     "lint:js": "eslint .",
+    "lint:all:js": "pnpm --filter '*' lint:js",
     "lint:types": "tsc --noEmit",
     "test": "vitest"
   },

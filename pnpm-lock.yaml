@@ -1,56 +1,93 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@babel/core': ^7.20.12
-  '@babel/eslint-parser': ^7.19.1
-  '@changesets/changelog-github': ^0.4.8
-  '@changesets/cli': ^2.26.0
-  '@tsconfig/node18-strictest': ^1.0.0
-  '@types/eslint': ^8.4.10
-  '@typescript-eslint/eslint-plugin': 5.48.0
-  '@typescript-eslint/parser': 5.48.0
-  cosmiconfig: ^8.0.0
-  eslint: 8.31.0
-  eslint-config-prettier: 8.6.0
-  eslint-import-resolver-typescript: ^3.5.2
-  eslint-plugin-decorator-position: ^5.0.1
-  eslint-plugin-ember: 11.4.2
-  eslint-plugin-import: ^2.26.0
-  eslint-plugin-json: ^3.1.0
-  eslint-plugin-n: ^15.6.0
-  eslint-plugin-prettier: ^4.2.1
-  eslint-plugin-qunit: 7.3.4
-  eslint-plugin-simple-import-sort: ^8.0.0
-  prettier: 2.8.2
-  typescript: ^4.9.4
-  vitest: ^0.26.3
+importers:
 
-dependencies:
-  cosmiconfig: 8.0.0
-  eslint-import-resolver-typescript: 3.5.2_ol7jqilc3wemtdbq3nzhywgxq4
-  eslint-plugin-decorator-position: 5.0.1_hmtvptkcahin2z7n6w4gscsx64
-  eslint-plugin-import: 2.26.0_cxu27kyieece4tnvunezm4whiq
-  eslint-plugin-json: 3.1.0
-  eslint-plugin-n: 15.6.0_eslint@8.31.0
-  eslint-plugin-prettier: 4.2.1_iu5s7nk6dw7o3tajefwfiqfmge
-  eslint-plugin-simple-import-sort: 8.0.0_eslint@8.31.0
+  .:
+    specifiers:
+      '@babel/core': ^7.20.12
+      '@babel/eslint-parser': ^7.19.1
+      '@changesets/changelog-github': ^0.4.8
+      '@changesets/cli': ^2.26.0
+      '@tsconfig/node18-strictest': ^1.0.0
+      '@types/eslint': ^8.4.10
+      '@typescript-eslint/eslint-plugin': 5.48.0
+      '@typescript-eslint/parser': 5.48.0
+      cosmiconfig: ^8.0.0
+      eslint: 8.31.0
+      eslint-config-prettier: 8.6.0
+      eslint-import-resolver-typescript: ^3.5.2
+      eslint-plugin-decorator-position: ^5.0.1
+      eslint-plugin-ember: 11.4.2
+      eslint-plugin-import: ^2.26.0
+      eslint-plugin-json: ^3.1.0
+      eslint-plugin-n: ^15.6.0
+      eslint-plugin-prettier: ^4.2.1
+      eslint-plugin-qunit: 7.3.4
+      eslint-plugin-simple-import-sort: ^8.0.0
+      prettier: 2.8.2
+      typescript: ^4.9.4
+      vitest: ^0.26.3
+    dependencies:
+      cosmiconfig: 8.0.0
+      eslint-import-resolver-typescript: 3.5.2_ol7jqilc3wemtdbq3nzhywgxq4
+      eslint-plugin-decorator-position: 5.0.1_hmtvptkcahin2z7n6w4gscsx64
+      eslint-plugin-import: 2.26.0_cxu27kyieece4tnvunezm4whiq
+      eslint-plugin-json: 3.1.0
+      eslint-plugin-n: 15.6.0_eslint@8.31.0
+      eslint-plugin-prettier: 4.2.1_iu5s7nk6dw7o3tajefwfiqfmge
+      eslint-plugin-simple-import-sort: 8.0.0_eslint@8.31.0
+    devDependencies:
+      '@babel/core': 7.20.12
+      '@babel/eslint-parser': 7.19.1_ucmnolur3r335ullwiyt3zl3pi
+      '@changesets/changelog-github': 0.4.8
+      '@changesets/cli': 2.26.0
+      '@tsconfig/node18-strictest': 1.0.0
+      '@types/eslint': 8.4.10
+      '@typescript-eslint/eslint-plugin': 5.48.0_k73wpmdolxikpyqun3p36akaaq
+      '@typescript-eslint/parser': 5.48.0_iukboom6ndih5an6iafl45j2fe
+      eslint: 8.31.0
+      eslint-config-prettier: 8.6.0_eslint@8.31.0
+      eslint-plugin-ember: 11.4.2_eslint@8.31.0
+      eslint-plugin-qunit: 7.3.4_eslint@8.31.0
+      prettier: 2.8.2
+      typescript: 4.9.4
+      vitest: 0.26.3
 
-devDependencies:
-  '@babel/core': 7.20.12
-  '@babel/eslint-parser': 7.19.1_ucmnolur3r335ullwiyt3zl3pi
-  '@changesets/changelog-github': 0.4.8
-  '@changesets/cli': 2.26.0
-  '@tsconfig/node18-strictest': 1.0.0
-  '@types/eslint': 8.4.10
-  '@typescript-eslint/eslint-plugin': 5.48.0_k73wpmdolxikpyqun3p36akaaq
-  '@typescript-eslint/parser': 5.48.0_iukboom6ndih5an6iafl45j2fe
-  eslint: 8.31.0
-  eslint-config-prettier: 8.6.0_eslint@8.31.0
-  eslint-plugin-ember: 11.4.2_eslint@8.31.0
-  eslint-plugin-qunit: 7.3.4_eslint@8.31.0
-  prettier: 2.8.2
-  typescript: 4.9.4
-  vitest: 0.26.3
+  test-packages/node-js-cjs:
+    specifiers:
+      '@nullvoxpopuli/eslint-configs': workspace:../..
+      eslint: 8.31.0
+    devDependencies:
+      '@nullvoxpopuli/eslint-configs': link:../..
+      eslint: 8.31.0
+
+  test-packages/node-js-mjs:
+    specifiers:
+      '@nullvoxpopuli/eslint-configs': workspace:../..
+      eslint: 8.31.0
+    devDependencies:
+      '@nullvoxpopuli/eslint-configs': link:../..
+      eslint: 8.31.0
+
+  test-packages/node-ts-cjs:
+    specifiers:
+      '@nullvoxpopuli/eslint-configs': workspace:../..
+      eslint: 8.31.0
+      typescript: ^4.9.4
+    devDependencies:
+      '@nullvoxpopuli/eslint-configs': link:../..
+      eslint: 8.31.0
+      typescript: 4.9.4
+
+  test-packages/node-ts-mjs:
+    specifiers:
+      '@nullvoxpopuli/eslint-configs': workspace:../..
+      eslint: 8.31.0
+      typescript: ^4.9.4
+    devDependencies:
+      '@nullvoxpopuli/eslint-configs': link:../..
+      eslint: 8.31.0
+      typescript: 4.9.4
 
 packages:
 

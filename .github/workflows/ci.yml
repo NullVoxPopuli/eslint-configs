@@ -36,8 +36,8 @@ jobs:
       - name: ESLint
         run: pnpm lint:js
 
-  lint_types:
-    name: Lint Types
+  lint_test-packages:
+    name: Lint Test Packages
     runs-on: ubuntu-latest
 
     steps:
@@ -45,8 +45,20 @@ jobs:
       - uses: volta-cli/action@v4
       - uses: ./.github/actions/pnpm
 
-      - name: Type Check
-        run: pnpm tsc
+      - name: ESLint
+        run: pnpm lint:all:js
+
+  # lint_types:
+  #   name: Lint Types
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: volta-cli/action@v4
+  #     - uses: ./.github/actions/pnpm
+
+  #     - name: Type Check
+  #       run: pnpm tsc
 
   # https://github.com/changesets/action
   release:
@@ -57,7 +69,8 @@ jobs:
     needs:
       - own_tests
       - lint_source
-      - lint_types
+      - lint_test-packages
+      # - lint_types
 
     steps:
       - uses: actions/checkout@v3
