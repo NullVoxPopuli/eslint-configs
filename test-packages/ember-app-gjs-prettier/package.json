@@ -1,14 +1,14 @@
 {
-  "name": "@nullvoxpopuli/ember-v2-addon-ts-prettier-integration",
+  "name": "@nullvoxpopuli/ember-app-gjs-prettier",
   "private": true,
   "scripts": {
     "format:check": "prettier -c .",
+    "format": "prettier -w .",
     "lint:js": "eslint ."
   },
   "devDependencies": {
-    "eslint": "8.31.0",
     "@nullvoxpopuli/eslint-configs": "workspace:../..",
-    "prettier": "2.8.2",
-    "typescript": "^4.9.4"
+    "eslint": "8.31.0",
+    "prettier": "2.8.2"
   }
 }

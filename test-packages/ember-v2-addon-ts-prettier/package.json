@@ -1,12 +1,15 @@
 {
-  "name": "@nullvoxpopuli/ember-v2-addon-ts-prettier",
-  "private": true,
-  "scripts": {
-    "lint:js": "eslint ."
-  },
-  "devDependencies": {
-    "eslint": "8.31.0",
-    "@nullvoxpopuli/eslint-configs": "workspace:../..",
-    "typescript": "^4.9.4"
-  }
+    "name": "@nullvoxpopuli/ember-v2-addon-ts-prettier",
+    "private": true,
+    "scripts": {
+        "format:check": "prettier -c .",
+        "format": "prettier -w .",
+        "lint:js": "eslint ."
+    },
+    "devDependencies": {
+        "eslint": "8.31.0",
+        "@nullvoxpopuli/eslint-configs": "workspace:../..",
+        "prettier": "2.8.2",
+        "typescript": "^4.9.4"
+    }
 }

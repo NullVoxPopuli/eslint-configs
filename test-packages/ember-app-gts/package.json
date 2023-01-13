@@ -1,5 +1,5 @@
 {
-  "name": "@nullvoxpopuli/ember-app-gjs",
+  "name": "@nullvoxpopuli/ember-app-gts",
   "private": true,
   "scripts": {
     "lint:js": "eslint ."
