@@ -16,9 +16,14 @@ module.exports = (options = {}) => {
       [
         '{src,app,addon,addon-test-support,tests}/**/*.{gjs,js}',
         'tests/dummy/config/deprecation-workflow.js',
-        'config/deprecation-workflow.js',
       ],
       config.modules.browser.js
+    ),
+    forFiles(
+      'config/deprecation-workflow.js',
+      merge(config.modules.browser.js, {
+        globals: { self: 'readonly' },
+      })
     ),
     forFiles(
       '{src,app,addon,addon-test-support,tests,types}/**/*.{gts,ts}',
