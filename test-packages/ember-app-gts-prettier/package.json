@@ -1,8 +1,9 @@
 {
-  "name": "@nullvoxpopuli/ember-app-gts",
+  "name": "@nullvoxpopuli/ember-app-gts-prettier",
   "private": true,
   "scripts": {
     "format:check": "prettier -c .",
+    "format": "prettier -w .",
     "lint:js": "eslint ."
   },
   "devDependencies": {
