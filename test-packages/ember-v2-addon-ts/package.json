@@ -8,8 +8,5 @@
     "eslint": "8.31.0",
     "@nullvoxpopuli/eslint-configs": "workspace:../..",
     "typescript": "^4.9.4"
-  },
-  "engines": {
-    "node": ">= 16"
   }
 }
