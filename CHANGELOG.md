@@ -1,3 +1,5 @@
+# @nullvoxpopuli/eslint-configs
+
 ## [2.3.5](https://github.com/NullVoxPopuli/eslint-configs/compare/v2.3.4...v2.3.5) (2022-11-14)
 
 
