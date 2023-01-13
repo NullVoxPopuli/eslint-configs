@@ -20,7 +20,7 @@ importers:
       eslint-plugin-ember: 11.4.2
       eslint-plugin-import: ^2.26.0
       eslint-plugin-json: ^3.1.0
-      eslint-plugin-n: ^15.6.0
+      eslint-plugin-n: ^15.6.1
       eslint-plugin-prettier: ^4.2.1
       eslint-plugin-qunit: 7.3.4
       eslint-plugin-simple-import-sort: ^8.0.0
@@ -33,7 +33,7 @@ importers:
       eslint-plugin-decorator-position: 5.0.1_hmtvptkcahin2z7n6w4gscsx64
       eslint-plugin-import: 2.26.0_sdr4ve3dj3bxiks4kzrjoo3cty
       eslint-plugin-json: 3.1.0
-      eslint-plugin-n: 15.6.0_eslint@8.31.0
+      eslint-plugin-n: 15.6.1_eslint@8.31.0
       eslint-plugin-prettier: 4.2.1_iu5s7nk6dw7o3tajefwfiqfmge
       eslint-plugin-simple-import-sort: 8.0.0_eslint@8.31.0
     devDependencies:
@@ -1590,7 +1590,7 @@ packages:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   /convert-source-map/1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
@@ -2132,8 +2132,8 @@ packages:
       vscode-json-languageservice: 4.2.1
     dev: false
 
-  /eslint-plugin-n/15.6.0_eslint@8.31.0:
-    resolution: {integrity: sha512-Hd/F7wz4Mj44Jp0H6Jtty13NcE69GNTY0rVlgTIj1XBnGGVI6UTdDrpE6vqu3AHo07bygq/N+7OH/lgz1emUJw==}
+  /eslint-plugin-n/15.6.1_eslint@8.31.0:
+    resolution: {integrity: sha512-R9xw9OtCRxxaxaszTQmQAlPgM+RdGjaL1akWuY/Fv9fRAi8Wj4CUKc6iYVG8QNRjRuo8/BqVYIpfqberJUEacA==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       eslint: '>=7.0.0'
@@ -2142,7 +2142,7 @@ packages:
       eslint: 8.31.0
       eslint-plugin-es: 4.1.0_eslint@8.31.0
       eslint-utils: 3.0.0_eslint@8.31.0
-      ignore: 5.2.0
+      ignore: 5.2.4
       is-core-module: 2.11.0
       minimatch: 3.1.2
       resolve: 1.22.1
@@ -2696,11 +2696,6 @@ packages:
     dependencies:
       safer-buffer: 2.1.2
     dev: true
-
-  /ignore/5.2.0:
-    resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
-    engines: {node: '>= 4'}
-    dev: false
 
   /ignore/5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
