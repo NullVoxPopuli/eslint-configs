@@ -21,8 +21,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: volta-cli/action@v4
-      - run: yarn install --frozen-lockfile
-      - run: yarn jest
+      - uses: ./.github/actions/pnpm
+      - run: pnpm test
 
   lint_source:
     name: Lint Source
@@ -31,40 +31,34 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: volta-cli/action@v4
-
-      - run: yarn install --frozen-lockfile
+      - uses: ./.github/actions/pnpm
 
       - name: ESLint
-        run: yarn lint:js
+        run: pnpm lint:js
 
+  lint_test-packages:
+    name: Lint Test Packages
+    runs-on: ubuntu-latest
 
-  # tests:
-  #   if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
-  #   name: "Test: ${{ matrix.name }}"
-  #   timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v3
+      - uses: volta-cli/action@v4
+      - uses: ./.github/actions/pnpm
+
+      - name: ESLint
+        run: pnpm lint:all:js
+
+  # lint_types:
+  #   name: Lint Types
   #   runs-on: ubuntu-latest
-  #   continue-on-error: ${{ matrix.allow-failure }}
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       name:
-  #         - 'emberclear'
-  #         - 'highlightjs-glimmer'
-  #         - 'limber'
-  #       allow-failure: [true]
-  #       # include:
-  #       #   - name: emberclear
-  #       #     allow-failure: true
-  #       #   - name: highlightjs-glimmer
-  #       #     allow-failure: true
-  #       #   - name: limber
-  #       #     allow-failure: true
 
   #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: volta-cli/action@v1
-  #     - run: yarn install --frozen-lockfile
-  #     - run: ./partner-tests/${{ matrix.name }}.sh
+  #     - uses: actions/checkout@v3
+  #     - uses: volta-cli/action@v4
+  #     - uses: ./.github/actions/pnpm
+
+  #     - name: Type Check
+  #       run: pnpm tsc
 
   # https://github.com/changesets/action
   release:
@@ -74,6 +68,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs:
       - own_tests
+      - lint_source
+      - lint_test-packages
+      # - lint_types
 
     steps:
       - uses: actions/checkout@v3
@@ -85,9 +82,9 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          # This expects you to have a script called release which does a build for your
+          # packages and calls changeset publish
           publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-

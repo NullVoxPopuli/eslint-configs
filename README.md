@@ -23,6 +23,26 @@ you'll need to ensure that all the dependencies of `@nullvoxpopuli/eslint-config
 
 This is easier with either yarn workspaces or npm. Standalone yarn with non-monorepos nests `node_modules` which confuses eslint.
 
+## Upgrading across major version boundaries
+
+This goes for major bumps of this package, and any plugin within.
+
+You'll want to use [eslint-formatter-todo](https://github.com/lint-todo/eslint-formatter-todo),
+so that when you encounter new rules, or a plugin changes the defaults, you can _mark them as "TODO"_.
+This is effectively _temporarily_ turning errors into warnings,
+but it allows you to incrementally adopt big changes to your lint configs over time.
+
+This is _especially_ useful on large codebases, and when lint rules don't come with auto-fixers.
+
+I'd recommend updating your `lint:js` script in `package.json` to:
+```js
+"scripts": {
+  "lint:js": "eslint . --format @lint-todo/eslint-formatter-todo"
+}
+```
+
+See the [Usage](https://github.com/lint-todo/eslint-formatter-todo#usage) section of eslint-formatter-todo for details.
+
 ## Usage
 
 **Ember**

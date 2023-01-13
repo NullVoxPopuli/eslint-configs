@@ -1,6 +1,6 @@
 {
   "name": "@nullvoxpopuli/eslint-configs",
-  "version": "2.3.5",
+  "version": "3.0.0-beta.0",
   "description": "eslint configs for the NullVoxPopuli's projects",
   "main": "index.js",
   "type": "commonjs",
@@ -10,39 +10,85 @@
   "author": "NullVoxPopuli",
   "license": "MIT",
   "volta": {
-    "node": "14.17.3",
+    "node": "16.19.0",
     "yarn": "1.22.19"
   },
   "engines": {
-    "node": ">= v12.0.0"
+    "node": ">= v16.0.0"
   },
   "scripts": {
     "release": "changeset publish",
-    "lint:js": "eslint .",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "lint:js": "eslint . --ignore-pattern test-packages",
+    "lint:all:js": "pnpm --filter '*' lint:js",
+    "lint:types": "tsc --noEmit",
+    "test": "vitest"
   },
-  "dependencies": {
-    "@babel/eslint-parser": "7.19.1",
-    "@typescript-eslint/eslint-plugin": "5.48.1",
-    "@typescript-eslint/parser": "5.48.1",
-    "eslint": "8.31.0",
-    "eslint-config-prettier": "8.6.0",
-    "eslint-plugin-decorator-position": "5.0.1",
-    "eslint-plugin-ember": "11.4.2",
-    "eslint-plugin-import": "^2.27.4",
-    "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-qunit": "7.3.4",
-    "eslint-plugin-simple-import-sort": "^8.0.0",
-    "prettier": "2.8.2"
+  "peerDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/eslint-parser": "^7.19.1",
+    "@typescript-eslint/eslint-plugin": "5.46.0",
+    "@typescript-eslint/parser": "5.46.0",
+    "eslint": "^7.0.0 || ^8.0.0",
+    "eslint-plugin-ember": "^11.4.2",
+    "eslint-plugin-qunit": "^7.3.4",
+    "prettier": "^2.8.2"
+  },
+  "peerDependenciesMeta": {
+    "@babel/core": {
+      "optional": true
+    },
+    "@babel/eslint-parser": {
+      "optional": true
+    },
+    "@typescript-eslint/parser": {
+      "optional": true
+    },
+    "@typescript-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "eslint-plugin-ember": {
+      "optional": true
+    },
+    "eslint-plugin-qunit": {
+      "optional": true
+    },
+    "prettier": {
+      "optional": true
+    }
   },
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/eslint-parser": "^7.19.1",
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.0",
+    "@tsconfig/node18-strictest": "^1.0.0",
     "@types/eslint": "^8.4.10",
-    "jest": "^29.3.1",
-    "semantic-release": "^19.0.5"
+    "@typescript-eslint/eslint-plugin": "5.48.0",
+    "@typescript-eslint/parser": "5.48.0",
+    "eslint": "8.31.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-ember": "11.4.2",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-qunit": "7.3.4",
+    "prettier": "2.8.2",
+    "typescript": "^4.9.4",
+    "vitest": "^0.26.3"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "ember-cli-htmlbars"
+      ]
+    }
+  },
+  "dependencies": {
+    "cosmiconfig": "^8.0.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-decorator-position": "^5.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0"
   }
 }

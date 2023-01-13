@@ -1,0 +1,4 @@
+packages:
+  # any directory (including the top level)
+  - '*'
+  - 'test-packages/*'
