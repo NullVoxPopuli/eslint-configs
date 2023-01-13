@@ -16,6 +16,8 @@ This project aims to simplify both configuring and overriding ESLint configs.
 yarn add --dev @nullvoxpopuli/eslint-configs
 # or
 npm install --save-dev @nullvoxpopuli/eslint-configs
+# or 
+pnpm add --save-dev @nullvoxpopuli/eslint-configs
 ```
 
 And due to how ESLint resolves plugins,
@@ -52,7 +54,7 @@ See the [Usage](https://github.com/lint-todo/eslint-formatter-todo#usage) sectio
 
 const { configs } = require('@nullvoxpopuli/eslint-configs');
 
-// accommodates: JS, TS, App, and Addon
+// accommodates: JS, TS, App, Addon, and V2 Addon
 module.exports = configs.ember();
 ```
 
@@ -98,7 +100,7 @@ module.exports = {
 
 **Node**
 
-This config is native ES Modules, and cjs is allowed via files with the *.cjs extension.
+This config looks at your package.json to determine if your project is CommonJS or ES Modules.
 ```js
 // .eslintrc.js
 'use strict';
@@ -107,30 +109,6 @@ const { configs } = require('@nullvoxpopuli/eslint-configs');
 
 // accommodates: JS
 module.exports = configs.node();
-```
-
-**Node (CJS as defaultl)**
-
-This config is for when *.js is cjs, and ES Modules are used via the *.mjs extension.
-```js
-// .eslintrc.js
-'use strict';
-
-const { configs } = require('@nullvoxpopuli/eslint-configs');
-
-// accommodates: JS
-module.exports = configs.nodeCJS();
-```
-
-**Node (ES Modules in TypeScript)**
-```js
-// .eslintrc.js
-'use strict';
-
-const { configs } = require('@nullvoxpopuli/eslint-configs');
-
-// accommodates: JS, TS
-module.exports = configs.nodeTS();
 ```
 
 _overriding_
@@ -182,6 +160,18 @@ module.exports = {
 
 // This is the babel config file
 ```
+
+**Configure eslint prettier integration**
+
+This is disabled by default, but if you wish to include prettier errors in eslint, you may add the setting:
+```js
+const { configs } = require('@nullvoxpopuli/eslint-configs');
+
+const config = configs.node({ prettierIntegration: true });
+```
+
+All configs on the `configs` object support this.
+
 
 ## Gaining additional lints with 0 config
 
