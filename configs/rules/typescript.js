@@ -11,6 +11,10 @@ const rule = {
     // this isn't C#
     '@typescript-eslint/interface-name-prefix': 'off',
 
+    // Having an empty interface is plausable when iterating on types,
+    // extending from an existing type and "planning" to update.
+    '@typescript-eslint/no-empty-interface': 'off',
+
     // type imports are removed in builds
     '@typescript-eslint/consistent-type-imports': 'error',
 

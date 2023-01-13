@@ -20,6 +20,8 @@
     "release": "changeset publish",
     "lint:js": "eslint . --ignore-pattern test-packages",
     "lint:all:js": "pnpm --filter '*' lint:js",
+    "format:check:all": "pnpm --filter '*-prettier' format:check",
+    "format:all": "pnpm --filter '*' format",
     "lint:types": "tsc --noEmit",
     "test": "vitest"
   },
@@ -89,6 +91,7 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^8.0.0"
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "prettier-plugin-ember-template-tag": "^0.3.0"
   }
 }

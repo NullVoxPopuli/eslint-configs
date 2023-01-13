@@ -48,6 +48,19 @@ jobs:
       - name: ESLint
         run: pnpm lint:all:js
 
+  lint_formatting:
+    name: Lint Formatting
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: volta-cli/action@v4
+      - uses: ./.github/actions/pnpm
+
+      - name: Prettier
+        run: pnpm lint:all:js
+
+
   # lint_types:
   #   name: Lint Types
   #   runs-on: ubuntu-latest
