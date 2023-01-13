@@ -63,6 +63,16 @@ importers:
       eslint: 8.31.0
       typescript: 4.9.4
 
+  test-packages/ember-v2-addon-ts-prettier-integration:
+    specifiers:
+      '@nullvoxpopuli/eslint-configs': workspace:../..
+      eslint: 8.31.0
+      typescript: ^4.9.4
+    devDependencies:
+      '@nullvoxpopuli/eslint-configs': link:../..
+      eslint: 8.31.0
+      typescript: 4.9.4
+
   test-packages/node-js-cjs:
     specifiers:
       '@nullvoxpopuli/eslint-configs': workspace:../..
