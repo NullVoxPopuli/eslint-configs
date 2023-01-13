@@ -22,6 +22,7 @@
     "lint:all:js": "pnpm --filter '*' lint:js",
     "format:check:all": "pnpm --filter '*-prettier' format:check",
     "format:all": "pnpm --filter '*' format",
+    "format": "prettier --write .",
     "lint:types": "tsc --noEmit",
     "test": "vitest"
   },
