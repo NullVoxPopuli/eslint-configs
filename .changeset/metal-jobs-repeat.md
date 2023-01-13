@@ -16,3 +16,6 @@ Adding support for gjs and gts is what initially prompted the breaking change to
 change the default of having prettierIntegration turned off -- because in order for
 prettier to parse gjs / gts, we use this plugin: https://github.com/gitKrystan/prettier-plugin-ember-template-tag
 But that plugin is incompatible with eslint-plugin-prettier.
+
+The https://github.com/NullVoxPopuli/eslint-configs/ monorepo serves as an example for how to set up separate 
+format and lint commands if that is unfamiliar.
