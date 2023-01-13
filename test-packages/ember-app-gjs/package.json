@@ -1,0 +1,11 @@
+{
+  "name": "@nullvoxpopuli/ember-app-gjs",
+  "private": true,
+  "scripts": {
+    "lint:js": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "8.31.0",
+    "@nullvoxpopuli/eslint-configs": "workspace:../.."
+  }
+}
