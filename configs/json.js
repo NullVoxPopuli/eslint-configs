@@ -23,4 +23,8 @@ const tsConfig = {
   files: ['tsconfig.json', 'tsconfig*.json'],
 };
 
-module.exports = { baseConfig, withCommentsConfig, json: [packageJson, tsConfig] };
+module.exports = {
+  baseConfig,
+  withCommentsConfig,
+  json: [packageJson, tsConfig],
+};
