@@ -1,5 +1,22 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.0.2
+
+### Patch Changes
+
+- [#323](https://github.com/NullVoxPopuli/eslint-configs/pull/323) [`9ddd667`](https://github.com/NullVoxPopuli/eslint-configs/commit/9ddd667f1bdf7e2afeea31167a7e84000adc2e16) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - Rule fixes which affect typescript and ember projects:
+
+  in Ember projects, node files will be linted assuming at least Node 16.
+  (Node 16 is already a requirement to use eslint-configs v3)
+
+  in TypeScript projects, the "ban-types" lint has been turned off.
+  In my experience writing libraries, there are many cases where
+  "basic type and you just don't care, becausue it doesn't affect intellisense"
+  is the right choice -- these types include `object` and `Function`,
+  for example, and should be allowed.
+  It's true that using different types that are more specific would provide better intellisense,
+  if they are user facing -- but for non-user-facing types, these types are perfectly fine.
+
 ## 3.0.1
 
 ### Patch Changes
