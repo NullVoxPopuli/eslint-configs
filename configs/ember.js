@@ -160,21 +160,19 @@ function configBuilder(options = {}) {
               plugins: ['n'],
               extends: ['plugin:n/recommended'],
               rules: {
-                rules: {
-                  'n/no-unsupported-features/es-syntax': [
-                    'error',
-                    {
-                      version: EXPECTED_NODE_VERSION,
-                    },
-                  ],
-                  'n/no-unsupported-features': [
-                    'error',
-                    {
-                      version: EXPECTED_NODE_VERSION,
-                      ignores: [],
-                    },
-                  ],
-                },
+                'n/no-unsupported-features/es-syntax': [
+                  'error',
+                  {
+                    version: EXPECTED_NODE_VERSION,
+                  },
+                ],
+                'n/no-unsupported-features': [
+                  'error',
+                  {
+                    version: EXPECTED_NODE_VERSION,
+                    ignores: [],
+                  },
+                ],
               },
             },
             (config) => merge(config, personalPreferences)
