@@ -144,6 +144,8 @@ function configBuilder(options = {}) {
     commonjs: {
       node: {
         get js() {
+          const EXPECTED_NODE_VERSION = '16.0.0'; // or greater
+
           return pipe(
             {
               parserOptions: {
@@ -157,6 +159,21 @@ function configBuilder(options = {}) {
               },
               plugins: ['n'],
               extends: ['plugin:n/recommended'],
+              rules: {
+                'n/no-unsupported-features/es-syntax': [
+                  'error',
+                  {
+                    version: EXPECTED_NODE_VERSION,
+                  },
+                ],
+                'n/no-unsupported-features': [
+                  'error',
+                  {
+                    version: EXPECTED_NODE_VERSION,
+                    ignores: [],
+                  },
+                ],
+              },
             },
             (config) => merge(config, personalPreferences)
           );

@@ -23,6 +23,12 @@ const rule = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
 
+    // Unless a type actively harms the intellisense experience,
+    // it's not worth banning types. Sure other types could provide
+    // better intellisense experiences, but it doesn't mean that
+    // using 'object' for example, or 'Function' is inherently bad.
+    '@typescript-eslint/ban-types': 'off',
+
     // much concise
     '@typescript-eslint/prefer-optional-chain': 'error',
 
