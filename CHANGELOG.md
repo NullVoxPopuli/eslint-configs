@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.0.3
+
+### Patch Changes
+
+- [#328](https://github.com/NullVoxPopuli/eslint-configs/pull/328) [`5e62c88`](https://github.com/NullVoxPopuli/eslint-configs/commit/5e62c881a79d3dbadb9bd97e47760f1b694efcb0) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - disable accidentally enabled lint rule, import/exports-last
+
 ## 3.0.2
 
 ### Patch Changes
