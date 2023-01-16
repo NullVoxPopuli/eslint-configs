@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.0.4
+
+### Patch Changes
+
+- [`ed3496e`](https://github.com/NullVoxPopuli/eslint-configs/commit/ed3496ef1b39a567b5f96da56fc3c684020ac644) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - widen range of @typescript-eslint peers
+
 ## 3.0.3
 
 ### Patch Changes
