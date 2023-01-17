@@ -23,7 +23,7 @@ importers:
       eslint-plugin-n: ^15.6.1
       eslint-plugin-prettier: ^4.2.1
       eslint-plugin-qunit: 7.3.4
-      eslint-plugin-simple-import-sort: ^8.0.0
+      eslint-plugin-simple-import-sort: ^9.0.0
       prettier: 2.8.3
       prettier-plugin-ember-template-tag: ^0.3.0
       typescript: ^4.9.4
@@ -36,7 +36,7 @@ importers:
       eslint-plugin-json: 3.1.0
       eslint-plugin-n: 15.6.1_eslint@8.32.0
       eslint-plugin-prettier: 4.2.1_cn4lalcyadplruoxa5mhp7j3dq
-      eslint-plugin-simple-import-sort: 8.0.0_eslint@8.32.0
+      eslint-plugin-simple-import-sort: 9.0.0_eslint@8.32.0
       prettier-plugin-ember-template-tag: 0.3.0
     devDependencies:
       '@babel/core': 7.20.12
@@ -2341,8 +2341,8 @@ packages:
       - eslint
     dev: true
 
-  /eslint-plugin-simple-import-sort/8.0.0_eslint@8.32.0:
-    resolution: {integrity: sha512-bXgJQ+lqhtQBCuWY/FUWdB27j4+lqcvXv5rUARkzbeWLwea+S5eBZEQrhnO+WgX3ZoJHVj0cn943iyXwByHHQw==}
+  /eslint-plugin-simple-import-sort/9.0.0_eslint@8.32.0:
+    resolution: {integrity: sha512-PtrLjyXP8kjRneWT1n0b99y/2Fyup37we7FVoWsI61/O7x4ztLohzhep/pxI/cYlECr/cQ2j6utckdvWpVwXNA==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
