@@ -17,7 +17,7 @@ importers:
       eslint-config-prettier: 8.6.0
       eslint-import-resolver-typescript: ^3.5.3
       eslint-plugin-decorator-position: ^5.0.2
-      eslint-plugin-ember: 11.4.3
+      eslint-plugin-ember: 11.4.4
       eslint-plugin-import: ^2.27.5
       eslint-plugin-json: ^3.1.0
       eslint-plugin-n: ^15.6.1
@@ -49,7 +49,7 @@ importers:
       '@typescript-eslint/parser': 5.49.0_7uibuqfxkfaozanbtbziikiqje
       eslint: 8.32.0
       eslint-config-prettier: 8.6.0_eslint@8.32.0
-      eslint-plugin-ember: 11.4.3_eslint@8.32.0
+      eslint-plugin-ember: 11.4.4_eslint@8.32.0
       eslint-plugin-qunit: 7.3.4_eslint@8.32.0
       prettier: 2.8.3
       typescript: 4.9.4
@@ -2289,8 +2289,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-ember/11.4.3_eslint@8.32.0:
-    resolution: {integrity: sha512-hkHtaDu6KY5IpI+WgS9eGlahezJBxSmXgHZMINSwf4Njh9nJj+nwRxpPNtTNscFmWmud6OGAnKYvQN99L7tzPw==}
+  /eslint-plugin-ember/11.4.4_eslint@8.32.0:
+    resolution: {integrity: sha512-LhfXdyNQq3wbL0+EIobEpvXrqwId0m1qXT2rRuSzmtwyeUx+RZVVtxV0xwVpTurIjgFnQ+niCF61eZgW30gOgg==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       eslint: '>= 7'
