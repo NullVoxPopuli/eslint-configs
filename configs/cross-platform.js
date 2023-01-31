@@ -1,7 +1,5 @@
 'use strict';
 
-const path = require('path');
-
 const { hasDep, configFor, pipe, merge, forFiles } = require('./-utils');
 
 /**
@@ -110,7 +108,7 @@ const configBuilder = (options = {}) => {
         rules: {
           // devDependencies
           'n/no-unpublished-import': 'off',
-          // side-effects are... fine? 
+          // side-effects are... fine?
           'import/no-unassigned-import': 'off',
         },
       };

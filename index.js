@@ -19,7 +19,7 @@ module.exports = {
      * @returns {import('eslint').Linter.Config}
      */
     crossPlatform(options = {}) {
-      return require('./configs/cross-platform')(options)
+      return require('./configs/cross-platform')(options);
     },
     /**
      * @param {import('./configs/types').Options} [ options ]
