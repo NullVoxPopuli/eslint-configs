@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.1.0
+
+### Minor Changes
+
+- [#347](https://github.com/NullVoxPopuli/eslint-configs/pull/347) [`c99bdbd`](https://github.com/NullVoxPopuli/eslint-configs/commit/c99bdbd3c7008a209c33e104773604e977877345) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - Add crossPlatform config. This is considered beta for now, and is not explicitly under SemVer at this time
+
 ## 3.0.4
 
 ### Patch Changes
