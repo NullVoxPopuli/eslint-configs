@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.1.1
+
+### Patch Changes
+
+- [#349](https://github.com/NullVoxPopuli/eslint-configs/pull/349) [`8ab7e17`](https://github.com/NullVoxPopuli/eslint-configs/commit/8ab7e174173d00bd9a77987d2e0011c4de9fb25c) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - Remove eslint-plugin-n from cross-platform configs
+
 ## 3.1.0
 
 ### Minor Changes
