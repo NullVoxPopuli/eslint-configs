@@ -6,6 +6,7 @@ ESLint has grown complicated for projects with variance:
  - JavaScript or TypeScript
  - Node or Browser
  - App or Library
+ - Cross-Platform
  - etc
 
 This project aims to simplify both configuring and overriding ESLint configs.
@@ -98,6 +99,20 @@ module.exports = {
 }
 ```
 
+**Cross-Platform**
+
+This config is ESM, as ESM is the most widely supported module format across different distributions (browser, node, etc).
+
+```js 
+// .eslintrc.cjs
+'use strict';
+
+const { configs } = require('@nullvoxpopuli/eslint-configs');
+
+// accommodates: JS, TS, ESM, and CJS
+module.exports = configs.crossPlatform();
+```
+
 **Node**
 
 This config looks at your package.json to determine if your project is CommonJS or ES Modules.
@@ -107,7 +122,7 @@ This config looks at your package.json to determine if your project is CommonJS 
 
 const { configs } = require('@nullvoxpopuli/eslint-configs');
 
-// accommodates: JS
+// accommodates: JS, TS, ESM, and CJS
 module.exports = configs.node();
 ```
 
