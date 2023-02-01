@@ -25,7 +25,7 @@ importers:
       eslint-plugin-qunit: 7.3.4
       eslint-plugin-simple-import-sort: ^10.0.0
       prettier: 2.8.3
-      prettier-plugin-ember-template-tag: ^0.3.0
+      prettier-plugin-ember-template-tag: ^0.3.1
       typescript: ^4.9.5
       vitest: ^0.28.3
     dependencies:
@@ -37,7 +37,7 @@ importers:
       eslint-plugin-n: 15.6.1_eslint@8.33.0
       eslint-plugin-prettier: 4.2.1_jqplj6qf3uqpxpu4gdyhwwasnq
       eslint-plugin-simple-import-sort: 10.0.0_eslint@8.33.0
-      prettier-plugin-ember-template-tag: 0.3.0
+      prettier-plugin-ember-template-tag: 0.3.1
     devDependencies:
       '@babel/core': 7.20.12
       '@babel/eslint-parser': 7.19.1_b3mcivpi6zqbotlvqqcfprcnry
@@ -1418,14 +1418,11 @@ packages:
       ember-rfc176-data: 0.3.17
     dev: false
 
-  /babel-plugin-ember-template-compilation/1.0.2:
-    resolution: {integrity: sha512-4HBMksmlYsWEf/C/n3uW5rkBRbUp4FNaspzdQTAHgLbfCJnkLze8R6i6sUSge48y/Wne7mx+vcImI1o6rlUwXQ==}
+  /babel-plugin-ember-template-compilation/2.0.0:
+    resolution: {integrity: sha512-d+4jaB2ik0rt9TH0K9kOlKJeRBHEb373FgFMcU9ZaJL2zYuVXe19bqy+cWlLpLf1tpOBcBG9QTlFBCoImlOt1g==}
     engines: {node: '>= 12.*'}
     dependencies:
       babel-import-util: 1.3.0
-      line-column: 1.0.2
-      magic-string: 0.26.7
-      string.prototype.matchall: 4.0.8
     dev: false
 
   /babel-plugin-htmlbars-inline-precompile/5.3.1:
@@ -1985,12 +1982,12 @@ packages:
     resolution: {integrity: sha512-sKvOiPNHr5F/60NLd7SFzMpYPte/nnGkq/tMIfXejfKHIhaiIkYFqX8Z9UFTKWLLn+V7NOaby6niNPZUdvKCRw==}
     engines: {node: 6.* || 8.* || >= 10.*}
 
-  /ember-cli-htmlbars/6.1.1:
-    resolution: {integrity: sha512-DKf2rjzIVw9zWCuFsBGJScrgf5Mz7dSg08Cq+FWFYIxnpssINUbNUoB0NHWnUJK4QqCvaExOyOmjm0kO455CPg==}
+  /ember-cli-htmlbars/6.2.0:
+    resolution: {integrity: sha512-j5EGixjGau23HrqRiW/JjoAovg5UBHfjbyN7wX5ekE90knIEqUUj1z/Mo/cTx/J2VepQ2lE6HdXW9LWQ/WdMtw==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@ember/edition-utils': 1.2.0
-      babel-plugin-ember-template-compilation: 1.0.2
+      babel-plugin-ember-template-compilation: 2.0.0
       babel-plugin-htmlbars-inline-precompile: 5.3.1
       broccoli-debug: 0.6.5
       broccoli-persistent-filter: 3.1.3
@@ -2042,19 +2039,13 @@ packages:
       - supports-color
     dev: true
 
-  /ember-template-imports/3.4.0_ember-cli-htmlbars@6.1.1:
-    resolution: {integrity: sha512-3Cwcj3NXA129g3ZhmrQ/nYOxksFonTmB/qxyaSNTHrLBSoc93UZys47hBz13DlcfoeSCCrNt2Qpq1j890I04PQ==}
+  /ember-template-imports/3.4.1:
+    resolution: {integrity: sha512-KXnBFTAVxCfXnSCUgd/iuic9ajWbmFkRUBEeorJAMqxvougsPoK22s5ygE9O3GnzYdPpMwn+8v+/NAGy8HRBGA==}
     engines: {node: 12.* || >= 14}
-    peerDependencies:
-      ember-cli-htmlbars: ^6.0.0
-    peerDependenciesMeta:
-      ember-cli-htmlbars:
-        optional: true
     dependencies:
       babel-import-util: 0.2.0
       broccoli-stew: 3.0.0
       ember-cli-babel-plugin-helpers: 1.1.1
-      ember-cli-htmlbars: 6.1.1
       ember-cli-version-checker: 5.1.2
       line-column: 1.0.2
       magic-string: 0.25.9
@@ -3312,13 +3303,6 @@ packages:
     dependencies:
       sourcemap-codec: 1.4.8
 
-  /magic-string/0.26.7:
-    resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
-    engines: {node: '>=12'}
-    dependencies:
-      sourcemap-codec: 1.4.8
-    dev: false
-
   /magic-string/0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
@@ -3715,13 +3699,13 @@ packages:
       fast-diff: 1.2.0
     dev: false
 
-  /prettier-plugin-ember-template-tag/0.3.0:
-    resolution: {integrity: sha512-0WeYOyutMKAMP39e0E45HI+xX5/tS0iOvZWpKUxIbzKAoLwTzkfFe7Rc7Fxp0aSJbuAavtkrpQB/6WQj3cySPg==}
+  /prettier-plugin-ember-template-tag/0.3.1:
+    resolution: {integrity: sha512-k19pd4/F5wSgR1f9JDUpyBrccZ8mN7V5X4YTjIiSQvi8QCJFOtnPGLko4xy9k3Ymk5eOFxjvbOUkeIo7VdQeAw==}
     dependencies:
       '@babel/core': 7.20.12
       '@glimmer/syntax': 0.84.2
-      ember-cli-htmlbars: 6.1.1
-      ember-template-imports: 3.4.0_ember-cli-htmlbars@6.1.1
+      ember-cli-htmlbars: 6.2.0
+      ember-template-imports: 3.4.1
       prettier: 2.8.3
     transitivePeerDependencies:
       - supports-color
