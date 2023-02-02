@@ -25,7 +25,7 @@ importers:
       eslint-plugin-qunit: 7.3.4
       eslint-plugin-simple-import-sort: ^10.0.0
       prettier: 2.8.3
-      prettier-plugin-ember-template-tag: ^0.3.1
+      prettier-plugin-ember-template-tag: ^0.3.2
       typescript: ^4.9.5
       vitest: ^0.28.3
     dependencies:
@@ -37,7 +37,7 @@ importers:
       eslint-plugin-n: 15.6.1_eslint@8.33.0
       eslint-plugin-prettier: 4.2.1_jqplj6qf3uqpxpu4gdyhwwasnq
       eslint-plugin-simple-import-sort: 10.0.0_eslint@8.33.0
-      prettier-plugin-ember-template-tag: 0.3.1
+      prettier-plugin-ember-template-tag: 0.3.2
     devDependencies:
       '@babel/core': 7.20.12
       '@babel/eslint-parser': 7.19.1_b3mcivpi6zqbotlvqqcfprcnry
@@ -1785,6 +1785,11 @@ packages:
 
   /convert-source-map/1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
+
+  /core-js/3.27.2:
+    resolution: {integrity: sha512-9ashVQskuh5AZEZ1JdQWp1GqSoC1e1G87MzRqg2gIfVAQ7Qn9K+uFj8EcniUFA4P2NLZfV+TOlX1SzoKfo+s7w==}
+    requiresBuild: true
+    dev: false
 
   /cosmiconfig/8.0.0:
     resolution: {integrity: sha512-da1EafcpH6b/TD8vDRaWV7xFINlHlF6zKsGwS1TsuVJTZRkquaS5HTMq7uq6h31619QjbsYl21gVDOm32KM1vQ==}
@@ -3675,14 +3680,16 @@ packages:
       fast-diff: 1.2.0
     dev: false
 
-  /prettier-plugin-ember-template-tag/0.3.1:
-    resolution: {integrity: sha512-k19pd4/F5wSgR1f9JDUpyBrccZ8mN7V5X4YTjIiSQvi8QCJFOtnPGLko4xy9k3Ymk5eOFxjvbOUkeIo7VdQeAw==}
+  /prettier-plugin-ember-template-tag/0.3.2:
+    resolution: {integrity: sha512-L/15ujsvuOpuIB9y9XJJs/QOPgdot76T0U1Q34C19igS1lsaL/cdRw8rXIVC5Z2x362yZI33Qodo//7kK7ItkA==}
+    engines: {node: 14.* || 16.* || >= 18}
     dependencies:
       '@babel/core': 7.20.12
       '@glimmer/syntax': 0.84.2
       ember-cli-htmlbars: 6.2.0
       ember-template-imports: 3.4.1
       prettier: 2.8.3
+      ts-replace-all: 1.0.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4265,6 +4272,12 @@ packages:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
     engines: {node: '>=8'}
     dev: true
+
+  /ts-replace-all/1.0.0:
+    resolution: {integrity: sha512-6uBtdkw3jHXkPtx/e9xB/5vcngMm17CyJYsS2YZeQ+9FdRnt6Ev5g931Sg2p+dxbtMGoCm13m3ax/obicTZIkQ==}
+    dependencies:
+      core-js: 3.27.2
+    dev: false
 
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
