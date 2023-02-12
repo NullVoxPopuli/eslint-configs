@@ -17,6 +17,7 @@ const config = {
       '^ember-qunit',
       '^@embroider',
       '^@embroider',
+      '^node:',
     ],
 
     // Packages.
