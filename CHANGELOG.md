@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.1.2
+
+### Patch Changes
+
+- [`087ea28`](https://github.com/NullVoxPopuli/eslint-configs/commit/087ea2816950358aa9ff702c16901599f09f61b7) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - import-sorting fix: place node imports separate from package imports
+
 ## 3.1.1
 
 ### Patch Changes
