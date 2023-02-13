@@ -70,7 +70,7 @@ function configBuilder(options = {}) {
   const babelParser = {
     parser: '@babel/eslint-parser',
     parserOptions: {
-      requireConnfigFile: false,
+      requireConfigFile: false,
       babelOptions: {
         plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
       },
