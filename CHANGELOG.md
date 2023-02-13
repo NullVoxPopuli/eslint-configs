@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.1.3
+
+### Patch Changes
+
+- [#362](https://github.com/NullVoxPopuli/eslint-configs/pull/362) [`0efe54e`](https://github.com/NullVoxPopuli/eslint-configs/commit/0efe54e6f1ecddd0a2088a28a4adf587c7286c39) Thanks [@simonihmig](https://github.com/simonihmig)! - Fix typo in configs/ember.js where `requireConfigFile` for the `@babel/eslint-parser` was misspelled.
+
 ## 3.1.2
 
 ### Patch Changes
