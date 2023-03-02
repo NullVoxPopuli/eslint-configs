@@ -17,7 +17,7 @@ importers:
       eslint-config-prettier: 8.6.0
       eslint-import-resolver-typescript: ^3.5.3
       eslint-plugin-decorator-position: ^5.0.2
-      eslint-plugin-ember: 11.4.6
+      eslint-plugin-ember: 11.4.7
       eslint-plugin-import: ^2.27.5
       eslint-plugin-json: ^3.1.0
       eslint-plugin-n: ^15.6.1
@@ -49,7 +49,7 @@ importers:
       '@typescript-eslint/parser': 5.54.0_ycpbpc6yetojsgtrx3mwntkhsu
       eslint: 8.35.0
       eslint-config-prettier: 8.6.0_eslint@8.35.0
-      eslint-plugin-ember: 11.4.6_eslint@8.35.0
+      eslint-plugin-ember: 11.4.7_eslint@8.35.0
       eslint-plugin-qunit: 7.3.4_eslint@8.35.0
       prettier: 2.8.4
       typescript: 4.9.5
@@ -2264,8 +2264,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-ember/11.4.6_eslint@8.35.0:
-    resolution: {integrity: sha512-ak+gDkZrOQUjpLYiDWJA1D2jWJy0MYTf409Ki6du06+vYNifuMJIFpJhH9oKsD1FPU1sQylzhHcOeiHfbQTWmA==}
+  /eslint-plugin-ember/11.4.7_eslint@8.35.0:
+    resolution: {integrity: sha512-9owpi2uCBBl8XXg0V5oW6nnQf4soqmRI8xs1Srf/kg9Om109CyxpY41i+ZSjRNFaTuWufXHSs5NCraFcrThoDg==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       eslint: '>= 7'
@@ -2280,7 +2280,7 @@ packages:
       estraverse: 5.3.0
       lodash.camelcase: 4.3.0
       lodash.kebabcase: 4.1.1
-      magic-string: 0.27.0
+      magic-string: 0.30.0
       requireindex: 1.2.0
       snake-case: 3.0.4
     transitivePeerDependencies:
@@ -3286,8 +3286,8 @@ packages:
     dependencies:
       sourcemap-codec: 1.4.8
 
-  /magic-string/0.27.0:
-    resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
+  /magic-string/0.30.0:
+    resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.14
