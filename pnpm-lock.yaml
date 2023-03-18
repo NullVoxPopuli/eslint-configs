@@ -12,7 +12,7 @@ importers:
       '@types/eslint': ^8.21.2
       '@typescript-eslint/eslint-plugin': 5.55.0
       '@typescript-eslint/parser': 5.55.0
-      cosmiconfig: ^8.1.0
+      cosmiconfig: ^8.1.2
       eslint: 8.36.0
       eslint-config-prettier: 8.7.0
       eslint-import-resolver-typescript: ^3.5.3
@@ -29,7 +29,7 @@ importers:
       typescript: ^4.9.5
       vitest: ^0.29.3
     dependencies:
-      cosmiconfig: 8.1.0
+      cosmiconfig: 8.1.2
       eslint-import-resolver-typescript: 3.5.3_eakrjjutlgqjxe5ydhtnd4qdmy
       eslint-plugin-decorator-position: 5.0.2_kixzldopwlj3xm3b57rwttexoy
       eslint-plugin-import: 2.27.5_v7jo3sddp7aqau7pajjy572cju
@@ -1804,8 +1804,8 @@ packages:
     requiresBuild: true
     dev: false
 
-  /cosmiconfig/8.1.0:
-    resolution: {integrity: sha512-0tLZ9URlPGU7JsKq0DQOQ3FoRsYX8xDZ7xMiATQfaiGMz7EHowNkbU9u1coAOmnh9p/1ySpm0RB3JNWRXM5GCg==}
+  /cosmiconfig/8.1.2:
+    resolution: {integrity: sha512-rmpUFKMZiawLfug8sP4NbpBSOpWftZB6UACOLEiNbnRAYM1TzgQuTWlMYFRuPgmoTCkcOxSMwQJQpJmiXv/eHw==}
     engines: {node: '>=14'}
     dependencies:
       import-fresh: 3.3.0
