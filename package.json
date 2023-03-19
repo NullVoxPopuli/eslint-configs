@@ -65,7 +65,7 @@
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.0",
     "@tsconfig/node18-strictest": "^1.0.0",
-    "@types/eslint": "^8.21.2",
+    "@types/eslint": "^8.21.3",
     "@typescript-eslint/eslint-plugin": "5.55.0",
     "@typescript-eslint/parser": "5.55.0",
     "eslint": "8.36.0",
