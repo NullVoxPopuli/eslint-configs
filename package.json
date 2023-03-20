@@ -75,7 +75,7 @@
     "eslint-plugin-qunit": "7.3.4",
     "prettier": "2.8.5",
     "typescript": "^5.0.2",
-    "vitest": "^0.29.3"
+    "vitest": "^0.29.7"
   },
   "pnpm": {
     "peerDependencyRules": {
