@@ -34,7 +34,7 @@
     "eslint": "^7.0.0 || ^8.0.0",
     "eslint-plugin-ember": "^11.4.8",
     "eslint-plugin-qunit": "^7.3.4",
-    "prettier": "^2.8.5"
+    "prettier": "^2.8.6"
   },
   "peerDependenciesMeta": {
     "@babel/core": {
@@ -73,7 +73,7 @@
     "eslint-plugin-ember": "11.4.8",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-qunit": "7.3.4",
-    "prettier": "2.8.5",
+    "prettier": "2.8.6",
     "typescript": "^5.0.2",
     "vitest": "^0.29.7"
   },
