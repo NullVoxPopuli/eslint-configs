@@ -7,7 +7,7 @@
         "lint:js": "eslint ."
     },
     "devDependencies": {
-        "eslint": "8.36.0",
+        "eslint": "8.37.0",
         "@nullvoxpopuli/eslint-configs": "workspace:../..",
         "prettier": "2.8.7",
         "typescript": "^5.0.2"
