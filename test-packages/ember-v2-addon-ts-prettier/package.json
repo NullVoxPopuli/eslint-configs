@@ -10,6 +10,6 @@
         "eslint": "8.43.0",
         "@nullvoxpopuli/eslint-configs": "workspace:../..",
         "prettier": "2.8.8",
-        "typescript": "^5.1.3"
+        "typescript": "^5.1.5"
     }
 }
