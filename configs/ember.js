@@ -45,6 +45,10 @@ module.exports = (options = {}) => {
         './lib/*/index.js',
         './server/**/*.js',
         './blueprints/*/index.js',
+        'tests/dummy/config/environment.js',
+        'tests/dummy/config/targets.js',
+        'tests/dummy/config/ember-try.js',
+        'tests/dummy/config/ember-intl.js',
       ],
       config.commonjs.node.js
     ),
