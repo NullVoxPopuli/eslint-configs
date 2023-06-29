@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.1.4
+
+### Patch Changes
+
+- [#458](https://github.com/NullVoxPopuli/eslint-configs/pull/458) [`5ff6154`](https://github.com/NullVoxPopuli/eslint-configs/commit/5ff6154e5d61e531d1092e97f77a2d7d2710cb62) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - Add better support for v1 addons in the ember config
+
 ## 3.1.3
 
 ### Patch Changes
