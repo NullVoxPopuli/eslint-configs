@@ -27,8 +27,8 @@
     "test": "vitest"
   },
   "peerDependencies": {
-    "@babel/core": "^7.22.6",
-    "@babel/eslint-parser": "^7.22.6",
+    "@babel/core": "^7.22.8",
+    "@babel/eslint-parser": "^7.22.7",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "eslint": "^7.0.0 || ^8.0.0",
@@ -60,8 +60,8 @@
     }
   },
   "devDependencies": {
-    "@babel/core": "^7.22.6",
-    "@babel/eslint-parser": "^7.22.6",
+    "@babel/core": "^7.22.8",
+    "@babel/eslint-parser": "^7.22.7",
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.2",
     "@tsconfig/node18-strictest": "^1.0.0",
