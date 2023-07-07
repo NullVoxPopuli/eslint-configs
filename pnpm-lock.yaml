@@ -67,8 +67,8 @@ importers:
         specifier: 8.8.0
         version: 8.8.0(eslint@8.44.0)
       eslint-plugin-ember:
-        specifier: 11.9.0
-        version: 11.9.0(eslint@8.44.0)
+        specifier: 11.10.0
+        version: 11.10.0(eslint@8.44.0)
       eslint-plugin-qunit:
         specifier: 8.0.0
         version: 8.0.0(eslint@8.44.0)
@@ -1017,6 +1017,7 @@ packages:
     resolution: {integrity: sha512-tMZxQpOddUVmHEOuripkNqVR7ba0K4doiYnFd4WyswqoHPlxqpBujbIamQ+bWCWEF0U4yxsXKa31ekS/JHkiBQ==}
     dependencies:
       '@simple-dom/interface': 1.4.0
+    dev: false
 
   /@glimmer/interfaces@0.84.3:
     resolution: {integrity: sha512-dk32ykoNojt0mvEaIW6Vli5MGTbQo58uy3Epj7ahCgTHmWOKuw/0G83f2UmFprRwFx689YTXG38I/vbpltEjzg==}
@@ -1041,6 +1042,7 @@ packages:
       '@glimmer/util': 0.84.2
       '@handlebars/parser': 2.0.0
       simple-html-tokenizer: 0.5.11
+    dev: false
 
   /@glimmer/syntax@0.84.3:
     resolution: {integrity: sha512-ioVbTic6ZisLxqTgRBL2PCjYZTFIwobifCustrozRU2xGDiYvVIL0vt25h2c1ioDsX59UgVlDkIK4YTAQQSd2A==}
@@ -1057,6 +1059,7 @@ packages:
       '@glimmer/env': 0.1.7
       '@glimmer/interfaces': 0.84.2
       '@simple-dom/interface': 1.4.0
+    dev: false
 
   /@glimmer/util@0.84.3:
     resolution: {integrity: sha512-qFkh6s16ZSRuu2rfz3T4Wp0fylFj3HBsONGXQcrAdZjdUaIS6v3pNj6mecJ71qRgcym9Hbaq/7/fefIwECUiKw==}
@@ -1105,14 +1108,14 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/set-array': 1.1.2
-      '@jridgewell/sourcemap-codec': 1.4.14
+      '@jridgewell/sourcemap-codec': 1.4.15
 
   /@jridgewell/gen-mapping@0.3.2:
     resolution: {integrity: sha512-mh65xKQAzI6iBcFzwv28KVWSmCkdRBWoOh+bYQGW3+6OZvbbN3TqMGo5hqYxQniRcH9F2VZIoJCm4pa3BPDK/A==}
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/set-array': 1.1.2
-      '@jridgewell/sourcemap-codec': 1.4.14
+      '@jridgewell/sourcemap-codec': 1.4.15
       '@jridgewell/trace-mapping': 0.3.17
 
   /@jridgewell/resolve-uri@3.1.0:
@@ -1128,7 +1131,6 @@ packages:
 
   /@jridgewell/sourcemap-codec@1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
-    dev: true
 
   /@jridgewell/trace-mapping@0.3.17:
     resolution: {integrity: sha512-MCNzAp77qzKca9+W/+I0+sEpaUnZoeasnghNeVc41VZCEKaCH73Vq3BZZ/SzWIgrqE4H4ceI+p+b6C0mHf9T4g==}
@@ -2505,14 +2507,14 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-ember@11.9.0(eslint@8.44.0):
-    resolution: {integrity: sha512-kpsvbdQOFw9ikzwmhxR8mmsAXtwwj+DPMGn1NOHAHJOnhTkyioKEiNO6tQK/b33VtQy1VpJP6zFu+Bt6m/cYxA==}
+  /eslint-plugin-ember@11.10.0(eslint@8.44.0):
+    resolution: {integrity: sha512-/5VanfpfzIdmWgXWyQ6ylAJWITu8mXivRce06h0uoifVpUoGaBdAkwuto/PLGfDxWdi43xWUFLb5Tpkhx2MoFg==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       eslint: '>= 7'
     dependencies:
       '@ember-data/rfc395-data': 0.0.4
-      '@glimmer/syntax': 0.84.2
+      '@glimmer/syntax': 0.84.3
       css-tree: 2.3.1
       ember-rfc176-data: 0.3.17
       ember-template-imports: 3.4.2
@@ -2522,7 +2524,7 @@ packages:
       estraverse: 5.3.0
       lodash.camelcase: 4.3.0
       lodash.kebabcase: 4.1.1
-      magic-string: 0.30.0
+      magic-string: 0.30.1
       requireindex: 1.2.0
       snake-case: 3.0.4
     transitivePeerDependencies:
@@ -3539,13 +3541,6 @@ packages:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
       sourcemap-codec: 1.4.8
-
-  /magic-string@0.30.0:
-    resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.14
-    dev: true
 
   /magic-string@0.30.1:
     resolution: {integrity: sha512-mbVKXPmS0z0G4XqFDCTllmDQ6coZzn94aMlb0o/A4HEHJCKcanlDZwYJgwnkmgD3jyWhUgj9VsPrfd972yPffA==}
