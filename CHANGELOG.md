@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.2.0
+
+### Minor Changes
+
+- [#469](https://github.com/NullVoxPopuli/eslint-configs/pull/469) [`51f56a9`](https://github.com/NullVoxPopuli/eslint-configs/commit/51f56a9397c5eb5d35fb1f067fc63b977237fb38) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - Add the 'type-tests' folder to the ember configuration
+
 ## 3.1.4
 
 ### Patch Changes
