@@ -35,6 +35,7 @@ module.exports = (options = {}) => {
     // Tests
     forFiles('tests/**/*-test.{gjs,js}', config.modules.tests.js),
     forFiles('tests/**/*-test.{gts,ts}', config.modules.tests.ts),
+    forFiles('type-tests/**/*.ts', config.modules.browser.declarations),
 
     // ----------------------
     // Config files, usually
