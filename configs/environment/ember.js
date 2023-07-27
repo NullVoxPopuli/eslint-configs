@@ -1,12 +1,15 @@
-'use strict';
+// @ts-check
+import { createRequire } from 'node:module';
 
-const { merge, hasDep, pipe, configFor, forFiles } = require('./-utils');
+import { merge, hasDep, pipe, configFor, forFiles } from '../-utils';
+
+const require = createRequire(import.meta.url);
 
 /**
- * @param {import('./types').Options} [options]
- * @returns {import('eslint').Linter.Config}
+ * @param {import('../types').Options} [options]
+ * @returns {Promise<import('eslint').Linter.Config>}
  */
-module.exports = (options = {}) => {
+export default async function buildEmberConfig(options = {}) {
   let config = configBuilder(options);
 
   return configFor([
@@ -54,22 +57,22 @@ module.exports = (options = {}) => {
       config.commonjs.node.js
     ),
   ]);
-};
+}
 
 /**
- * @param {import('./types').Options} [options]
+ * @param {import('../types').Options} [options]
  */
 function configBuilder(options = {}) {
   let hasTypeScript = hasDep('typescript');
 
   let personalPreferences = pipe(
     {},
-    (config) => merge(config, require('./base').base),
-    (config) => merge(config, require('./rules/decorator-position'))
+    (config) => merge(config, require('../base').base),
+    (config) => merge(config, require('../rules/decorator-position'))
   );
 
   if (options.prettierIntegration) {
-    personalPreferences = merge(personalPreferences, require('./rules/prettier').resolveRule());
+    personalPreferences = merge(personalPreferences, require('../rules/prettier').resolveRule());
   }
 
   const babelParser = {

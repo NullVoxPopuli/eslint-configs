@@ -1,13 +1,30 @@
-'use strict';
+// @ts-check
+//  https://ota-meshi.github.io/eslint-plugin-jsonc/#features
+import jsonc from 'eslint-plugin-jsonc';
 
-const baseConfig = {
-  plugins: ['json'],
-  extends: ['plugin:json/recommended'],
+import base from 'eslint-plugin-jsonc/dist/configs/base';
+import jsonConfig from 'eslint-plugin-jsonc/dist/configs/recommended-with-json';
+import jsonCommentConfig from 'eslint-plugin-jsonc/dist/configs/recommended-with-jsonc';
+
+// eslint-plugin-jsonc needs native ESLint9 exports
+const jsonBaseConfig = base.overrides[0];
+
+export const baseConfig = {
+  plugins: { jsonc },
+  parser: jsonBaseConfig.parser,
+  rules: {
+    ...jsonBaseConfig.rules,
+    ...jsonConfig.rules,
+  },
 };
 
-const withCommentsConfig = {
-  plugins: ['json'],
-  extends: ['plugin:json/recommended-with-comments'],
+export const withCommentsConfig = {
+  plugins: { jsonc },
+  parser: jsonBaseConfig.parser,
+  rules: {
+    ...jsonBaseConfig.rules,
+    ...jsonCommentConfig.rules,
+  },
 };
 
 const packageJson = {
@@ -23,8 +40,4 @@ const tsConfig = {
   files: ['tsconfig.json', 'tsconfig*.json'],
 };
 
-module.exports = {
-  baseConfig,
-  withCommentsConfig,
-  json: [packageJson, tsConfig],
-};
+export const json = [packageJson, tsConfig];

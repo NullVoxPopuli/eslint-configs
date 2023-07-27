@@ -1,4 +1,7 @@
 // @ts-check
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 
 /**
  * @param {string} depName

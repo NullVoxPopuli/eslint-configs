@@ -1,8 +1,6 @@
-'use strict';
+import path from 'node:path';
 
-const path = require('path');
-
-const { hasDep, configFor, pipe, merge, forFiles } = require('./-utils');
+import { hasDep, configFor, pipe, merge, forFiles } from './-utils';
 
 /**
  * @param {import('./types').Options} options
