@@ -1,11 +1,10 @@
 // @ts-check
-'use strict';
 
 /**
  * @param {string} depName
  * @returns {boolean}
  */
-function hasDep(depName) {
+export function hasDep(depName) {
   try {
     return Boolean(require.resolve(depName));
   } catch (e) {
@@ -43,7 +42,7 @@ function hasDep(depName) {
  *
  * @returns {PartialConfig}
  */
-function merge(source, override, options = { mandatory: true }) {
+export function merge(source, override, options = { mandatory: true }) {
   /** @type {<Value>(x: Value | Value[] | undefined) => Value[]} */
   let array = (x) => {
     if (!x) return [];
@@ -99,7 +98,7 @@ function merge(source, override, options = { mandatory: true }) {
  * @param {(((input: Value) => Value))[]} fns
  * @returns {Value}
  */
-function pipe(input, ...fns) {
+export function pipe(input, ...fns) {
   let lastResult = input;
 
   for (let fn of fns) {
@@ -114,7 +113,7 @@ function pipe(input, ...fns) {
  * @param {Array<import('eslint').Linter.ConfigOverride | undefined>} overrides
  * @returns {import('eslint').Linter.Config}
  */
-function configFor(overrides) {
+export function configFor(overrides) {
   /** @type{import('eslint').Linter.ConfigOverride[]} */
   let configs = [];
 
@@ -134,7 +133,7 @@ function configFor(overrides) {
  * @param {import('./types').PartialConfig | undefined} override
  * @returns {import('eslint').Linter.ConfigOverride | undefined}
  */
-function forFiles(globs, override) {
+export function forFiles(globs, override) {
   if (!override) return;
 
   return {
@@ -142,5 +141,3 @@ function forFiles(globs, override) {
     files: Array.isArray(globs) ? globs : [globs],
   };
 }
-
-module.exports = { hasDep, merge, pipe, configFor, forFiles };

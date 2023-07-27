@@ -21,10 +21,11 @@ npm install --save-dev @nullvoxpopuli/eslint-configs
 pnpm add --save-dev @nullvoxpopuli/eslint-configs
 ```
 
-And due to how ESLint resolves plugins,
-you'll need to ensure that all the dependencies of `@nullvoxpopuli/eslint-configs` are installed in the root `node_modules` directory.
+Note that only ESLint's new (v9) config format is supported.
 
-This is easier with either yarn workspaces or npm. Standalone yarn with non-monorepos nests `node_modules` which confuses eslint.
+So the config file name should be `eslint.config.js` (or `cjs` or `mjs`, depending on which style of config you want to use).
+
+This package is _ESM_ only, but the new ESLint config format supports receiving a promise that returns a config, so we can `await import` ESM from within the a CJS file. 
 
 ## Upgrading across major version boundaries
 
@@ -49,8 +50,57 @@ See the [Usage](https://github.com/lint-todo/eslint-formatter-todo#usage) sectio
 ## Usage
 
 **Ember**
+
 ```js
-// .eslintrc.js
+// eslint.config.js 
+import { configs } from '@nullvoxpopuli/eslint-configs';
+
+// accommodates: JS, TS, App, Addon, and V2 Addon
+export default configs.ember();
+```
+
+<details><summary>ESM Configuration</summary>
+
+_overriding_
+```js
+// eslint.config.js 
+import { configs } from '@nullvoxpopuli/eslint-configs';
+
+const config = await configs.ember();
+
+export default [
+    ...config,
+    // your modifications here
+    // see: https://eslint.org/docs/user-guide/configuring/configuration-files#how-do-overrides-work
+];
+```
+
+_overriding prettier configuration example_
+```js
+// eslint.config.js 
+import { configs } from '@nullvoxpopuli/eslint-configs';
+
+const config = await configs.ember();
+
+export default [
+    ...config,
+    {
+        files: ['**/*.js', '**/*.ts'],
+        rules: {
+            'prettier/prettier': ['error', { singleQuote: true, printWidth: 120, trailingComma: 'all' }],
+        },
+    },
+]
+```
+
+
+
+</details>
+
+<details><summary>In CJS</summary>
+
+```js
+// eslint.config.js 
 'use strict';
 
 const { configs } = require('@nullvoxpopuli/eslint-configs');
@@ -61,20 +111,20 @@ module.exports = configs.ember();
 
 _overriding_
 ```js
-// .eslintrc.js
+// eslint.config.js 
 'use strict';
 
 const { configs } = require('@nullvoxpopuli/eslint-configs');
-const config = configs.ember();
 
-module.exports = {
-  ...config,
-  overrides: [
-    ...config.overrides,
-    // your modifications here
-    // see: https://eslint.org/docs/user-guide/configuring/configuration-files#how-do-overrides-work
-  ]
-}
+module.exports = (async () => {
+  const config = await configs.ember();
+
+    return [
+        ...config,
+        // your modifications here
+        // see: https://eslint.org/docs/user-guide/configuring/configuration-files#how-do-overrides-work
+    ];
+})()
 ```
 
 _overriding prettier configuration example_
@@ -98,6 +148,8 @@ module.exports = {
   ]
 }
 ```
+
+</details>
 
 **Cross-Platform**
 

@@ -1,11 +1,13 @@
 // @ts-check
 'use strict';
 
-const { merge, pipe } = require('./configs/-utils');
+const { merge, pipe, forFiles, configFor } = require('./configs/-utils');
 
 module.exports = {
   merge,
   pipe,
+  forFiles,
+  configFor,
   configs: {
     /**
      * @param {import('./configs/types').Options} [ options ]

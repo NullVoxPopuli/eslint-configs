@@ -11,7 +11,8 @@
   "license": "MIT",
   "volta": {
     "node": "16.19.0",
-    "yarn": "1.22.19"
+    "yarn": "1.22.19",
+    "pnpm": "8.6.10"
   },
   "engines": {
     "node": ">= v16.0.0"
@@ -66,14 +67,14 @@
     "@changesets/cli": "^2.26.2",
     "@tsconfig/node18-strictest": "^1.0.0",
     "@types/eslint": "^8.44.1",
-    "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "5.62.0",
+    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "@typescript-eslint/parser": "6.2.0",
     "eslint": "8.45.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-ember": "11.10.0",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-qunit": "8.0.0",
-    "prettier": "2.8.8",
+    "prettier": "3.0.0",
     "typescript": "^5.1.6",
     "vitest": "^0.33.0"
   },
@@ -91,7 +92,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-n": "^16.0.1",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "prettier-plugin-ember-template-tag": "^1.0.0"
   }
