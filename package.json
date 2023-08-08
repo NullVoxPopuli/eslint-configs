@@ -93,6 +93,6 @@
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "prettier-plugin-ember-template-tag": "^1.0.0"
+    "prettier-plugin-ember-template-tag": "^1.0.1"
   }
 }
