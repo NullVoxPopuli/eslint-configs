@@ -33,8 +33,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0(eslint@8.46.0)
       prettier-plugin-ember-template-tag:
-        specifier: ^1.0.1
-        version: 1.0.1(prettier@2.8.8)
+        specifier: ^1.0.2
+        version: 1.0.2(prettier@2.8.8)
     devDependencies:
       '@babel/core':
         specifier: ^7.22.10
@@ -3932,10 +3932,9 @@ packages:
       fast-diff: 1.2.0
     dev: false
 
-  /prettier-plugin-ember-template-tag@1.0.1(prettier@2.8.8):
-    resolution: {integrity: sha512-YtRxPDIbyLSHARQt5cbB31R2AMVSibLHC5zvDXnmOGsuz36dcdScFxWrKYMjVeEVHWT5JjC0VWM1mj0o8yzKxQ==}
+  /prettier-plugin-ember-template-tag@1.0.2(prettier@2.8.8):
+    resolution: {integrity: sha512-skL3NH1ay/eTlrTSTtFxoHLBmZJIoTDrb2zOONClt01aKqs/8brh/9ZtnjjLHi9FUq5x/kJ8LCm+6BYmNp696Q==}
     engines: {node: 16.* || 18.* || >= 20}
-    requiresBuild: true
     peerDependencies:
       prettier: '>= 3.0.0'
     dependencies:
