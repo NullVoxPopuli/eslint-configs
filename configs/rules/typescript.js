@@ -29,8 +29,18 @@ const rule = {
     // using 'object' for example, or 'Function' is inherently bad.
     '@typescript-eslint/ban-types': 'off',
 
-    // much concise
-    '@typescript-eslint/prefer-optional-chain': 'error',
+    // we typically want this one enabled,
+    // but in a major release of typescript-eslint,
+    // it began to require that tsconfig.json be passed
+    // which, means we need to disable the lint.
+    // in a future release of `@nullvoxpopuli/eslint-configs`,
+    // we can conditionally add the tsconfig-needing lints
+    // if a tsconfig path is passed,
+    // or a local tsconfig.json is present and detected
+    //
+    // this capabilitiy will align with the upcoming eslint 9
+    // config in the next major of eslint-configs
+    '@typescript-eslint/prefer-optional-chain': 'off',
 
     // Maximum strictness
     '@typescript-eslint/no-non-null-assertion': 'error',
