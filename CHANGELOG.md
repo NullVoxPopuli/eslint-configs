@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.2.2
+
+### Patch Changes
+
+- [#498](https://github.com/NullVoxPopuli/eslint-configs/pull/498) [`37296f5`](https://github.com/NullVoxPopuli/eslint-configs/commit/37296f5587cd21144179bbdc3cb9db099431d7e7) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - widen peer dep ranges
+
 ## 3.2.1
 
 ### Patch Changes
