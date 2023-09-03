@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       cosmiconfig:
-        specifier: ^8.3.2
-        version: 8.3.2(typescript@5.2.2)
+        specifier: ^8.3.3
+        version: 8.3.3(typescript@5.2.2)
       eslint-import-resolver-typescript:
         specifier: ^3.6.0
         version: 3.6.0(@typescript-eslint/parser@6.5.0)(eslint-plugin-import@2.28.1)(eslint@8.48.0)
@@ -1974,9 +1974,9 @@ packages:
   /convert-source-map@1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
 
-  /cosmiconfig@8.3.2(typescript@5.2.2):
-    resolution: {integrity: sha512-/PvU3MjSLVKJMRHsL6GW+wHQ9RaJuMW6fnn56sXNy+kP1L8nI/SHk9F9giIA+dnfzjKNJAulRjOR/fi9kzGuNA==}
-    engines: {node: '>=18'}
+  /cosmiconfig@8.3.3(typescript@5.2.2):
+    resolution: {integrity: sha512-/VY+0IvFoE47hwgKHu8feeBFIb1Z1mcJFiLrNwaJpLoLa9qwLVquMGMr2OUwQmhpJDtsSQSasg/TMv1imec9xA==}
+    engines: {node: '>=14'}
     peerDependencies:
       typescript: '>=4.9.5'
     peerDependenciesMeta:
