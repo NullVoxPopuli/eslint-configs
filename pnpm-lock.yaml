@@ -67,8 +67,8 @@ importers:
         specifier: 9.1.0
         version: 9.1.0(eslint@8.55.0)
       eslint-plugin-ember:
-        specifier: 11.11.1
-        version: 11.11.1(eslint@8.55.0)
+        specifier: 11.12.0
+        version: 11.12.0(eslint@8.55.0)
       eslint-plugin-qunit:
         specifier: 8.0.1
         version: 8.0.1(eslint@8.55.0)
@@ -2581,8 +2581,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-ember@11.11.1(eslint@8.55.0):
-    resolution: {integrity: sha512-dvsDa4LkDkGqCE2bzBIguRMi1g40JVwRWMSHmn8S7toRDxSOU3M7yromgi5eSAJX2O2vEvJZ9QnR15YDbvNfVQ==}
+  /eslint-plugin-ember@11.12.0(eslint@8.55.0):
+    resolution: {integrity: sha512-7Ow1ky5JnRR0k3cxuvgYi4AWTe9DzGjlLgOJbU5VABLgr7Q0iq3ioC+YwAP79nV48cpw2HOgMgkZ1MynuIg59g==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       eslint: '>= 7'
@@ -2598,7 +2598,7 @@ packages:
       estraverse: 5.3.0
       lodash.camelcase: 4.3.0
       lodash.kebabcase: 4.1.1
-      magic-string: 0.30.1
+      magic-string: 0.30.5
       requireindex: 1.2.0
       snake-case: 3.0.4
     transitivePeerDependencies:
@@ -3635,13 +3635,6 @@ packages:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
       sourcemap-codec: 1.4.8
-
-  /magic-string@0.30.1:
-    resolution: {integrity: sha512-mbVKXPmS0z0G4XqFDCTllmDQ6coZzn94aMlb0o/A4HEHJCKcanlDZwYJgwnkmgD3jyWhUgj9VsPrfd972yPffA==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
 
   /magic-string@0.30.5:
     resolution: {integrity: sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==}
