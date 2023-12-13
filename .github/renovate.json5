@@ -5,6 +5,7 @@
   automerge: true,
   masterIssue: true,
   rangeStrategy: 'bump',
+  schedule: ["after 9pm on sunday"],
   packageRules: [
     {
       packageNames: ['node'],
