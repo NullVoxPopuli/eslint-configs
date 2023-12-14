@@ -29,6 +29,7 @@
   "peerDependencies": {
     "@babel/core": "^7.22.10",
     "@babel/eslint-parser": "^7.22.10",
+    "@babel/plugin-proposal-decorators": "^7.22.10",
     "@typescript-eslint/eslint-plugin": "^5.62.0 || >= 6.0.0",
     "@typescript-eslint/parser": "^5.62.0 || >= 6.0.0",
     "eslint": "^7.0.0 || ^8.0.0",
@@ -38,6 +39,9 @@
   },
   "peerDependenciesMeta": {
     "@babel/core": {
+      "optional": true
+    },
+    "@babel/plugin-proposal-decorators": {
       "optional": true
     },
     "@babel/eslint-parser": {
