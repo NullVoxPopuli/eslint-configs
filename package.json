@@ -92,7 +92,7 @@
     "cosmiconfig": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-decorator-position": "^5.0.2",
-    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-n": "^16.4.0",
     "eslint-plugin-prettier": "^4.2.1",
