@@ -73,8 +73,8 @@ importers:
         specifier: 11.12.0
         version: 11.12.0(eslint@8.56.0)
       eslint-plugin-qunit:
-        specifier: 8.0.1
-        version: 8.0.1(eslint@8.56.0)
+        specifier: 8.1.1
+        version: 8.1.1(eslint@8.56.0)
       prettier:
         specifier: 2.8.8
         version: 2.8.8
@@ -2662,8 +2662,8 @@ packages:
       prettier-linter-helpers: 1.0.0
     dev: false
 
-  /eslint-plugin-qunit@8.0.1(eslint@8.56.0):
-    resolution: {integrity: sha512-3bFOPryXoQOez95oP/JfWTxHBc/bgDQQZqTuv9uYTwH5sdIvSM2TES1iHDcy/F/LvqiqIpscDAOPAjlqSCnNPg==}
+  /eslint-plugin-qunit@8.1.1(eslint@8.56.0):
+    resolution: {integrity: sha512-j3xhiAf2Wvr8Dfwl5T6tlJ+F55vqYE9ZdAHUOTzq1lGerYrXzOS46RvK4SSWug2D8sl3ZYr2lA4/hgVXgLloxw==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     dependencies:
       eslint-utils: 3.0.0(eslint@8.56.0)
