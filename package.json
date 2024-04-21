@@ -69,7 +69,7 @@
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
     "@tsconfig/node18-strictest": "^1.0.0",
-    "@types/eslint": "^8.56.9",
+    "@types/eslint": "^8.56.10",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "eslint": "8.57.0",
