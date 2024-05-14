@@ -1,6 +1,5 @@
 import { getOwner } from '@ember/application';
 import { assert } from '@ember/debug';
-import { scheduleOnce } from '@ember/runloop';
 import Service, { inject as service } from '@ember/service';
 import { isEmpty } from '@ember/utils';
 
@@ -194,7 +193,8 @@ export default class PageTitleService extends Service {
   }
 
   scheduleTitleUpdate = () => {
-    scheduleOnce('afterRender', this, this._updateTitle);
+    // @ts-expect-error
+    requestAnimationFrame(this._updateTitle);
   };
 
   toString() {
