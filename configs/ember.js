@@ -38,7 +38,7 @@ module.exports = (options = {}) => {
     forFiles('type-tests/**/*.ts', config.modules.browser.declarations),
 
     // ----------------------
-    // Tests
+    // GJS/GTS files, requires that the ember plugin be present
     forFiles('**/*.gts', { parser: 'ember-eslint-parser' }),
     forFiles('**/*.gjs', { parser: 'ember-eslint-parser' }),
 
