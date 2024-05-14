@@ -38,6 +38,11 @@ module.exports = (options = {}) => {
     forFiles('type-tests/**/*.ts', config.modules.browser.declarations),
 
     // ----------------------
+    // Tests
+    forFiles('**/*.gts', { parser: 'ember-eslint-parser' }),
+    forFiles('**/*.gjs', { parser: 'ember-eslint-parser' }),
+
+    // ----------------------
     // Config files, usually
     forFiles(
       [
