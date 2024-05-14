@@ -33,8 +33,8 @@ importers:
         specifier: ^4.2.1
         version: 4.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@2.8.8)
       eslint-plugin-simple-import-sort:
-        specifier: ^10.0.0
-        version: 10.0.0(eslint@8.57.0)
+        specifier: ^12.1.0
+        version: 12.1.0(eslint@8.57.0)
       prettier-plugin-ember-template-tag:
         specifier: ^1.1.0
         version: 1.1.0(prettier@2.8.8)
@@ -2775,8 +2775,8 @@ packages:
       - eslint
     dev: true
 
-  /eslint-plugin-simple-import-sort@10.0.0(eslint@8.57.0):
-    resolution: {integrity: sha512-AeTvO9UCMSNzIHRkg8S6c3RPy5YEwKWSQPx3DYghLedo2ZQxowPFLGDN1AZ2evfg6r6mjBSZSLxLFsWSu3acsw==}
+  /eslint-plugin-simple-import-sort@12.1.0(eslint@8.57.0):
+    resolution: {integrity: sha512-Y2fqAfC11TcG/WP3TrI1Gi3p3nc8XJyEOJYHyEPEGI/UAgNx6akxxlX74p7SbAQdLcgASKhj8M0GKvH3vq/+ig==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
