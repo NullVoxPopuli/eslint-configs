@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import { configs } from '../index.js';
+import { configs } from '../index';
 import { findRule } from './-helpers.js';
 
 describe('configs', () => {
