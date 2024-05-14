@@ -1,5 +1,30 @@
 # Changelog
 
+## Release (2024-05-14)
+
+@nullvoxpopuli/eslint-configs 4.0.0 (major)
+
+#### :boom: Breaking Change
+* `@nullvoxpopuli/eslint-configs`
+  * [#627](https://github.com/NullVoxPopuli/eslint-configs/pull/627) Support GJS and GTS ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#634](https://github.com/NullVoxPopuli/eslint-configs/pull/634) Drop support for prettier 2, only support 3 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#632](https://github.com/NullVoxPopuli/eslint-configs/pull/632) Update import-sort to v12 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#631](https://github.com/NullVoxPopuli/eslint-configs/pull/631) Bump eslint-plugin-n to v17 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#628](https://github.com/NullVoxPopuli/eslint-configs/pull/628) Use latest typescript-eslint (v8) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#581](https://github.com/NullVoxPopuli/eslint-configs/pull/581) fix: add @babel/plugin-proposal-decorators as peerDep ([@betocantu93](https://github.com/betocantu93))
+
+#### :house: Internal
+* `@nullvoxpopuli/eslint-configs`
+  * [#633](https://github.com/NullVoxPopuli/eslint-configs/pull/633) Update renovate config ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#629](https://github.com/NullVoxPopuli/eslint-configs/pull/629) Release plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 2
+- Alberto Cantú Gómez ([@betocantu93](https://github.com/betocantu93))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 # @nullvoxpopuli/eslint-configs
 
 ## 3.2.2
