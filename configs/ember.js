@@ -171,13 +171,6 @@ function configBuilder(options = {}) {
                     version: EXPECTED_NODE_VERSION,
                   },
                 ],
-                'n/no-unsupported-features': [
-                  'error',
-                  {
-                    version: EXPECTED_NODE_VERSION,
-                    ignores: [],
-                  },
-                ],
               },
             },
             (config) => merge(config, personalPreferences)
