@@ -1,5 +1,11 @@
 # @nullvoxpopuli/eslint-configs
 
+## 3.2.3
+
+### Patch Changes
+
+- [#581](https://github.com/NullVoxPopuli/eslint-configs/pull/581) [`3572090`](https://github.com/NullVoxPopuli/eslint-configs/commit/35720906f82c36318660f220aa4f9b067f87d22b) Thanks [@betocantu93](https://github.com/betocantu93)! - Add @babel/plugin-proposal-decorators as a peerDep
+
 ## 3.2.2
 
 ### Patch Changes
