@@ -1,3 +1,5 @@
+# Changelog
+
 # @nullvoxpopuli/eslint-configs
 
 ## 3.2.2

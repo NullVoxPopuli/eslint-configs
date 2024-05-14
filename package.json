@@ -2,29 +2,49 @@
   "name": "@nullvoxpopuli/eslint-configs",
   "version": "3.2.2",
   "description": "eslint configs for the NullVoxPopuli's projects",
-  "main": "index.js",
-  "type": "commonjs",
   "repository": {
     "url": "https://github.com/NullVoxPopuli/eslint-configs"
   },
-  "author": "NullVoxPopuli",
   "license": "MIT",
-  "volta": {
-    "node": "16.19.0",
-    "yarn": "1.22.22"
-  },
-  "engines": {
-    "node": ">= v16.0.0"
-  },
+  "author": "NullVoxPopuli",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
-    "release": "changeset publish",
-    "lint:js": "eslint . --ignore-pattern test-packages",
-    "lint:all:js": "pnpm --filter '*' lint:js",
-    "format:check:all": "pnpm --filter '*-prettier' format:check",
-    "format:all": "pnpm --filter '*' format",
     "format": "prettier --write .",
+    "format:all": "pnpm --filter '*' format",
+    "format:check:all": "pnpm --filter '*-prettier' format:check",
+    "lint:all:js": "pnpm --filter '*' lint:js",
+    "lint:js": "eslint . --ignore-pattern test-packages",
     "lint:types": "tsc --noEmit",
     "test": "vitest"
+  },
+  "dependencies": {
+    "cosmiconfig": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-decorator-position": "^5.0.2",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier-plugin-ember-template-tag": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/eslint-parser": "^7.24.5",
+    "@tsconfig/node18-strictest": "^1.0.0",
+    "@types/eslint": "^8.56.10",
+    "@typescript-eslint/eslint-plugin": "7.9.0",
+    "@typescript-eslint/parser": "7.9.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-ember": "11.12.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-qunit": "8.1.1",
+    "prettier": "2.8.8",
+    "release-plan": "^0.9.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   },
   "peerDependencies": {
     "@babel/core": "^7.22.10",
@@ -41,16 +61,16 @@
     "@babel/core": {
       "optional": true
     },
-    "@babel/plugin-proposal-decorators": {
-      "optional": true
-    },
     "@babel/eslint-parser": {
       "optional": true
     },
-    "@typescript-eslint/parser": {
+    "@babel/plugin-proposal-decorators": {
       "optional": true
     },
     "@typescript-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "@typescript-eslint/parser": {
       "optional": true
     },
     "eslint-plugin-ember": {
@@ -63,23 +83,12 @@
       "optional": true
     }
   },
-  "devDependencies": {
-    "@babel/core": "^7.24.5",
-    "@babel/eslint-parser": "^7.24.5",
-    "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.1",
-    "@tsconfig/node18-strictest": "^1.0.0",
-    "@types/eslint": "^8.56.10",
-    "@typescript-eslint/eslint-plugin": "7.9.0",
-    "@typescript-eslint/parser": "7.9.0",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-ember": "11.12.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-qunit": "8.1.1",
-    "prettier": "2.8.8",
-    "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
+  "engines": {
+    "node": ">= v16.0.0"
+  },
+  "volta": {
+    "node": "16.19.0",
+    "yarn": "1.22.22"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -87,16 +96,5 @@
         "ember-cli-htmlbars"
       ]
     }
-  },
-  "dependencies": {
-    "cosmiconfig": "^9.0.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-decorator-position": "^5.0.2",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "prettier-plugin-ember-template-tag": "^1.1.0"
   }
 }

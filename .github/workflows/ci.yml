@@ -72,31 +72,3 @@ jobs:
 
   #     - name: Type Check
   #       run: pnpm tsc
-
-  # https://github.com/changesets/action
-  release:
-    name: Release
-    timeout-minutes: 5
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    needs:
-      - own_tests
-      - lint_source
-      - lint_test-packages
-      # - lint_types
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - uses: ./.github/actions/pnpm
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          # This expects you to have a script called release which does a build for your
-          # packages and calls changeset publish
-          publish: pnpm release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
