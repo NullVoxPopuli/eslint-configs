@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+
+
 ## Release (2024-05-14)
 
 @nullvoxpopuli/eslint-configs 4.0.0 (major)
