@@ -1,6 +1,7 @@
 'use strict';
 
 const { merge, hasDep, pipe, configFor, forFiles } = require('./-utils');
+const { configBuilder: nodeConfigBuilder } = require('./node');
 
 /**
  * @param {import('./types').Options} [options]
@@ -58,6 +59,7 @@ module.exports = (options = {}) => {
       ],
       config.commonjs.node.js
     ),
+    forFiles(['./*.{mjs}'], config.modules.node.js),
   ]);
 };
 
@@ -87,8 +89,18 @@ function configBuilder(options = {}) {
     },
   };
 
+  const node = nodeConfigBuilder(options);
+
   const configBuilder = {
     modules: {
+      node: {
+        get js() {
+          return node.modules.js;
+        },
+        get ts() {
+          return node.modules.ts;
+        },
+      },
       browser: {
         get js() {
           return pipe(
