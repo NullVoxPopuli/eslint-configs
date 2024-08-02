@@ -1,25 +1,17 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "major",
-      "oldVersion": "3.2.2",
-      "newVersion": "4.0.0",
+      "impact": "minor",
+      "oldVersion": "4.0.0",
+      "newVersion": "4.1.0",
       "constraints": [
         {
-          "impact": "major",
-          "reason": "Appears in changelog section :boom: Breaking Change"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-05-14)\n\n@nullvoxpopuli/eslint-configs 4.0.0 (major)\n\n#### :boom: Breaking Change\n* `@nullvoxpopuli/eslint-configs`\n  * [#627](https://github.com/NullVoxPopuli/eslint-configs/pull/627) Support GJS and GTS ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#634](https://github.com/NullVoxPopuli/eslint-configs/pull/634) Drop support for prettier 2, only support 3 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#632](https://github.com/NullVoxPopuli/eslint-configs/pull/632) Update import-sort to v12 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#631](https://github.com/NullVoxPopuli/eslint-configs/pull/631) Bump eslint-plugin-n to v17 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#628](https://github.com/NullVoxPopuli/eslint-configs/pull/628) Use latest typescript-eslint (v8) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@nullvoxpopuli/eslint-configs`\n  * [#581](https://github.com/NullVoxPopuli/eslint-configs/pull/581) fix: add @babel/plugin-proposal-decorators as peerDep ([@betocantu93](https://github.com/betocantu93))\n\n#### :house: Internal\n* `@nullvoxpopuli/eslint-configs`\n  * [#633](https://github.com/NullVoxPopuli/eslint-configs/pull/633) Update renovate config ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#629](https://github.com/NullVoxPopuli/eslint-configs/pull/629) Release plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 2\n- Alberto Cantú Gómez ([@betocantu93](https://github.com/betocantu93))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2024-08-02)\n\n@nullvoxpopuli/eslint-configs 4.1.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#653](https://github.com/NullVoxPopuli/eslint-configs/pull/653) Use node config builder for node ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
