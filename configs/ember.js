@@ -59,7 +59,8 @@ module.exports = (options = {}) => {
       ],
       config.commonjs.node.js
     ),
-    forFiles(['./*.{mjs}'], config.modules.node.js),
+    forFiles('./*.mjs', config.modules.node.js),
+    forFiles('./*.mts', config.modules.node.ts),
   ]);
 };
 
