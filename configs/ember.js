@@ -166,32 +166,7 @@ function configBuilder(options = {}) {
     commonjs: {
       node: {
         get js() {
-          const EXPECTED_NODE_VERSION = '16.0.0'; // or greater
-
-          return pipe(
-            {
-              parserOptions: {
-                sourceType: 'script',
-                ecmaVersion: 'latest',
-              },
-              env: {
-                browser: false,
-                node: true,
-                es6: true,
-              },
-              plugins: ['n'],
-              extends: ['plugin:n/recommended'],
-              rules: {
-                'n/no-unsupported-features/es-syntax': [
-                  'error',
-                  {
-                    version: EXPECTED_NODE_VERSION,
-                  },
-                ],
-              },
-            },
-            (config) => merge(config, personalPreferences)
-          );
+          return node.commonjs.js;
         },
       },
     },
