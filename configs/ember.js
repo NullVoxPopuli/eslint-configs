@@ -1,6 +1,7 @@
 'use strict';
 
 const { merge, hasDep, pipe, configFor, forFiles } = require('./-utils');
+const { configBuilder: nodeConfigBuilder } = require('./node');
 
 /**
  * @param {import('./types').Options} [options]
@@ -58,6 +59,7 @@ module.exports = (options = {}) => {
       ],
       config.commonjs.node.js
     ),
+    forFiles(['./*.{mjs}'], config.modules.node.js),
   ]);
 };
 
@@ -87,8 +89,18 @@ function configBuilder(options = {}) {
     },
   };
 
+  const node = nodeConfigBuilder(options);
+
   const configBuilder = {
     modules: {
+      node: {
+        get js() {
+          return node.modules.js;
+        },
+        get ts() {
+          return node.modules.ts;
+        },
+      },
       browser: {
         get js() {
           return pipe(
@@ -154,32 +166,7 @@ function configBuilder(options = {}) {
     commonjs: {
       node: {
         get js() {
-          const EXPECTED_NODE_VERSION = '16.0.0'; // or greater
-
-          return pipe(
-            {
-              parserOptions: {
-                sourceType: 'script',
-                ecmaVersion: 'latest',
-              },
-              env: {
-                browser: false,
-                node: true,
-                es6: true,
-              },
-              plugins: ['n'],
-              extends: ['plugin:n/recommended'],
-              rules: {
-                'n/no-unsupported-features/es-syntax': [
-                  'error',
-                  {
-                    version: EXPECTED_NODE_VERSION,
-                  },
-                ],
-              },
-            },
-            (config) => merge(config, personalPreferences)
-          );
+          return node.commonjs.js;
         },
       },
     },

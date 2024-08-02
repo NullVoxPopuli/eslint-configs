@@ -4,6 +4,7 @@ const path = require('path');
 
 const { hasDep, configFor, pipe, merge, forFiles } = require('./-utils');
 
+const EXPECTED_NODE_VERSION = '16.0.0'; // or greater
 /**
  * @param {import('./types').Options} options
  */
@@ -75,6 +76,14 @@ const configBuilder = (options = {}) => {
             },
             plugins: ['n'],
             extends: ['plugin:n/recommended'],
+            rules: {
+              'n/no-unsupported-features/es-syntax': [
+                'error',
+                {
+                  version: EXPECTED_NODE_VERSION,
+                },
+              ],
+            },
           },
           (config) => merge(config, personalPreferences),
           (config) => merge(config, require('./rules/imports'))
@@ -98,6 +107,14 @@ const configBuilder = (options = {}) => {
             },
             plugins: ['n'],
             extends: ['plugin:n/recommended', 'plugin:import/typescript'],
+            rules: {
+              'n/no-unsupported-features/es-syntax': [
+                'error',
+                {
+                  version: EXPECTED_NODE_VERSION,
+                },
+              ],
+            },
           },
           (config) => merge(config, personalPreferences),
           (config) => merge(config, require('./rules/imports')),
