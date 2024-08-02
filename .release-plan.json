@@ -2,8 +2,8 @@
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
       "impact": "minor",
-      "oldVersion": "4.0.0",
-      "newVersion": "4.1.0",
+      "oldVersion": "4.1.0",
+      "newVersion": "4.2.0",
       "constraints": [
         {
           "impact": "minor",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-08-02)\n\n@nullvoxpopuli/eslint-configs 4.1.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#653](https://github.com/NullVoxPopuli/eslint-configs/pull/653) Use node config builder for node ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2024-08-02)\n\n@nullvoxpopuli/eslint-configs 4.2.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#654](https://github.com/NullVoxPopuli/eslint-configs/pull/654) Support mts for node config ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
