@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-11-01)
+
+@nullvoxpopuli/eslint-configs 4.3.0 (minor)
+
+#### :rocket: Enhancement
+* `@nullvoxpopuli/eslint-configs`
+  * [#671](https://github.com/NullVoxPopuli/eslint-configs/pull/671) Expose ember's config builder ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2024-08-02)
 
 @nullvoxpopuli/eslint-configs 4.2.0 (minor)
