@@ -12,7 +12,7 @@ module.exports = {
      * @returns {import('eslint').Linter.Config}
      */
     ember(options = {}) {
-      return require('./configs/ember')(options);
+      return require('./configs/ember').ember(options);
     },
     /**
      * @param {import('./configs/types').Options} [ options ]
