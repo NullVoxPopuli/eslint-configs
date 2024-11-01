@@ -7,7 +7,7 @@ const { configBuilder: nodeConfigBuilder } = require('./node');
  * @param {import('./types').Options} [options]
  * @returns {import('eslint').Linter.Config}
  */
-module.exports = (options = {}) => {
+const ember = (options = {}) => {
   let config = configBuilder(options);
 
   return configFor([
@@ -175,3 +175,8 @@ function configBuilder(options = {}) {
 
   return configBuilder;
 }
+
+module.exports = {
+  configBuilder,
+  ember,
+};
