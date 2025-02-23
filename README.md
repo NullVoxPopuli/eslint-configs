@@ -50,53 +50,25 @@ See the [Usage](https://github.com/lint-todo/eslint-formatter-todo#usage) sectio
 
 **Ember**
 ```js
-// .eslintrc.js
-'use strict';
-
-const { configs } = require('@nullvoxpopuli/eslint-configs');
+// eslint.config.js  
+import { configs } from '@nullvoxpopuli/eslint-configs';
 
 // accommodates: JS, TS, App, Addon, and V2 Addon
-module.exports = configs.ember();
+export default configs.ember(import.meta.dirname);
 ```
 
 _overriding_
 ```js
-// .eslintrc.js
-'use strict';
+// eslint.config.js  
+import { configs } from '@nullvoxpopuli/eslint-configs';
 
-const { configs } = require('@nullvoxpopuli/eslint-configs');
-const config = configs.ember();
+const config = configs.ember(import.meta.dirname);
 
-module.exports = {
-  ...config,
-  overrides: [
-    ...config.overrides,
+export default [
+    ...config,
     // your modifications here
     // see: https://eslint.org/docs/user-guide/configuring/configuration-files#how-do-overrides-work
-  ]
-}
-```
-
-_overriding prettier configuration example_
-```js
-// .eslintrc.js
-'use strict';
-
-const { configs } = require('@nullvoxpopuli/eslint-configs');
-const config = configs.ember();
-
-module.exports = {
-  ...config,
-  overrides: [
-    ...config.overrides,
-    {
-      files: ['**/*.js', '**/*.ts'],
-      rules: {
-        'prettier/prettier': ['error', { singleQuote: true, printWidth: 120, trailingComma: 'all' }],
-      },
-    },
-  ]
-}
+];
 ```
 
 **Cross-Platform**
@@ -104,26 +76,20 @@ module.exports = {
 This config is ESM, as ESM is the most widely supported module format across different distributions (browser, node, etc).
 
 ```js 
-// .eslintrc.cjs
-'use strict';
+// eslint.config.js  
+import { configs } from '@nullvoxpopuli/eslint-configs';
 
-const { configs } = require('@nullvoxpopuli/eslint-configs');
-
-// accommodates: JS, TS, ESM, and CJS
-module.exports = configs.crossPlatform();
+export default configs.crossPlatform(import.meta.dirname);
 ```
 
 **Node**
 
 This config looks at your package.json to determine if your project is CommonJS or ES Modules.
 ```js
-// .eslintrc.js
-'use strict';
+// eslint.config.js  
+import { configs } from '@nullvoxpopuli/eslint-configs';
 
-const { configs } = require('@nullvoxpopuli/eslint-configs');
-
-// accommodates: JS, TS, ESM, and CJS
-module.exports = configs.node();
+export default configs.node(import.meta.dirname);
 ```
 
 _overriding_
@@ -131,88 +97,14 @@ _overriding_
 // .eslintrc.js
 'use strict';
 
-const { configs } = require('@nullvoxpopuli/eslint-configs');
+import { configs } from '@nullvoxpopuli/eslint-configs';
+
 const config = configs.node();
 
-module.exports = {
-  ...config,
-  overrides: [
-    ...config.overrides,
+export default [
+    ...config,
     // your modifications here
     // see: https://eslint.org/docs/user-guide/configuring/configuration-files#how-do-overrides-work
-  ]
-}
+]
 ```
 
-**Configure babel parser of js files**
-
-*.js files are now parsed with @babel/eslint-parser. Config file if disabled by default by eslint-configs.
-
-```js
-// .eslintrc.js
-'use strict';
-
-const { configs } = require('@nullvoxpopuli/eslint-configs');
-const config = configs.node();
-
-module.exports = {
-  ...config,
-  overrides: [
-    ...config.overrides,
-    {
-      files: ['**/*.js'],
-      parserOptions: {
-        // Enable babel config file
-        requireConfigFile: true,
-      },
-    },
-  ]
-}
-```
-
-```js
-// .babelrc.js
-
-// This is the babel config file
-```
-
-**Configure eslint prettier integration**
-
-This is disabled by default, but if you wish to include prettier errors in eslint, you may add the setting:
-```js
-const { configs } = require('@nullvoxpopuli/eslint-configs');
-
-const config = configs.node({ prettierIntegration: true });
-```
-
-All configs on the `configs` object support this.
-
-
-## Gaining additional lints with 0 config
-
-This lint config meta package is setup to lazily detect which plugins and configurations you have installed and automatically add them to your lint config.
-
-This has the following benefits:
- - No need to install dependencies you don't use (typescript, for example)
- - No need to force prettier on your projects if you don't have it installed
- - Progressive enhancement as you decide you want more behaviors / lints
- - Minimal impact to node_modules so that local dev and C.I. are not unnecessarily hit with extra dependencies
-
-## Debugging
-
-To see what the resolved config looks like for a file
-```bash
-node_modules/.bin/eslint --print-config path/to/file
-```
-
-## Why use overrides for everything?
-
-With traditional ESLint configs, you end up having cascading rules, where plugins, extends all get piled on top of each other.
-By having no base config, and _only_ targeting files matching patterns, we can have much more control over what lint rules
-we work with, and avoid the problem of disabling rules for specific files in too many places.
-
-## Why is prettier bundlede in here?
-
-I want a decent formatter, and since there is an integration with ESLint, it makes
-my life setting up apps, addons, libraries, etc much easier.
-One less thing to think about and make sure is configured correctly.

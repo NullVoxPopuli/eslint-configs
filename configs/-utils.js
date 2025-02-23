@@ -1,13 +1,15 @@
-// @ts-check
-'use strict';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta);
 
 /**
  * @param {string} depName
+ * @param {string} dir
  * @returns {boolean}
  */
-function hasDep(depName) {
+function hasDep(depName, dir) {
   try {
-    return Boolean(require.resolve(depName));
+    return Boolean(require.resolve(depName, { paths: [dir]}));
   } catch (e) {
     if (e instanceof Error) {
       if (e.message.startsWith(`Cannot find module '${depName}'`)) return false;
