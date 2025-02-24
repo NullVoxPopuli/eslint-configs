@@ -6,5 +6,3 @@ export { FindRecord } from './-private/resources/find-record';
 export { Query } from './-private/resources/query';
 export { QueryRecord } from './-private/resources/query-record';
 
-// Resource wrappers in JS/TS classes
-export { findAll, findRecord, query, queryRecord } from './js-helpers';
