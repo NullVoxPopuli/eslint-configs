@@ -7,6 +7,8 @@
   },
   "devDependencies": {
     "@nullvoxpopuli/eslint-configs": "workspace:../..",
+    "@tsconfig/ember": "^3.0.9",
+    "ember-source": "^6.2.0",
     "eslint": "9.21.0",
     "typescript": "^5.7.3"
   }

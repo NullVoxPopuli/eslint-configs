@@ -10,12 +10,12 @@ import { rule as typescriptRules } from './rules/typescript.js';
  */
 export function ember(root) {
   return [
-    ...upstreamEmber.recommended(root),
     ...base,
     ...imports,
     {
       files: ['**/*.ts'],
       ...typescriptRules,
     },
+    ...upstreamEmber.recommended(root),
   ];
 }

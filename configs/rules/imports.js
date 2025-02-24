@@ -1,12 +1,14 @@
 import importPlugin from 'eslint-plugin-import';
 
+const base = importPlugin.flatConfigs.recommended;
+
 /**
  *
  * @type {import('#types').PartialConfig[]}
  */
 export const config = [
-  importPlugin.flatConfigs.recommended,
   {
+    plugins: { ...base.plugins },
     rules: {
       // ----------------------------
       // Broken Rules
