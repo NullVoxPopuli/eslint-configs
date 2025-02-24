@@ -1,16 +1,14 @@
-'use strict';
 
-const config = {
-  allow: ['debug', 'warn', 'error', 'info', 'group', 'groupEnd', 'groupCollapsed'],
+const ruleConfig = {
+  allow: ['debug', 'warn', 'error', 'info', 'group', 'groupEnd', 'groupCollapsed', 'table'],
 };
 
 /**
- * @type {import('../types').PartialConfig}
+ * @type {import('#types').PartialConfig}
  */
-const rule = {
+export const config = [{
   rules: {
-    'no-console': ['error', config],
+    'no-console': ['error', ruleConfig],
   },
-};
+}];
 
-module.exports = { rule, config };

@@ -1,6 +1,4 @@
-'use strict';
-
-const config = [
+const ruleConfig = [
   { blankLine: 'always', prev: '*', next: 'return' },
   { blankLine: 'always', prev: '*', next: 'break' },
   { blankLine: 'always', prev: '*', next: 'block-like' },
@@ -12,12 +10,11 @@ const config = [
 ];
 
 /**
- * @type {import('../types').PartialConfig}
+ * @type {import('#types').PartialConfig}
  */
-const rule = {
+export const config = [{
   rules: {
-    'padding-line-between-statements': ['error', ...config],
+    'padding-line-between-statements': ['error', ...ruleConfig],
   },
-};
+}];
 
-module.exports = { rule, config };

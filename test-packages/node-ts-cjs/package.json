@@ -6,8 +6,8 @@
   },
   "devDependencies": {
     "@nullvoxpopuli/eslint-configs": "workspace:../..",
-    "eslint": "8.57.1",
-    "typescript": "^5.4.5"
+    "eslint": "9.21.0",
+    "typescript": "^5.7.3"
   },
   "engines": {
     "node": ">= 16"

@@ -1,26 +1,33 @@
 // @ts-check
-export { merge, pipe } from './configs/-utils.js';
+export { merge, pipe } from '#utils';
+
+import { ember } from './configs/ember.js';
+import { crossPlatform } from './configs/cross-platform.js';
+import { node } from './configs/node.js';
 
 export const configs = {
   /**
-   * @param {import('./configs/types').Options} [ options ]
+   * @param {string} root
+   * @param {import('#types').Options} [ options ]
    * @returns {import('eslint').Linter.Config}
    */
-  ember(options = {}) {
-    return require('./configs/ember').ember(options);
+  ember(root, options = {}) {
+    return ember(root, options);
   },
   /**
-   * @param {import('./configs/types').Options} [ options ]
+   * @param {string} root
+   * @param {import('#types').Options} [ options ]
    * @returns {import('eslint').Linter.Config}
    */
-  crossPlatform(options = {}) {
-    return require('./configs/cross-platform')(options);
+  crossPlatform(root, options = {}) {
+    return crossPlatform(root, options);
   },
   /**
-   * @param {import('./configs/types').Options} [ options ]
+   * @param {string} root
+   * @param {import('#types').Options} [ options ]
    * @returns {import('eslint').Linter.Config}
    */
-  node(options = {}) {
-    return require('./configs/node').node(options);
+  node(root, options = {}) {
+    return node(root, options);
   },
 }; 

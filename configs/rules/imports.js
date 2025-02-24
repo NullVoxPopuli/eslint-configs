@@ -1,12 +1,12 @@
-'use strict';
+import importPlugin from 'eslint-plugin-import';
 
 /**
  *
- * @type {import('../types').PartialConfig}
+ * @type {import('#types').PartialConfig}
  */
-const rule = {
-  plugins: ['import'],
-  extends: ['plugin:import/recommended'],
+export const config = [
+  importPlugin.flatConfigs.recommended,
+  {
   rules: {
     // ----------------------------
     // Broken Rules
@@ -28,6 +28,5 @@ const rule = {
     'import/no-duplicates': ['error'],
     'import/newline-after-import': ['error'],
   },
-};
+}];
 
-module.exports = { rule };
