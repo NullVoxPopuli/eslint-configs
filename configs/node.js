@@ -1,7 +1,8 @@
 import { createRequire } from 'node:module';
 import path from 'node:path';
 
-import { parsers } from 'ember-eslint';
+import * as parser from '@typescript-eslint/parser';
+import { parsers, utils } from 'ember-eslint';
 import n from 'eslint-plugin-n';
 import globals from 'globals';
 
@@ -19,6 +20,7 @@ const EXPECTED_NODE_VERSION = '22.0.0'; // or greater
  */
 const configBuilder = (root) => {
   let esm = parsers.esm(root);
+  let hasTS = utils.hasTypescript(root);
 
   return {
     modules: {
@@ -32,8 +34,12 @@ const configBuilder = (root) => {
         };
       },
       get ts() {
+        if (!hasTS) return {};
+
         return {
           languageOptions: {
+            globals: globals.node,
+            parser,
             parserOptions: esm.ts,
           },
         };
@@ -60,6 +66,7 @@ const configBuilder = (root) => {
       get ts() {
         return {
           languageOptions: {
+            globals: globals.node,
             parserOptions: esm.ts,
           },
           rules: {
@@ -78,6 +85,8 @@ const configBuilder = (root) => {
         rules: {
           // devDependencies
           'n/no-unpublished-import': 'off',
+          'n/no-missing-import': 'off',
+          'import/named': 'off',
         },
       };
     },
@@ -139,7 +148,7 @@ function nodeCJS(root, options) {
 
 /**
  * @param {string} root
- * @param {import('./types').Options} options
+ * @param {import('#types').Options} options
  */
 function nodeESM(root, options) {
   let config = configBuilder(root, options);
