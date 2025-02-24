@@ -20,8 +20,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: volta-cli/action@v4
-      - uses: ./.github/actions/pnpm
+      - uses: wyvox/action-setup-pnpm@v3
       - run: pnpm test
 
   lint_source:
@@ -30,9 +29,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: volta-cli/action@v4
-      - uses: ./.github/actions/pnpm
-
+      - uses: wyvox/action-setup-pnpm@v3
       - name: Formatting
         run: pnpm format
 
@@ -45,9 +42,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: volta-cli/action@v4
-      - uses: ./.github/actions/pnpm
-
+      - uses: wyvox/action-setup-pnpm@v3
       - name: ESLint
         run: pnpm lint:all:js
 
@@ -57,8 +52,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: volta-cli/action@v4
-      - uses: ./.github/actions/pnpm
+      - uses: wyvox/action-setup-pnpm@v3
 
   # lint_types:
   #   name: Lint Types
