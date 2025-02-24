@@ -1,8 +1,8 @@
 // @ts-check
-export { merge, pipe } from '#utils';
+export { pipe } from '#utils';
 
-import { ember } from './configs/ember.js';
 import { crossPlatform } from './configs/cross-platform.js';
+import { ember } from './configs/ember.js';
 import { node } from './configs/node.js';
 
 export const configs = {

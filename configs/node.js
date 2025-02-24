@@ -1,29 +1,52 @@
-import js from '@eslint/js';
+import { createRequire } from 'node:module';
 import path from 'node:path';
+
+import { parsers } from 'ember-eslint';
 import n from 'eslint-plugin-n';
+import globals from 'globals';
+
 import { forFiles } from '#utils';
 
-import { config as imports } from './rules/imports.js';
 import { config as base } from './base.js';
+import { config as imports } from './rules/imports.js';
+
+const require = createRequire(import.meta.url);
 
 const EXPECTED_NODE_VERSION = '22.0.0'; // or greater
 /**
  * @param {string} root
- * @param {import('#types').Options} options
+ * @param {import('#types').Options} [ options ]
  */
-const configBuilder = (root, options = {}) => {
+const configBuilder = (root) => {
+  let esm = parsers.esm(root);
+
   return {
     modules: {
       get js() {
-        return {};
+        return {
+          languageOptions: {
+            globals: globals.node,
+            ecmaVersion: 'latest',
+            sourceType: 'module',
+          },
+        };
       },
       get ts() {
-        return {};
+        return {
+          languageOptions: {
+            parserOptions: esm.ts,
+          },
+        };
       },
     },
     commonjs: {
       get js() {
         return {
+          languageOptions: {
+            globals: globals.node,
+            ecmaVersion: 'latest',
+            sourceType: 'script',
+          },
           rules: {
             'n/no-unsupported-features/es-syntax': [
               'error',
@@ -36,6 +59,9 @@ const configBuilder = (root, options = {}) => {
       },
       get ts() {
         return {
+          languageOptions: {
+            parserOptions: esm.ts,
+          },
           rules: {
             'n/no-unsupported-features/es-syntax': [
               'error',
@@ -101,7 +127,7 @@ function nodeCJS(root, options) {
 
   return [
     ...base,
-    ...n.configs['flat/recommended'],
+    n.configs['flat/recommended'],
     ...imports,
     forFiles('**/*.{cjs,js}', config.commonjs.js),
     forFiles('**/*.{cts,ts}', config.commonjs.ts),
@@ -120,7 +146,7 @@ function nodeESM(root, options) {
 
   return [
     ...base,
-    ...n.configs['flat/recommended'],
+    n.configs['flat/recommended'],
     ...imports,
     forFiles('**/*.cjs', config.commonjs.js),
     forFiles('**/*.cts', config.commonjs.ts),

@@ -2,7 +2,7 @@ import importPlugin from 'eslint-plugin-import';
 
 /**
  *
- * @type {import('#types').PartialConfig}
+ * @type {import('#types').PartialConfig[]}
  */
 export const config = [
   importPlugin.flatConfigs.recommended,

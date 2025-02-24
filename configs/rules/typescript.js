@@ -1,12 +1,7 @@
-'use strict';
-
 /**
- * @type {import('../types').PartialConfig}
+ * @type {import('#types').PartialConfig}
  */
-const rule = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  extends: ['plugin:@typescript-eslint/recommended'],
+export const rule = {
   rules: {
     // this isn't C#
     '@typescript-eslint/interface-name-prefix': 'off',
@@ -50,5 +45,3 @@ const rule = {
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
   },
 };
-
-module.exports = { rule };
