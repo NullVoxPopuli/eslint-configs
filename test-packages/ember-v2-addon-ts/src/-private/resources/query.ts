@@ -26,7 +26,7 @@ export class Query<Model, LocalArgs extends Args = Args> extends Request<LocalAr
 
   @action
   async __WRAPPED_FUNCTION__([modelName, query]: PositionalArgs, { options }: NamedArgs) {
-    let records = await this.store.query(modelName as never, query, options);
+    const records = await this.store.query(modelName as never, query, options);
 
     if (isDestroyed(this) || isDestroying(this)) return;
 

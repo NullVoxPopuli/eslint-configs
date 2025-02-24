@@ -40,7 +40,7 @@ export class FindRecord<Model, LocalArgs extends Args = Args> extends Request<Lo
       throw new IdTypeError(modelName, id);
     }
 
-    let record = await this.store.findRecord(modelName as never, id, options);
+    const record = await this.store.findRecord(modelName as never, id, options);
 
     if (isDestroyed(this) || isDestroying(this)) return;
 

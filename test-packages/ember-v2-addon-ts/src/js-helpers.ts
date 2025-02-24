@@ -18,7 +18,7 @@ export function findRecord<Model = unknown>(
   thunk: () => FindRecordThunkResult
 ) {
   return FindRecord.from(destroyable, () => {
-    let reified = thunk();
+    const reified = thunk();
     let id: Id;
     let options: FindRecordOptions;
 
@@ -26,7 +26,7 @@ export function findRecord<Model = unknown>(
       id = reified[0];
       options = reified[1] ?? {};
     } else {
-      id = reified as Id;
+      id = reified;
       options = {};
     }
 
@@ -48,8 +48,8 @@ export function findAll<Model = unknown>(
   thunk?: () => FindAllThunkResult
 ) {
   return FindAll.from(destroyable, () => {
-    let reified = thunk?.() || {};
-    let options = 'options' in reified ? reified.options : reified;
+    const reified = thunk?.() || {};
+    const options = 'options' in reified ? reified.options : reified;
 
     return {
       positional: [modelName],
@@ -69,10 +69,10 @@ export function query<Model = unknown>(
   thunk: () => QueryThunkResult
 ) {
   return Query.from(destroyable, () => {
-    let reified = thunk();
+    const reified = thunk();
 
     if (Array.isArray(reified)) {
-      let [query, options] = reified;
+      const [query, options] = reified;
 
       return {
         positional: [modelName, query],
@@ -103,10 +103,10 @@ export function queryRecord<Model = unknown>(
   thunk: () => QueryRecordThunkResult
 ) {
   return QueryRecord.from(destroyable, () => {
-    let reified = thunk();
+    const reified = thunk();
 
     if (Array.isArray(reified)) {
-      let [query, options] = reified;
+      const [query, options] = reified;
 
       return {
         positional: [modelName, query],

@@ -24,7 +24,7 @@ export class FindAll<Model, LocalArgs extends Args = Args> extends Request<Local
 
   @action
   async __WRAPPED_FUNCTION__([modelName]: PositionalArgs, { options }: NamedArgs) {
-    let records = await this.store.findAll(modelName as never, options);
+    const records = await this.store.findAll(modelName as never, options);
 
     if (isDestroyed(this) || isDestroying(this)) return;
 
