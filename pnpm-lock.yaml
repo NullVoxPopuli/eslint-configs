@@ -60,6 +60,9 @@ importers:
       '@types/node':
         specifier: ^22.13.5
         version: 22.13.5
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.24.1
+        version: 8.24.1(@typescript-eslint/parser@8.24.1(eslint@9.21.0)(typescript@5.7.3))(eslint@9.21.0)(typescript@5.7.3)
       eslint:
         specifier: 9.21.0
         version: 9.21.0
@@ -141,36 +144,6 @@ importers:
       eslint:
         specifier: 9.21.0
         version: 9.21.0
-      typescript:
-        specifier: ^5.7.3
-        version: 5.7.3
-
-  test-packages/ember-v2-addon-ts-prettier:
-    devDependencies:
-      '@nullvoxpopuli/eslint-configs':
-        specifier: workspace:../..
-        version: link:../..
-      eslint:
-        specifier: 9.21.0
-        version: 9.21.0
-      prettier:
-        specifier: 3.5.2
-        version: 3.5.2
-      typescript:
-        specifier: ^5.7.3
-        version: 5.7.3
-
-  test-packages/ember-v2-addon-ts-prettier-integration:
-    devDependencies:
-      '@nullvoxpopuli/eslint-configs':
-        specifier: workspace:../..
-        version: link:../..
-      eslint:
-        specifier: 9.21.0
-        version: 9.21.0
-      prettier:
-        specifier: 3.5.2
-        version: 3.5.2
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
