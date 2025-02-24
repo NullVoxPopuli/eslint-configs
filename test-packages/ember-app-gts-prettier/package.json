@@ -2,6 +2,7 @@
   "name": "@nullvoxpopuli/ember-app-gts-prettier",
   "private": true,
   "scripts": {
+    "update:ignore": "npx lint-to-the-future ignore",
     "format:check": "prettier -c .",
     "format": "prettier -w .",
     "lint:js": "eslint ."

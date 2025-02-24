@@ -2,6 +2,7 @@
   "name": "@nullvoxpopuli/lint-test-package-node-ts-cjs",
   "private": true,
   "scripts": {
+    "update:ignore": "npx lint-to-the-future ignore",
     "lint:js": "eslint ."
   },
   "devDependencies": {

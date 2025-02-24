@@ -16,6 +16,7 @@
     "#types": "./src/types.ts"
   },
   "scripts": {
+    "update:all": "pnpm --filter '*' update:ignore",
     "format": "prettier --write .",
     "format:all": "pnpm --filter '*' format",
     "format:check:all": "pnpm --filter '*-prettier' format:check",

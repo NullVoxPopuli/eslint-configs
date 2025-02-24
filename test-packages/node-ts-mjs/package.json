@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "update:ignore": "npx lint-to-the-future ignore",
     "lint:js": "eslint ."
   },
   "devDependencies": {
