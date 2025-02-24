@@ -6,6 +6,7 @@
     "lint:js": "eslint ."
   },
   "devDependencies": {
+    "@ember-data/store": "^5.3.11",
     "@nullvoxpopuli/eslint-configs": "workspace:../..",
     "@tsconfig/ember": "^3.0.9",
     "ember-source": "^6.2.0",

@@ -66,6 +66,12 @@ importers:
       eslint:
         specifier: 9.21.0
         version: 9.21.0
+      lint-to-the-future:
+        specifier: ^2.6.2
+        version: 2.6.2(encoding@0.1.13)
+      lint-to-the-future-eslint:
+        specifier: ^3.0.0
+        version: 3.0.0(eslint@9.21.0)
       prettier:
         specifier: 3.5.2
         version: 3.5.2
@@ -138,6 +144,9 @@ importers:
 
   test-packages/ember-v2-addon-ts:
     devDependencies:
+      '@ember-data/store':
+        specifier: ^5.3.11
+        version: 5.3.11(@ember-data/request-utils@5.3.11(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)))(@ember-data/request@5.3.11(@warp-drive/core-types@0.0.1))(@ember-data/tracking@5.3.11(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)))(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))
       '@nullvoxpopuli/eslint-configs':
         specifier: workspace:../..
         version: link:../..
@@ -766,11 +775,51 @@ packages:
     resolution: {integrity: sha512-Y3IR1cRnOxOCDvMmNiym7XpXQ93iGDDPHx+Zj+NM+rg0fBaShfQLkg+hKPaZCEvg5N/LeCo4+Rj/i3FuJsIQaw==}
     engines: {node: '>=6.9.0'}
 
+  '@ember-data/request-utils@5.3.11':
+    resolution: {integrity: sha512-L6oGT/2dAacjHhOgo3yuekEfg9suCK8tL1HlDO5GruiUoqfieHI35tKqjjOb+05Z+ypTzPAh/Ky6FFzffJBx6Q==}
+    engines: {node: '>= 18.20.4'}
+    peerDependencies:
+      '@ember/string': ^3.1.1 || ^4.0.0
+      '@warp-drive/core-types': 0.0.1
+      ember-inflector: ^4.0.2 || ^5.0.0
+      ember-source: 3.28.12 || ^4.0.4 || ^5.0.0 || ^6.0.0
+    peerDependenciesMeta:
+      '@ember/string':
+        optional: true
+      ember-inflector:
+        optional: true
+
+  '@ember-data/request@5.3.11':
+    resolution: {integrity: sha512-5YzMF90zb3Ti7XNL4qQWNpnbWmSrgHMxrRwTIN1KY1WQljciNen1EqFoLWcUq4PpEcy3U2ljRLTmxn3PC+QP7Q==}
+    engines: {node: '>= 18.20.4'}
+    peerDependencies:
+      '@warp-drive/core-types': 0.0.1
+
   '@ember-data/rfc395-data@0.0.4':
     resolution: {integrity: sha512-tGRdvgC9/QMQSuSuJV45xoyhI0Pzjm7A9o/MVVA3HakXIImJbbzx/k/6dO9CUEQXIyS2y0fW6C1XaYOG7rY0FQ==}
 
+  '@ember-data/store@5.3.11':
+    resolution: {integrity: sha512-7154J4wrlx0irdOukZTvp9zVE1DI9MC1UVsbHEk+KToyukknPyBIICa/ZBgx5UgOw/RLPSUaczIdmNlaML0IoA==}
+    engines: {node: '>= 18.20.4'}
+    peerDependencies:
+      '@ember-data/request': 5.3.11
+      '@ember-data/request-utils': 5.3.11
+      '@ember-data/tracking': 5.3.11
+      '@warp-drive/core-types': 0.0.1
+      ember-source: 3.28.12 || ^4.0.4 || ^5.0.0 || ^6.0.0
+
+  '@ember-data/tracking@5.3.11':
+    resolution: {integrity: sha512-y5aC3sXzTAef3rMVfrEuvF8zpwLZCTdUHOfX232r464Omzl3IQSRf/AGvBBIxBykSdoZGqiCOKYa5x6EldHEBg==}
+    engines: {node: '>= 18.20.4'}
+    peerDependencies:
+      '@warp-drive/core-types': 0.0.1
+      ember-source: 3.28.12 || ^4.0.4 || ^5.0.0 || ^6.0.0
+
   '@ember/edition-utils@1.2.0':
     resolution: {integrity: sha512-VmVq/8saCaPdesQmftPqbFtxJWrzxNGSQ+e8x8LLe3Hjm36pJ04Q8LeORGZkAeOhldoUX9seLGmSaHeXkIqoog==}
+
+  '@ember/test-waiters@4.0.0':
+    resolution: {integrity: sha512-anqtvTCQvQh8VlHcKPJC0Fxz3aMmc7L+mZLOqvoH7+k86TUikZ/CxhytgMvgLk0x53fqOPEL1uykl2C9Ez65OA==}
 
   '@embroider/addon-shim@1.9.0':
     resolution: {integrity: sha512-fMzayl/licUL8VRAy4qXROKcYvHwUbV8aTh4m97L5/MRuVpxbcAy92DGGTqx5OBKCSQN3gMg+sUKeE6AviefpQ==}
@@ -1447,6 +1496,14 @@ packages:
   '@vitest/utils@3.0.6':
     resolution: {integrity: sha512-18ktZpf4GQFTbf9jK543uspU03Q2qya7ZGya5yiZ0Gx0nnnalBvd5ZBislbl2EhLjM8A8rt4OilqKG7QwcGkvQ==}
 
+  '@warp-drive/build-config@0.0.1':
+    resolution: {integrity: sha512-i3RcvCDGyDEhLTxnsGpKC2QM/XPDhUPns8DIfrll3W0LNRS7JTShQqtBhKMCLNVxrf7jDdcyHN5mUfm0OB6pog==}
+    engines: {node: '>= 18.20.4'}
+
+  '@warp-drive/core-types@0.0.1':
+    resolution: {integrity: sha512-WEMFzr9FPoGbSEj2sAeo6qZ2NfzfpA4oERRomYFTArwTrSHFxK7V694L9gZkx+LWFx7nXurTItGgkbcIkOfTmg==}
+    engines: {node: '>= 18.20.4'}
+
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
 
@@ -1924,6 +1981,10 @@ packages:
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+
+  commander@9.5.0:
+    resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
+    engines: {node: ^12.20.0 || >=14}
 
   common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
@@ -2796,6 +2857,10 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
+  import-cwd@3.0.0:
+    resolution: {integrity: sha512-4pnzH16plW+hgvRECbDWpQl3cqtvSofHWh44met7ESfZ8UZOWWddm8hEyDTqREJ9RbYHY8gi8DqmaelApoOGMg==}
+    engines: {node: '>=8'}
+
   import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -2803,6 +2868,10 @@ packages:
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
     engines: {node: '>=6'}
+
+  import-from@3.0.0:
+    resolution: {integrity: sha512-CiuXOFFSzkU5x/CR0+z7T91Iht4CXgfCxVOFRhh2Zyhg5wOpWvvDLQUsWl+gcN+QscYBjez8hDCt85O7RLDttQ==}
+    engines: {node: '>=8'}
 
   imurmurhash@0.1.4:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
@@ -3140,6 +3209,17 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
+  lint-to-the-future-eslint@3.0.0:
+    resolution: {integrity: sha512-ffB9PyFloMd0S3AvYUeqG24rXPAqGbd8xY3SOAnHI1W/8M6E3s+XO7UgmxjVyxHkd5suMLeZ7ymFn3QWhhVWWQ==}
+    engines: {node: 10.* || >= 12.*}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+
+  lint-to-the-future@2.6.2:
+    resolution: {integrity: sha512-l8fmDddu7Gqp/gzIyYU+dVUDonaH/GIH9SnldoG+5bNqpdwQE+p4xS6sLuFo+N7MNTMXdq7HBUa9J3nrDkAzQg==}
+    engines: {node: '>= 18'}
+    hasBin: true
+
   loader-runner@4.3.0:
     resolution: {integrity: sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==}
     engines: {node: '>=6.11.5'}
@@ -3351,6 +3431,15 @@ packages:
 
   no-case@3.0.4:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
+
+  node-fetch@2.7.0:
+    resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
 
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
@@ -3761,6 +3850,10 @@ packages:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
 
+  resolve-from@5.0.0:
+    resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
+    engines: {node: '>=8'}
+
   resolve-package-path@1.2.7:
     resolution: {integrity: sha512-fVEKHGeK85bGbVFuwO9o1aU0n3vqQGrezPc51JGu9UTXpFQfWq5qCeKxyaRUSvephs+06c5j5rPq/dzHGEo8+Q==}
 
@@ -4096,6 +4189,12 @@ packages:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
 
+  temporal-polyfill@0.2.5:
+    resolution: {integrity: sha512-ye47xp8Cb0nDguAhrrDS1JT1SzwEV9e26sSsrWzVu+yPZ7LzceEcH0i2gci9jWfOfSCCgM3Qv5nOYShVUUFUXA==}
+
+  temporal-spec@0.2.4:
+    resolution: {integrity: sha512-lDMFv4nKQrSjlkHKAlHVqKrBG4DyFfa9F74cmBZ3Iy3ed8yvWnlWSIdi4IKfSqwmazAohBNwiN64qGx4y5Q3IQ==}
+
   terser-webpack-plugin@5.3.11:
     resolution: {integrity: sha512-RVCsMfuD0+cTt3EwX8hSl2Ks56EbFHWmhluwcqoPKtBnfjiT6olaq7PRIRfhyU8nnC2MrnDrBLfrD/RGE+cVXQ==}
     engines: {node: '>= 10.13.0'}
@@ -4161,6 +4260,9 @@ packages:
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
+
+  tr46@0.0.3:
+    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
 
   tree-sync@1.4.0:
     resolution: {integrity: sha512-YvYllqh3qrR5TAYZZTXdspnIhlKAYezPYw11ntmweoceu4VK+keN356phHRIIo1d+RDmLpHZrUlmxga2gc9kSQ==}
@@ -4407,6 +4509,9 @@ packages:
     resolution: {integrity: sha512-TnbFSbcOCcDgjZ4piURLCbJ3nJhznVh9kw6F6iokjiFPl8ONxe9A6nMDVXDiNbrSfLILs6vB07F7wLBrwPYzJw==}
     engines: {node: '>=10.13.0'}
 
+  webidl-conversions@3.0.1:
+    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+
   webpack-sources@3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
     engines: {node: '>=10.13.0'}
@@ -4420,6 +4525,9 @@ packages:
     peerDependenciesMeta:
       webpack-cli:
         optional: true
+
+  whatwg-url@5.0.0:
+    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
 
   which-boxed-primitive@1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
@@ -5259,9 +5367,60 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
+  '@ember-data/request-utils@5.3.11(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))':
+    dependencies:
+      '@embroider/macros': 1.16.11
+      '@warp-drive/build-config': 0.0.1
+      '@warp-drive/core-types': 0.0.1
+      ember-source: 6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
+  '@ember-data/request@5.3.11(@warp-drive/core-types@0.0.1)':
+    dependencies:
+      '@ember/test-waiters': 4.0.0
+      '@embroider/macros': 1.16.11
+      '@warp-drive/build-config': 0.0.1
+      '@warp-drive/core-types': 0.0.1
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
   '@ember-data/rfc395-data@0.0.4': {}
 
+  '@ember-data/store@5.3.11(@ember-data/request-utils@5.3.11(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)))(@ember-data/request@5.3.11(@warp-drive/core-types@0.0.1))(@ember-data/tracking@5.3.11(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)))(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))':
+    dependencies:
+      '@ember-data/request': 5.3.11(@warp-drive/core-types@0.0.1)
+      '@ember-data/request-utils': 5.3.11(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))
+      '@ember-data/tracking': 5.3.11(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))
+      '@embroider/macros': 1.16.11
+      '@warp-drive/build-config': 0.0.1
+      '@warp-drive/core-types': 0.0.1
+      ember-source: 6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
+  '@ember-data/tracking@5.3.11(@warp-drive/core-types@0.0.1)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))':
+    dependencies:
+      '@embroider/macros': 1.16.11
+      '@warp-drive/build-config': 0.0.1
+      '@warp-drive/core-types': 0.0.1
+      ember-source: 6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
   '@ember/edition-utils@1.2.0': {}
+
+  '@ember/test-waiters@4.0.0':
+    dependencies:
+      '@embroider/addon-shim': 1.9.0
+      '@embroider/macros': 1.16.11
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
 
   '@embroider/addon-shim@1.9.0':
     dependencies:
@@ -6006,6 +6165,25 @@ snapshots:
       loupe: 3.1.3
       tinyrainbow: 2.0.0
 
+  '@warp-drive/build-config@0.0.1':
+    dependencies:
+      '@embroider/addon-shim': 1.9.0
+      '@embroider/macros': 1.16.11
+      babel-import-util: 2.1.1
+      broccoli-funnel: 3.0.8
+      semver: 7.7.1
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
+  '@warp-drive/core-types@0.0.1':
+    dependencies:
+      '@embroider/macros': 1.16.11
+      '@warp-drive/build-config': 0.0.1
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
   '@webassemblyjs/ast@1.14.1':
     dependencies:
       '@webassemblyjs/helper-numbers': 1.13.2
@@ -6693,6 +6871,8 @@ snapshots:
   color-name@1.1.4: {}
 
   commander@2.20.3: {}
+
+  commander@9.5.0: {}
 
   common-ancestor-path@1.0.1: {}
 
@@ -8000,6 +8180,10 @@ snapshots:
 
   ignore@5.3.2: {}
 
+  import-cwd@3.0.0:
+    dependencies:
+      import-from: 3.0.0
+
   import-fresh@3.3.0:
     dependencies:
       parent-module: 1.0.1
@@ -8009,6 +8193,10 @@ snapshots:
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
+
+  import-from@3.0.0:
+    dependencies:
+      resolve-from: 5.0.0
 
   imurmurhash@0.1.4: {}
 
@@ -8336,6 +8524,22 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
+  lint-to-the-future-eslint@3.0.0(eslint@9.21.0):
+    dependencies:
+      eslint: 9.21.0
+      import-cwd: 3.0.0
+      walk-sync: 3.0.0
+
+  lint-to-the-future@2.6.2(encoding@0.1.13):
+    dependencies:
+      commander: 9.5.0
+      fs-extra: 7.0.1
+      import-cwd: 3.0.0
+      node-fetch: 2.7.0(encoding@0.1.13)
+      temporal-polyfill: 0.2.5
+    transitivePeerDependencies:
+      - encoding
+
   loader-runner@4.3.0: {}
 
   loader-utils@2.0.4:
@@ -8550,6 +8754,12 @@ snapshots:
     dependencies:
       lower-case: 2.0.2
       tslib: 2.8.1
+
+  node-fetch@2.7.0(encoding@0.1.13):
+    dependencies:
+      whatwg-url: 5.0.0
+    optionalDependencies:
+      encoding: 0.1.13
 
   node-releases@2.0.19: {}
 
@@ -8963,6 +9173,8 @@ snapshots:
   reselect@4.1.8: {}
 
   resolve-from@4.0.0: {}
+
+  resolve-from@5.0.0: {}
 
   resolve-package-path@1.2.7:
     dependencies:
@@ -9381,6 +9593,12 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
+  temporal-polyfill@0.2.5:
+    dependencies:
+      temporal-spec: 0.2.4
+
+  temporal-spec@0.2.4: {}
+
   terser-webpack-plugin@5.3.11(webpack@5.98.0):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
@@ -9433,6 +9651,8 @@ snapshots:
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
+
+  tr46@0.0.3: {}
 
   tree-sync@1.4.0:
     dependencies:
@@ -9725,6 +9945,8 @@ snapshots:
       glob-to-regexp: 0.4.1
       graceful-fs: 4.2.11
 
+  webidl-conversions@3.0.1: {}
+
   webpack-sources@3.2.3: {}
 
   webpack@5.98.0:
@@ -9756,6 +9978,11 @@ snapshots:
       - '@swc/core'
       - esbuild
       - uglify-js
+
+  whatwg-url@5.0.0:
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
 
   which-boxed-primitive@1.0.2:
     dependencies:
