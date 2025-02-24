@@ -67,7 +67,11 @@ const configBuilder = (root) => {
         return {
           languageOptions: {
             globals: globals.node,
-            parserOptions: esm.ts,
+            parser,
+            parserOptions: {
+              ...esm.ts,
+              sourceType: 'script',
+            },
           },
           rules: {
             'n/no-unsupported-features/es-syntax': [
