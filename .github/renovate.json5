@@ -1,3 +1,3 @@
 {
-  extends: ["github>NullVoxPopuli/renovate:npm.json5"],
+  extends: ['github>NullVoxPopuli/renovate:npm.json5'],
 }

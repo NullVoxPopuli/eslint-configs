@@ -1,4 +1,3 @@
-
 import js from '@eslint/js';
 import path from 'node:path';
 import n from 'eslint-plugin-n';
@@ -97,12 +96,12 @@ export function node(root, options) {
  * @param {string} root
  * @param {import('#types').Options} options
  */
-nodeCJS(root, options) {
+function nodeCJS(root, options) {
   let config = configBuilder(root, options);
 
   return [
     ...base,
-    ...n.configs["flat/recommended"],
+    ...n.configs['flat/recommended'],
     ...imports,
     forFiles('**/*.{cjs,js}', config.commonjs.js),
     forFiles('**/*.{cts,ts}', config.commonjs.ts),
@@ -111,16 +110,17 @@ nodeCJS(root, options) {
     forFiles(['vitest.config.ts', 'tests/**/*'], config.tests),
   ];
 }
+
 /**
  * @param {string} root
  * @param {import('./types').Options} options
  */
-nodeESM(root, options) {
+function nodeESM(root, options) {
   let config = configBuilder(root, options);
 
   return [
     ...base,
-    ...n.configs["flat/recommended"],
+    ...n.configs['flat/recommended'],
     ...imports,
     forFiles('**/*.cjs', config.commonjs.js),
     forFiles('**/*.cts', config.commonjs.ts),
@@ -128,5 +128,4 @@ nodeESM(root, options) {
     forFiles('**/*.{mjs,js}', config.modules.js),
     forFiles(['vitest.config.ts', 'tests/**/*'], config.tests),
   ];
-},
-
+}

@@ -6,7 +6,7 @@ module.exports = {
   trailingComma: 'es5',
   overrides: [
     {
-      files: ['*.json'],
+      files: ['*.json', '.json5'],
       options: {
         singleQuote: false,
       },

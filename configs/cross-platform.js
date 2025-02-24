@@ -51,7 +51,7 @@ export function crossPlatform(options = {}) {
 
   return [
     ...base,
-    ...n.configs["flat/recommended"],
+    ...n.configs['flat/recommended'],
     ...imports,
     forFiles('**/*.cjs', config.commonjs.js),
     forFiles('**/*.cts', config.commonjs.ts),
@@ -61,4 +61,3 @@ export function crossPlatform(options = {}) {
     forFiles(['vitest.config.ts', 'tests/**/*'], config.tests),
   ];
 }
-

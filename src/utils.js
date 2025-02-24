@@ -33,4 +33,3 @@ export function forFiles(globs, override) {
     files: Array.isArray(globs) ? globs : [globs],
   };
 }
-

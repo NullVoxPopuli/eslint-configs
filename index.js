@@ -30,4 +30,4 @@ export const configs = {
   node(root, options = {}) {
     return node(root, options);
   },
-}; 
+};

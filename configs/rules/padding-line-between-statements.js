@@ -12,9 +12,10 @@ const ruleConfig = [
 /**
  * @type {import('#types').PartialConfig}
  */
-export const config = [{
-  rules: {
-    'padding-line-between-statements': ['error', ...ruleConfig],
+export const config = [
+  {
+    rules: {
+      'padding-line-between-statements': ['error', ...ruleConfig],
+    },
   },
-}];
-
+];

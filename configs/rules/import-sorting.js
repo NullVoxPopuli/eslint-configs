@@ -1,4 +1,4 @@
-import simpleImportSort from "eslint-plugin-simple-import-sort";
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 const ruleConfig = {
   // This notation is bonkers
@@ -52,13 +52,14 @@ const ruleConfig = {
  *
  * @type {import('#types').PartialConfig}
  */
-export const config = [{
-  plugins: {
-    'simple-import-sort': simpleImportSort,
+export const config = [
+  {
+    plugins: {
+      'simple-import-sort': simpleImportSort,
+    },
+    rules: {
+      'simple-import-sort/imports': ['error', ruleConfig],
+      'simple-import-sort/exports': 'error',
+    },
   },
-  rules: {
-    'simple-import-sort/imports': ['error', ruleConfig],
-    'simple-import-sort/exports': 'error',
-  },
-}];
-
+];
