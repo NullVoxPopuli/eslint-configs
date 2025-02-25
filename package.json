@@ -8,22 +8,22 @@
   "license": "MIT",
   "author": "NullVoxPopuli",
   "type": "module",
-  "exports": {
-    ".": "./index.js"
-  },
   "imports": {
     "#utils": "./src/utils.js",
     "#types": "./src/types.ts"
   },
+  "exports": {
+    ".": "./index.js"
+  },
   "scripts": {
-    "update:all": "pnpm --filter '*' update:ignore",
     "format": "prettier --write .",
     "format:all": "pnpm --filter '*' format",
     "format:check:all": "pnpm --filter '*-prettier' format:check",
     "lint:all:js": "pnpm --filter '*' lint:js",
     "lint:js": "eslint . --ignore-pattern test-packages",
     "lint:types": "tsc --noEmit",
-    "test": "vitest"
+    "test": "vitest",
+    "update:all": "pnpm --filter '*' update:ignore"
   },
   "dependencies": {
     "@eslint/js": "^9.21.0",
