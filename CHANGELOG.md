@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2025-02-25)
+
+@nullvoxpopuli/eslint-configs 5.0.0 (major)
+
+#### :boom: Breaking Change
+* `@nullvoxpopuli/eslint-configs`
+  * [#675](https://github.com/NullVoxPopuli/eslint-configs/pull/675) Eslint 9 + flat config ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `@nullvoxpopuli/eslint-configs`
+  * [#676](https://github.com/NullVoxPopuli/eslint-configs/pull/676) Update release plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2024-11-01)
 
 @nullvoxpopuli/eslint-configs 4.3.0 (minor)

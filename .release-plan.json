@@ -1,17 +1,21 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "minor",
-      "oldVersion": "4.2.0",
-      "newVersion": "4.3.0",
+      "impact": "major",
+      "oldVersion": "4.3.0",
+      "newVersion": "5.0.0",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-11-01)\n\n@nullvoxpopuli/eslint-configs 4.3.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#671](https://github.com/NullVoxPopuli/eslint-configs/pull/671) Expose ember's config builder ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-02-25)\n\n@nullvoxpopuli/eslint-configs 5.0.0 (major)\n\n#### :boom: Breaking Change\n* `@nullvoxpopuli/eslint-configs`\n  * [#675](https://github.com/NullVoxPopuli/eslint-configs/pull/675) Eslint 9 + flat config ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `@nullvoxpopuli/eslint-configs`\n  * [#676](https://github.com/NullVoxPopuli/eslint-configs/pull/676) Update release plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
