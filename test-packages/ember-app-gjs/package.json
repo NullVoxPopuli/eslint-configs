@@ -2,10 +2,11 @@
   "name": "@nullvoxpopuli/ember-app-gjs",
   "private": true,
   "scripts": {
+    "update:ignore": "npx lint-to-the-future ignore",
     "lint:js": "eslint ."
   },
   "devDependencies": {
-    "eslint": "8.57.1",
-    "@nullvoxpopuli/eslint-configs": "workspace:../.."
+    "@nullvoxpopuli/eslint-configs": "workspace:../..",
+    "eslint": "9.21.0"
   }
 }

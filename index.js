@@ -1,46 +1,33 @@
 // @ts-check
-'use strict';
+export { pipe } from '#utils';
 
-const { merge, pipe } = require('./configs/-utils');
+import { crossPlatform } from './configs/cross-platform.js';
+import { ember } from './configs/ember.js';
+import { node } from './configs/node.js';
 
-module.exports = {
-  merge,
-  pipe,
-  configs: {
-    /**
-     * @param {import('./configs/types').Options} [ options ]
-     * @returns {import('eslint').Linter.Config}
-     */
-    ember(options = {}) {
-      return require('./configs/ember').ember(options);
-    },
-    /**
-     * @param {import('./configs/types').Options} [ options ]
-     * @returns {import('eslint').Linter.Config}
-     */
-    crossPlatform(options = {}) {
-      return require('./configs/cross-platform')(options);
-    },
-    /**
-     * @param {import('./configs/types').Options} [ options ]
-     * @returns {import('eslint').Linter.Config}
-     */
-    node(options = {}) {
-      return require('./configs/node').node(options);
-    },
-    /**
-     * @param {import('./configs/types').Options} [ options ]
-     * @returns {import('eslint').Linter.Config}
-     */
-    nodeCJS(options = {}) {
-      return require('./configs/node').nodeCJS(options);
-    },
-    /**
-     * @param {import('./configs/types').Options} [ options ]
-     * @returns {import('eslint').Linter.Config}
-     */
-    nodeESM(options = {}) {
-      return require('./configs/node').nodeESM(options);
-    },
+export const configs = {
+  /**
+   * @param {string} root
+   * @param {import('#types').Options} [ options ]
+   * @returns {import('eslint').Linter.Config}
+   */
+  ember(root, options = {}) {
+    return ember(root, options);
+  },
+  /**
+   * @param {string} root
+   * @param {import('#types').Options} [ options ]
+   * @returns {import('eslint').Linter.Config}
+   */
+  crossPlatform(root, options = {}) {
+    return crossPlatform(root, options);
+  },
+  /**
+   * @param {string} root
+   * @param {import('#types').Options} [ options ]
+   * @returns {import('eslint').Linter.Config}
+   */
+  node(root, options = {}) {
+    return node(root, options);
   },
 };

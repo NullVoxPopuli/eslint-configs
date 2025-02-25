@@ -1,7 +1,6 @@
-'use strict';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
-const plugin = 'simple-import-sort';
-const config = {
+const ruleConfig = {
   // This notation is bonkers
   groups: [
     // Side effect imports.
@@ -33,7 +32,7 @@ const config = {
     ['^emberclear', '^pinochle', '^limber'],
 
     // monorepo packages
-    ['^@emberclear', '^@limber', '@glimdown'],
+    ['^@emberclear', '^@limber', '@glimdown', '@nullvoxpopuli', '@universal-ember'],
 
     // paths with test-support in the name
     ['/test-support'],
@@ -51,14 +50,16 @@ const config = {
  * simple-import-sort is a mandatory plugin,
  * provided by this @nullvoxpopuli/eslint-configs
  *
- * @type {import('../types').PartialConfig}
+ * @type {import('#types').PartialConfig}
  */
-const rule = {
-  plugins: [plugin],
-  rules: {
-    'simple-import-sort/imports': ['error', config],
-    'simple-import-sort/exports': 'error',
+export const config = [
+  {
+    plugins: {
+      'simple-import-sort': simpleImportSort,
+    },
+    rules: {
+      'simple-import-sort/imports': ['error', ruleConfig],
+      'simple-import-sort/exports': 'error',
+    },
   },
-};
-
-module.exports = { rule, config, plugin };
+];

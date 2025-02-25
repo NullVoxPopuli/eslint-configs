@@ -1,13 +1,15 @@
-'use strict';
+import js from '@eslint/js';
 
-const { pipe, merge } = require('./-utils');
+import { config as importSorting } from './rules/import-sorting.js';
+import { config as noConsole } from './rules/no-console.js';
+import { config as paddingLine } from './rules/padding-line-between-statements.js';
 
 /**
- * @type {import('./types').PartialConfig}
+ * @type {import('#types').PartialConfig}
  */
-const base = pipe(
+export const config = [
+  js.configs.recommended,
   {
-    extends: ['eslint:recommended'],
     rules: {
       // const has misleading safety implications
       // look in to "liberal let"
@@ -17,11 +19,7 @@ const base = pipe(
       'getter-return': ['error', { allowImplicit: true }],
     },
   },
-  (config) => merge(config, require('./rules/no-console')),
-  (config) => merge(config, require('./rules/padding-line-between-statements')),
-  (config) => merge(config, require('./rules/import-sorting'))
-);
-
-module.exports = {
-  base,
-};
+  ...noConsole,
+  ...paddingLine,
+  ...importSorting,
+];
