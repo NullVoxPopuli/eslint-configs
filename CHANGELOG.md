@@ -1,5 +1,17 @@
 # Changelog
 
+## Release (2025-02-26)
+
+@nullvoxpopuli/eslint-configs 5.0.1 (patch)
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#678](https://github.com/NullVoxPopuli/eslint-configs/pull/678) Early exit TS configs when a project doesn't have TS configured ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#677](https://github.com/NullVoxPopuli/eslint-configs/pull/677) Add ignores to the non-ember configs ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-02-25)
 
 @nullvoxpopuli/eslint-configs 5.0.0 (major)
