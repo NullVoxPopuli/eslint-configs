@@ -64,6 +64,8 @@ const configBuilder = (root) => {
         };
       },
       get ts() {
+        if (!hasTS) return {};
+
         return {
           languageOptions: {
             globals: globals.node,
