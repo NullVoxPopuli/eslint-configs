@@ -1,21 +1,17 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "major",
-      "oldVersion": "4.3.0",
-      "newVersion": "5.0.0",
+      "impact": "patch",
+      "oldVersion": "5.0.0",
+      "newVersion": "5.0.1",
       "constraints": [
         {
-          "impact": "major",
-          "reason": "Appears in changelog section :boom: Breaking Change"
-        },
-        {
           "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-02-25)\n\n@nullvoxpopuli/eslint-configs 5.0.0 (major)\n\n#### :boom: Breaking Change\n* `@nullvoxpopuli/eslint-configs`\n  * [#675](https://github.com/NullVoxPopuli/eslint-configs/pull/675) Eslint 9 + flat config ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `@nullvoxpopuli/eslint-configs`\n  * [#676](https://github.com/NullVoxPopuli/eslint-configs/pull/676) Update release plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-02-26)\n\n@nullvoxpopuli/eslint-configs 5.0.1 (patch)\n\n#### :bug: Bug Fix\n* `@nullvoxpopuli/eslint-configs`\n  * [#678](https://github.com/NullVoxPopuli/eslint-configs/pull/678) Early exit TS configs when a project doesn't have TS configured ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#677](https://github.com/NullVoxPopuli/eslint-configs/pull/677) Add ignores to the non-ember configs ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
