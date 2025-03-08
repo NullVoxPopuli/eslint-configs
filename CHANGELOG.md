@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-03-08)
+
+@nullvoxpopuli/eslint-configs 5.0.2 (patch)
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#681](https://github.com/NullVoxPopuli/eslint-configs/pull/681) Disable import/no-unassigned-import ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-02-26)
 
 @nullvoxpopuli/eslint-configs 5.0.1 (patch)
