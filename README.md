@@ -94,9 +94,7 @@ export default configs.node(import.meta.dirname);
 
 _overriding_
 ```js
-// .eslintrc.js
-'use strict';
-
+// eslint.config.js 
 import { configs } from '@nullvoxpopuli/eslint-configs';
 
 const config = configs.node();
@@ -108,3 +106,14 @@ export default [
 ]
 ```
 
+
+### Disabling type-aware linting
+
+```js
+import { disableTypedLints } from '@nullvoxpopuli/eslint-configs';
+
+export default [
+    // ...
+    disableTypedLints.forTests,
+];
+```
