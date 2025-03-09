@@ -1,6 +1,6 @@
 {
   "name": "@nullvoxpopuli/eslint-configs",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "eslint configs for the NullVoxPopuli's projects",
   "repository": {
     "url": "https://github.com/NullVoxPopuli/eslint-configs"

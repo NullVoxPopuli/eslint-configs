@@ -1,17 +1,17 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "minor",
-      "oldVersion": "5.0.2",
-      "newVersion": "5.1.0",
+      "impact": "patch",
+      "oldVersion": "5.1.0",
+      "newVersion": "5.1.1",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-03-09)\n\n@nullvoxpopuli/eslint-configs 5.1.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#683](https://github.com/NullVoxPopuli/eslint-configs/pull/683) Add a way to disable typed lints ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-03-09)\n\n@nullvoxpopuli/eslint-configs 5.1.1 (patch)\n\n#### :bug: Bug Fix\n* `@nullvoxpopuli/eslint-configs`\n  * [#685](https://github.com/NullVoxPopuli/eslint-configs/pull/685) Add @typescript-eslint/restrict-template-expressions to disable typed-lints ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }

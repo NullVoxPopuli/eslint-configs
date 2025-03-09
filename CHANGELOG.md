@@ -2,6 +2,17 @@
 
 ## Release (2025-03-09)
 
+@nullvoxpopuli/eslint-configs 5.1.1 (patch)
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#685](https://github.com/NullVoxPopuli/eslint-configs/pull/685) Add @typescript-eslint/restrict-template-expressions to disable typed-lints ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2025-03-09)
+
 @nullvoxpopuli/eslint-configs 5.1.0 (minor)
 
 #### :rocket: Enhancement
