@@ -5,6 +5,8 @@ import { crossPlatform } from './configs/cross-platform.js';
 import { ember } from './configs/ember.js';
 import { node } from './configs/node.js';
 
+export { disableTypedLints } from './src/typed-lints.js';
+
 export const configs = {
   /**
    * @param {string} root
