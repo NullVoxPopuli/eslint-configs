@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+
+
 ## Release (2025-03-09)
 
 @nullvoxpopuli/eslint-configs 5.1.1 (patch)
