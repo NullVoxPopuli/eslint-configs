@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-04-24)
+
+@nullvoxpopuli/eslint-configs 5.1.2 (patch)
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#693](https://github.com/NullVoxPopuli/eslint-configs/pull/693) Add config files to no-unpublished ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-03-09)
 
 @nullvoxpopuli/eslint-configs 5.1.1 (patch)
