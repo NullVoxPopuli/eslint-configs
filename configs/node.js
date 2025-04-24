@@ -91,8 +91,21 @@ const configBuilder = (root) => {
         rules: {
           // devDependencies
           'n/no-unpublished-import': 'off',
+          'n/no-unpublished-require': 'off',
           'n/no-missing-import': 'off',
+          'n/no-missing-require': 'off',
           'import/named': 'off',
+        },
+      };
+    },
+    get unpublished() {
+      return {
+        rules: {
+          // devDependencies
+          'n/no-unpublished-import': 'off',
+          'n/no-unpublished-require': 'off',
+          'n/no-missing-import': 'off',
+          'n/no-missing-require': 'off',
         },
       };
     },
@@ -164,6 +177,7 @@ function nodeCJS(root, options) {
     forFiles('**/*.mts', config.modules.ts),
     forFiles('**/*.mjs', config.modules.js),
     forFiles(['vitest.config.ts', 'tests/**/*'], config.tests),
+    forFiles(['eslint.config.*', '.eslintrc.*', '.prettierrc.*'], config.unpublished),
   ];
 }
 
@@ -198,5 +212,6 @@ function nodeESM(root, options) {
     forFiles('**/*.{mts,ts}', config.modules.ts),
     forFiles('**/*.{mjs,js}', config.modules.js),
     forFiles(['vitest.config.ts', 'tests/**/*'], config.tests),
+    forFiles(['eslint.config.*', '.eslintrc.*', '.prettierrc.*'], config.unpublished),
   ];
 }
