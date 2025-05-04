@@ -1,17 +1,8 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "patch",
-      "oldVersion": "5.1.1",
-      "newVersion": "5.1.2",
-      "constraints": [
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        }
-      ],
-      "pkgJSONPath": "./package.json"
+      "oldVersion": "5.1.2"
     }
   },
-  "description": "## Release (2025-04-24)\n\n@nullvoxpopuli/eslint-configs 5.1.2 (patch)\n\n#### :bug: Bug Fix\n* `@nullvoxpopuli/eslint-configs`\n  * [#693](https://github.com/NullVoxPopuli/eslint-configs/pull/693) Add config files to no-unpublished ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "\n\n\n\n"
 }
