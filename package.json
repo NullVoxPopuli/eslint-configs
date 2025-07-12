@@ -26,33 +26,33 @@
     "update:all": "pnpm --filter '*' update:ignore"
   },
   "dependencies": {
-    "@eslint/js": "^9.21.0",
-    "@typescript-eslint/parser": "^8.24.1",
+    "@eslint/js": "^9.31.0",
+    "@typescript-eslint/parser": "^8.36.0",
     "cosmiconfig": "^9.0.0",
-    "ember-eslint": "^0.2.0",
-    "eslint-import-resolver-typescript": "^3.8.3",
+    "ember-eslint": "^0.3.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-decorator-position": "^6.0.0",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-json": "^4.0.1",
-    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-n": "^17.21.0",
     "eslint-plugin-simple-import-sort": "^12.1.0",
-    "globals": "^16.0.0",
-    "prettier-plugin-ember-template-tag": "^2.0.4"
+    "globals": "^16.3.0",
+    "prettier-plugin-ember-template-tag": "^2.0.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
-    "@tsconfig/node-lts": "^22.0.1",
+    "@babel/core": "^7.28.0",
+    "@tsconfig/node-lts": "^22.0.2",
     "@tsconfig/strictest": "^2.0.5",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.13.5",
-    "@typescript-eslint/eslint-plugin": "^8.24.1",
-    "eslint": "9.21.0",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "eslint": "9.31.0",
     "lint-to-the-future": "^2.6.2",
     "lint-to-the-future-eslint": "^3.0.0",
-    "prettier": "3.5.2",
+    "prettier": "3.6.2",
     "release-plan": "^0.13.1",
-    "typescript": "^5.7.3",
-    "vitest": "^3.0.6"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "@babel/core": "^7.22.10",
