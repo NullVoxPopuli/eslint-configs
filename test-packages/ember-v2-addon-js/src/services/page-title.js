@@ -3,7 +3,7 @@ import { assert } from '@ember/debug';
 import Service, { inject as service } from '@ember/service';
 import { isEmpty } from '@ember/utils';
 
-let isFastBoot = typeof FastBoot !== 'undefined';
+const isFastBoot = typeof FastBoot !== 'undefined';
 
 const RouterEvent = {
   ROUTE_DID_CHANGE: 'routeDidChange',
@@ -37,7 +37,7 @@ export default class PageTitleService extends Service {
     super(...arguments);
     this._validateExistingTitleElement();
 
-    let config = getOwner(this).resolveRegistration('config:environment');
+    const config = getOwner(this).resolveRegistration('config:environment');
 
     if (config.pageTitle) {
       ['separator', 'prepend', 'replace'].forEach((key) => {
@@ -51,9 +51,9 @@ export default class PageTitleService extends Service {
   }
 
   applyTokenDefaults(token) {
-    let defaultSeparator = this._defaultConfig.separator;
-    let defaultPrepend = this._defaultConfig.prepend;
-    let defaultReplace = this._defaultConfig.replace;
+    const defaultSeparator = this._defaultConfig.separator;
+    const defaultPrepend = this._defaultConfig.prepend;
+    const defaultReplace = this._defaultConfig.replace;
 
     if (token.separator == null) {
       token.separator = defaultSeparator;
@@ -69,7 +69,7 @@ export default class PageTitleService extends Service {
   }
 
   inheritFromPrevious(token) {
-    let previous = token.previous;
+    const previous = token.previous;
 
     if (previous) {
       if (token.separator == null) {
@@ -83,12 +83,12 @@ export default class PageTitleService extends Service {
   }
 
   push(token) {
-    let tokenForId = this._findTokenById(token.id);
+    const tokenForId = this._findTokenById(token.id);
 
     if (tokenForId) {
-      let index = this.tokens.indexOf(tokenForId);
-      let tokens = [...this.tokens];
-      let previous = tokenForId.previous;
+      const index = this.tokens.indexOf(tokenForId);
+      const tokens = [...this.tokens];
+      const previous = tokenForId.previous;
 
       token.previous = previous;
       token.next = tokenForId.next;
@@ -101,7 +101,7 @@ export default class PageTitleService extends Service {
       return;
     }
 
-    let previous = this.tokens.slice(-1)[0];
+    const previous = this.tokens.slice(-1)[0];
 
     if (previous) {
       token.previous = previous;
@@ -114,8 +114,8 @@ export default class PageTitleService extends Service {
   }
 
   remove(id) {
-    let token = this._findTokenById(id);
-    let { next, previous } = token;
+    const token = this._findTokenById(id);
+    const { next, previous } = token;
 
     if (next) {
       next.previous = previous;
@@ -127,19 +127,19 @@ export default class PageTitleService extends Service {
 
     token.previous = token.next = null;
 
-    let tokens = [...this.tokens];
+    const tokens = [...this.tokens];
 
     tokens.splice(tokens.indexOf(token), 1);
     this.tokens = tokens;
   }
 
   get visibleTokens() {
-    let tokens = this.tokens;
+    const tokens = this.tokens;
     let i = tokens ? tokens.length : 0;
-    let visible = [];
+    const visible = [];
 
     while (i--) {
-      let token = tokens[i];
+      const token = tokens[i];
 
       if (token.replace) {
         visible.unshift(token);
@@ -154,11 +154,11 @@ export default class PageTitleService extends Service {
   }
 
   get sortedTokens() {
-    let visible = this.visibleTokens;
+    const visible = this.visibleTokens;
     let appending = true;
     let group = [];
-    let groups = [group];
-    let frontGroups = [];
+    const groups = [group];
+    const frontGroups = [];
 
     visible.forEach((token) => {
       if (token.front) {
@@ -170,7 +170,7 @@ export default class PageTitleService extends Service {
           groups.push(group);
         }
 
-        let lastToken = group[0];
+        const lastToken = group[0];
 
         if (lastToken) {
           token = { ...token };
@@ -198,11 +198,11 @@ export default class PageTitleService extends Service {
   };
 
   toString() {
-    let tokens = this.sortedTokens;
-    let title = [];
+    const tokens = this.sortedTokens;
+    const title = [];
 
     for (let i = 0, len = tokens.length; i < len; i++) {
-      let token = tokens[i];
+      const token = tokens[i];
 
       if (token.title) {
         title.push(token.title);
@@ -283,7 +283,7 @@ export default class PageTitleService extends Service {
 
     // Remove existing title elements from previous render cycle
     for (let i = 0; i < headChildNodes.length; i++) {
-      let node = headChildNodes[i];
+      const node = headChildNodes[i];
 
       if (node.nodeName.toLowerCase() === 'title') {
         headElement.removeChild(node);
@@ -291,8 +291,8 @@ export default class PageTitleService extends Service {
     }
 
     // Add title element with latest value
-    let titleEl = this.document.createElement('title');
-    let titleContents = this.document.createTextNode(toBeTitle);
+    const titleEl = this.document.createElement('title');
+    const titleContents = this.document.createTextNode(toBeTitle);
 
     titleEl.appendChild(titleContents);
     headElement.appendChild(titleEl);

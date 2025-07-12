@@ -21,7 +21,7 @@ export default class PageTitle extends Helper {
   }
 
   compute(params, _hash) {
-    let hash = {
+    const hash = {
       ..._hash,
       id: this.tokenId,
       title: params.join(''),
