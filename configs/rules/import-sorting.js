@@ -54,6 +54,7 @@ const ruleConfig = {
  */
 export const config = [
   {
+    name: 'nvp:import-sorting',
     plugins: {
       'simple-import-sort': simpleImportSort,
     },

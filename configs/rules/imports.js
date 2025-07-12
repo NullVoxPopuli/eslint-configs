@@ -8,6 +8,7 @@ const base = importPlugin.flatConfigs.recommended;
  */
 export const config = [
   {
+    name: 'nvp:imports',
     plugins: { ...base.plugins },
     rules: {
       // ----------------------------

@@ -1,3 +1,6 @@
 packages:
-  - '.'
-  - 'test-packages/*'
+  - .
+  - test-packages/*
+
+overrides:
+  ember-eslint: link:../ember-eslint
