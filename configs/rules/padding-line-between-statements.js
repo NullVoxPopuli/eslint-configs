@@ -14,6 +14,7 @@ const ruleConfig = [
  */
 export const config = [
   {
+    name: 'nvp:padding-line-between-statements',
     rules: {
       'padding-line-between-statements': ['error', ...ruleConfig],
     },

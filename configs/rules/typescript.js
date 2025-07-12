@@ -2,6 +2,7 @@
  * @type {import('#types').PartialConfig}
  */
 export const rule = {
+  name: 'nvp:typescript',
   rules: {
     // this isn't C#
     '@typescript-eslint/interface-name-prefix': 'off',

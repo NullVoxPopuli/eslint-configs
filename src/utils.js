@@ -24,6 +24,10 @@ export function pipe(input, ...fns) {
 export function forFiles(globs, override) {
   if (!override) return;
 
+  if (Array.isArray(override)) {
+    return override.map((config) => forFiles(globs, config));
+  }
+
   return {
     ...override,
     files: Array.isArray(globs) ? globs : [globs],

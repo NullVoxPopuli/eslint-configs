@@ -7,6 +7,7 @@ const ruleConfig = {
  */
 export const config = [
   {
+    name: 'nvp:no-console',
     rules: {
       'no-console': ['error', ruleConfig],
     },

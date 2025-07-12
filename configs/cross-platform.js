@@ -28,6 +28,7 @@ const configBuilder = () => {
     },
     get tests() {
       return {
+        name: 'nvp/cross-platform:tests',
         rules: {
           // devDependencies
           'n/no-unpublished-import': 'off',
@@ -38,6 +39,7 @@ const configBuilder = () => {
     },
     get config() {
       return {
+        name: 'nvp/cross-platform:config',
         rules: {
           // devDependencies
           'n/no-unpublished-import': 'off',
@@ -56,12 +58,14 @@ export function crossPlatform(options = {}) {
      * https://eslint.org/docs/latest/use/configure/ignore
      */
     {
+      name: 'nvp/cross-platform:ignores',
       ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
     },
     /**
      * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
      */
     {
+      name: 'nvp/cross-platform:linter-options',
       linterOptions: {
         reportUnusedDisableDirectives: 'error',
       },
