@@ -1,21 +1,20 @@
 // @ts-expect-error - in this test, we did not add this package
-import FaIcon from '@fortawesome/ember-fontawesome/components/fa-icon';
+import FaIcon from "@fortawesome/ember-fontawesome/components/fa-icon";
 
-import type { TOC } from '@ember/component/template-only';
+import type { TOC } from "@ember/component/template-only";
 
-const DefaultContent: TOC<{ Blocks: { default: [] }}> = <template>
+const DefaultContent: TOC<{ Blocks: { default: [] } }> = <template>
   <span>{{yield}}</span>
 
   <FaIcon @icon="external-link-alt" />
-</template>
-
+</template>;
 
 const ExternalLink: TOC<{
   Element: HTMLAnchorElement;
   Blocks: {
-    'default': [],
-    'custom': [typeof DefaultContent],
-  }
+    default: [];
+    custom: [typeof DefaultContent];
+  };
 }> = <template>
   <a
     target="_blank"
@@ -32,7 +31,6 @@ const ExternalLink: TOC<{
       {{yield DefaultContent to="custom"}}
     {{/if}}
   </a>
-</template>
-
+</template>;
 
 export default ExternalLink;
