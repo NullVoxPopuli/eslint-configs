@@ -8,7 +8,7 @@
 export function pipe(input, ...fns) {
   let lastResult = input;
 
-  for (let fn of fns) {
+  for (const fn of fns) {
     lastResult = fn(lastResult);
   }
 

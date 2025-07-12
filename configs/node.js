@@ -19,8 +19,8 @@ const EXPECTED_NODE_VERSION = '22.0.0'; // or greater
  * @param {import('#types').Options} [ options ]
  */
 const configBuilder = (root) => {
-  let esm = parsers.esm(root);
-  let hasTS = utils.hasTypescript(root);
+  const esm = parsers.esm(root);
+  const hasTS = utils.hasTypescript(root);
 
   return {
     modules: {
@@ -151,7 +151,7 @@ export function node(root, options) {
  * @param {import('#types').Options} options
  */
 function nodeCJS(root, options) {
-  let config = configBuilder(root, options);
+  const config = configBuilder(root, options);
 
   return [
     /**
@@ -186,7 +186,7 @@ function nodeCJS(root, options) {
  * @param {import('#types').Options} options
  */
 function nodeESM(root, options) {
-  let config = configBuilder(root, options);
+  const config = configBuilder(root, options);
 
   return [
     /**

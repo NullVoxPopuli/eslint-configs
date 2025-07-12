@@ -48,7 +48,7 @@ const configBuilder = () => {
 };
 
 export function crossPlatform(options = {}) {
-  let config = configBuilder(options);
+  const config = configBuilder(options);
 
   return [
     /**
