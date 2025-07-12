@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2025-07-12)
+
+* @nullvoxpopuli/eslint-configs 5.2.0 (minor)
+
+#### :rocket: Enhancement
+* `@nullvoxpopuli/eslint-configs`
+  * [#701](https://github.com/NullVoxPopuli/eslint-configs/pull/701) core dep updates ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#700](https://github.com/NullVoxPopuli/eslint-configs/pull/700) Update prefer-const behavior ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `@nullvoxpopuli/eslint-configs`
+  * [#702](https://github.com/NullVoxPopuli/eslint-configs/pull/702) Update release plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-04-24)
 
 @nullvoxpopuli/eslint-configs 5.1.2 (patch)
