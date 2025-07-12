@@ -1,11 +1,10 @@
-import FaIcon from '@fortawesome/ember-fontawesome/components/fa-icon';
+import FaIcon from "@fortawesome/ember-fontawesome/components/fa-icon";
 
 const DefaultContent = <template>
   <span>{{yield}}</span>
 
   <FaIcon @icon="external-link-alt" />
-</template>
-
+</template>;
 
 const ExternalLink = <template>
   <a
@@ -23,7 +22,6 @@ const ExternalLink = <template>
       {{yield DefaultContent to="custom"}}
     {{/if}}
   </a>
-</template>
-
+</template>;
 
 export default ExternalLink;
