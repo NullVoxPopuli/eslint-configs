@@ -13,7 +13,11 @@ export const config = [
     rules: {
       // const has misleading safety implications
       // look in to "liberal let"
-      'prefer-const': 'off',
+      // However, const plays nicely with typescript gurantees.
+      //
+      // I'm still going to type "let", but this rule autofixes,
+      // So I don't *really* care that much.
+      'prefer-const': ['error', { destructuring: 'all' }],
 
       // people should know that no return is undefined in JS
       'getter-return': ['error', { allowImplicit: true }],
