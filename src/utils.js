@@ -33,3 +33,30 @@ export function forFiles(globs, override) {
     files: Array.isArray(globs) ? globs : [globs],
   };
 }
+
+export function combine(name, overrides) {
+  const configs = overrides.flat();
+
+  const files = new Set();
+  let rules = {};
+  let plugins = {};
+
+  for (const config of configs) {
+    files.add(config.files);
+
+    if (config.rules) {
+      rules = Object.assign(rules, config.rules);
+    }
+
+    if (config.plugins) {
+      plugins = Object.assign(plugins, config.plugins);
+    }
+  }
+
+  return {
+    files: [...files.values()].filter(Boolean),
+    plugins,
+    rules,
+    name,
+  };
+}

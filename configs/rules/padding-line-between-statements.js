@@ -10,7 +10,7 @@ const ruleConfig = [
 ];
 
 /**
- * @type {import('#types').PartialConfig}
+ * @type {import('#types').PartialConfig[]}
  */
 export const config = [
   {
