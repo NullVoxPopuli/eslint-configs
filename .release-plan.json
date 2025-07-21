@@ -1,18 +1,18 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "patch",
-      "oldVersion": "5.2.0",
-      "newVersion": "5.2.1",
+      "impact": "minor",
+      "oldVersion": "5.2.1",
+      "newVersion": "5.3.0",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-07-12)\n\n* @nullvoxpopuli/eslint-configs 5.2.1 (patch)\n\n#### :bug: Bug Fix\n* `@nullvoxpopuli/eslint-configs`\n  * [#703](https://github.com/NullVoxPopuli/eslint-configs/pull/703) Fix globals ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-07-21)\n\n* @nullvoxpopuli/eslint-configs 5.3.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#705](https://github.com/NullVoxPopuli/eslint-configs/pull/705) Configure allowing 'var', and add 'combine' util to group configs together under a common name for the eslint-inspector ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
