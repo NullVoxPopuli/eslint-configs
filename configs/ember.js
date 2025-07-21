@@ -1,6 +1,6 @@
 import { ember as upstreamEmber } from 'ember-eslint';
 
-import { forFiles } from '#utils';
+import { combine, forFiles } from '#utils';
 
 import { rules as baseRules } from './base.js';
 import { config as imports } from './rules/imports.js';
@@ -18,7 +18,9 @@ export function ember(root) {
       files: ['**/*.ts'],
       ...typescriptRules,
     },
-    ...forFiles('**/*.{js,ts,gjs,gts}', baseRules),
-    ...forFiles('**/*.{js,ts,gjs,gts}', imports),
+    combine('nvp/ember:overrides', [
+      forFiles('**/*.{js,ts,gjs,gts}', baseRules),
+      forFiles('**/*.{js,ts,gjs,gts}', imports),
+    ]),
   ];
 }
