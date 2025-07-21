@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-07-21)
+
+* @nullvoxpopuli/eslint-configs 5.3.0 (minor)
+
+#### :rocket: Enhancement
+* `@nullvoxpopuli/eslint-configs`
+  * [#705](https://github.com/NullVoxPopuli/eslint-configs/pull/705) Configure allowing 'var', and add 'combine' util to group configs together under a common name for the eslint-inspector ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-07-12)
 
 * @nullvoxpopuli/eslint-configs 5.2.1 (patch)
