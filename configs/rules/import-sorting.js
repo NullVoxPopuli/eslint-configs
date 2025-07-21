@@ -50,7 +50,7 @@ const ruleConfig = {
  * simple-import-sort is a mandatory plugin,
  * provided by this @nullvoxpopuli/eslint-configs
  *
- * @type {import('#types').PartialConfig}
+ * @type {import('#types').PartialConfig[]}
  */
 export const config = [
   {

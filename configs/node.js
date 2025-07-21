@@ -6,7 +6,7 @@ import { parsers, utils } from 'ember-eslint';
 import n from 'eslint-plugin-n';
 import globals from 'globals';
 
-import { forFiles } from '#utils';
+import { combine, forFiles } from '#utils';
 
 import { config as base } from './base.js';
 import { config as imports } from './rules/imports.js';
@@ -140,7 +140,9 @@ export function node(root, options) {
   }
 
   if (packageJson.type === 'module') {
-    return nodeESM(root, options);
+    const config = nodeESM(root, options);
+
+    return config;
   }
 
   return nodeCJS(root, options);
@@ -159,12 +161,14 @@ function nodeCJS(root, options) {
      * https://eslint.org/docs/latest/use/configure/ignore
      */
     {
+      name: 'nvp/node-cjs:ignores',
       ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
     },
     /**
      * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
      */
     {
+      name: 'nvp/node-cjs:linter-options',
       linterOptions: {
         reportUnusedDisableDirectives: 'error',
       },
@@ -172,12 +176,15 @@ function nodeCJS(root, options) {
     ...base,
     n.configs['flat/recommended'],
     ...imports,
-    forFiles('**/*.{cjs,js}', config.commonjs.js),
-    forFiles('**/*.{cts,ts}', config.commonjs.ts),
-    forFiles('**/*.mts', config.modules.ts),
-    forFiles('**/*.mjs', config.modules.js),
-    forFiles(['vitest.config.ts', 'tests/**/*'], config.tests),
-    forFiles(['eslint.config.*', '.eslintrc.*', '.prettierrc.*'], config.unpublished),
+
+    combine('nvp/node-cjs:cjs', [forFiles('**/*.{cjs,js}', config.commonjs.js)]),
+    combine('nvp/node-cjs:cts', [forFiles('**/*.{cts,ts}', config.commonjs.ts)]),
+    combine('nvp/node-cjs:mts', [forFiles('**/*.mts', config.modules.ts)]),
+    combine('nvp/node-cjs:mjs', [forFiles('**/*.mjs', config.modules.js)]),
+    combine('nvp/node-cjs:tests', [forFiles(['vitest.config.*', 'tests/**/*'], config.tests)]),
+    combine('nvp/node-cjs:configs', [
+      forFiles(['eslint.config.*', '.eslintrc.*', '.prettierrc.*'], config.unpublished),
+    ]),
   ];
 }
 
@@ -194,12 +201,14 @@ function nodeESM(root, options) {
      * https://eslint.org/docs/latest/use/configure/ignore
      */
     {
+      name: 'nvp/node-esm:ignores',
       ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
     },
     /**
      * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
      */
     {
+      name: 'nvp/node-esm:linter-options',
       linterOptions: {
         reportUnusedDisableDirectives: 'error',
       },
@@ -207,11 +216,13 @@ function nodeESM(root, options) {
     ...base,
     n.configs['flat/recommended'],
     ...imports,
-    forFiles('**/*.cjs', config.commonjs.js),
-    forFiles('**/*.cts', config.commonjs.ts),
-    forFiles('**/*.{mts,ts}', config.modules.ts),
-    forFiles('**/*.{mjs,js}', config.modules.js),
-    forFiles(['vitest.config.ts', 'tests/**/*'], config.tests),
-    forFiles(['eslint.config.*', '.eslintrc.*', '.prettierrc.*'], config.unpublished),
+    combine('nvp/node-esm:cjs', [forFiles('**/*.cjs', config.commonjs.js)]),
+    combine('nvp/node-esm:cts', [forFiles('**/*.cts', config.commonjs.ts)]),
+    combine('nvp/node-esm:mts', [forFiles('**/*.{mts,ts}', config.modules.ts)]),
+    combine('nvp/node-esm:mjs', [forFiles('**/*.{mjs,js}', config.modules.js)]),
+    combine('nvp/node-esm:tests', [forFiles(['vitest.config.*', 'tests/**/*'], config.tests)]),
+    combine('nvp/node-esm:configs', [
+      forFiles(['eslint.config.*', '.eslintrc.*', '.prettierrc.*'], config.unpublished),
+    ]),
   ];
 }

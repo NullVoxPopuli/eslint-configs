@@ -35,11 +35,12 @@ export function forFiles(globs, override) {
 }
 
 export function combine(name, overrides) {
-  const configs = overrides.flat();
+  const configs = [overrides].flat();
 
   const files = new Set();
   let rules = {};
   let plugins = {};
+  let languageOptions = {};
 
   for (const config of configs) {
     files.add(config.files);
@@ -51,12 +52,31 @@ export function combine(name, overrides) {
     if (config.plugins) {
       plugins = Object.assign(plugins, config.plugins);
     }
+
+    if (config.languageOptions) {
+      languageOptions = Object.assign(languageOptions, config.languageOptions);
+    }
   }
 
-  return {
-    files: [...files.values()].filter(Boolean),
+  const result = {
     plugins,
     rules,
     name,
+    languageOptions,
+    files: [...files.values()].flat().filter(Boolean),
   };
+
+  if (Object.keys(result.plugins).length === 0) {
+    delete result.plugins;
+  }
+
+  if (Object.keys(result.languageOptions).length === 0) {
+    delete result.languageOptions;
+  }
+
+  if (result.files.length === 0) {
+    delete result.files;
+  }
+
+  return result;
 }
