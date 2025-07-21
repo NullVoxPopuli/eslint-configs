@@ -38,12 +38,16 @@ export function combine(name, overrides) {
   const configs = [overrides].flat();
 
   const files = new Set();
+  const ignores = new Set();
   let rules = {};
   let plugins = {};
   let languageOptions = {};
+  let linterOptions = {};
+  let settings = {};
 
   for (const config of configs) {
     files.add(config.files);
+    ignores.add(config.ignores);
 
     if (config.rules) {
       rules = Object.assign(rules, config.rules);
@@ -56,6 +60,14 @@ export function combine(name, overrides) {
     if (config.languageOptions) {
       languageOptions = Object.assign(languageOptions, config.languageOptions);
     }
+
+    if (config.linterOptions) {
+      linterOptions = Object.assign(linterOptions, config.linterOptions);
+    }
+
+    if (config.settings) {
+      settings = Object.assign(settings, config.settings);
+    }
   }
 
   const result = {
@@ -63,7 +75,10 @@ export function combine(name, overrides) {
     rules,
     name,
     languageOptions,
+    linterOptions,
+    settings,
     files: [...files.values()].flat().filter(Boolean),
+    ignores: [...ignores.values()].flat().filter(Boolean),
   };
 
   if (Object.keys(result.plugins).length === 0) {
@@ -74,8 +89,20 @@ export function combine(name, overrides) {
     delete result.languageOptions;
   }
 
+  if (Object.keys(result.linterOptions).length === 0) {
+    delete result.linterOptions;
+  }
+
+  if (Object.keys(result.settings).length === 0) {
+    delete result.settings;
+  }
+
   if (result.files.length === 0) {
     delete result.files;
+  }
+
+  if (result.ignores.length === 0) {
+    delete result.ignores;
   }
 
   return result;
