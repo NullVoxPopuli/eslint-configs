@@ -1,5 +1,17 @@
 # Changelog
 
+## Release (2025-07-31)
+
+* @nullvoxpopuli/eslint-configs 5.3.1 (patch)
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#712](https://github.com/NullVoxPopuli/eslint-configs/pull/712) Missing rules in ember configs ([@edflips](https://github.com/edflips))
+  * [#710](https://github.com/NullVoxPopuli/eslint-configs/pull/710) Fix no-unused-vars inconsistency between JS and TS files ([@edflips](https://github.com/edflips))
+
+#### Committers: 1
+- Ed Phillips ([@edflips](https://github.com/edflips))
+
 ## Release (2025-07-21)
 
 * @nullvoxpopuli/eslint-configs 5.3.0 (minor)
