@@ -35,7 +35,7 @@ export function forFiles(globs, override) {
 }
 
 export function combine(name, overrides) {
-  const configs = [overrides].flat();
+  const configs = [overrides].flat(Infinity);
 
   const files = new Set();
   const ignores = new Set();
