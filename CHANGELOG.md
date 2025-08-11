@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-08-11)
+
+* @nullvoxpopuli/eslint-configs 5.3.2 (patch)
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#713](https://github.com/NullVoxPopuli/eslint-configs/pull/713) Disable base no-unused-vars for TS to resolve false positives ([@edflips](https://github.com/edflips))
+
+#### Committers: 1
+- Ed Phillips ([@edflips](https://github.com/edflips))
+
 ## Release (2025-07-31)
 
 * @nullvoxpopuli/eslint-configs 5.3.1 (patch)
