@@ -15,8 +15,11 @@ export function ember(root) {
     ...upstreamEmber.recommended(root),
     {
       name: 'nvp/ember:typescript',
-      files: ['**/*.ts'],
-      ...typescriptRules,
+      files: ['**/*.{ts,gts}'],
+      rules: {
+        ...typescriptRules.rules,
+        'no-unused-vars': 'off',
+      },
     },
     combine('nvp/ember:overrides', [
       forFiles('**/*.{js,ts,gjs,gts}', baseRules),
