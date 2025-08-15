@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-08-15)
+
+* @nullvoxpopuli/eslint-configs 5.3.3 (patch)
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#715](https://github.com/NullVoxPopuli/eslint-configs/pull/715) Tweaks to TS (re-ordering overrides, adding a name to a config) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-08-11)
 
 * @nullvoxpopuli/eslint-configs 5.3.2 (patch)
