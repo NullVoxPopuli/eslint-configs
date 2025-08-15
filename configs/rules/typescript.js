@@ -43,6 +43,7 @@ export const rule = {
 
     // Allows placeholder args to still be defined for
     // documentation or "for later" purposes
+    'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
   },
 };

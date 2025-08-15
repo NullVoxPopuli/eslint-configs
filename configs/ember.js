@@ -13,17 +13,16 @@ import { rule as typescriptRules } from './rules/typescript.js';
 export function ember(root) {
   return [
     ...upstreamEmber.recommended(root),
+    combine('nvp/ember:overrides', [
+      forFiles('**/*.{js,ts,gjs,gts}', baseRules),
+      forFiles('**/*.{js,ts,gjs,gts}', imports),
+    ]),
     {
       name: 'nvp/ember:typescript',
       files: ['**/*.{ts,gts}'],
       rules: {
         ...typescriptRules.rules,
-        'no-unused-vars': 'off',
       },
     },
-    combine('nvp/ember:overrides', [
-      forFiles('**/*.{js,ts,gjs,gts}', baseRules),
-      forFiles('**/*.{js,ts,gjs,gts}', imports),
-    ]),
   ];
 }
