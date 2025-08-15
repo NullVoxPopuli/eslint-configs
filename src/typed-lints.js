@@ -1,5 +1,6 @@
 export const disableTypedLints = {
   forTests: {
+    name: 'nvp/tests:no-typed-lints',
     files: ['**/*-test.{ts,gts}', '**/*.test.{ts,gts}'],
     rules: {
       '@typescript-eslint/ban-ts-comment': 0,
