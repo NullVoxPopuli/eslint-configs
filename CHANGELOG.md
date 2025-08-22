@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-08-22)
+
+* @nullvoxpopuli/eslint-configs 5.3.4 (patch)
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#717](https://github.com/NullVoxPopuli/eslint-configs/pull/717) Add declarations to node ignores ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-08-15)
 
 * @nullvoxpopuli/eslint-configs 5.3.3 (patch)
