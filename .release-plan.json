@@ -2,8 +2,8 @@
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
       "impact": "patch",
-      "oldVersion": "5.3.2",
-      "newVersion": "5.3.3",
+      "oldVersion": "5.3.3",
+      "newVersion": "5.3.4",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-08-15)\n\n* @nullvoxpopuli/eslint-configs 5.3.3 (patch)\n\n#### :bug: Bug Fix\n* `@nullvoxpopuli/eslint-configs`\n  * [#715](https://github.com/NullVoxPopuli/eslint-configs/pull/715) Tweaks to TS (re-ordering overrides, adding a name to a config) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-08-22)\n\n* @nullvoxpopuli/eslint-configs 5.3.4 (patch)\n\n#### :bug: Bug Fix\n* `@nullvoxpopuli/eslint-configs`\n  * [#717](https://github.com/NullVoxPopuli/eslint-configs/pull/717) Add declarations to node ignores ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
