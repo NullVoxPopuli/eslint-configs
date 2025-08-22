@@ -162,7 +162,7 @@ function nodeCJS(root, options) {
      */
     {
       name: 'nvp/node-cjs:ignores',
-      ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
+      ignores: ['dist/', 'declarations/', 'node_modules/', 'coverage/', '!**/.*'],
     },
     /**
      * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
@@ -202,7 +202,7 @@ function nodeESM(root, options) {
      */
     {
       name: 'nvp/node-esm:ignores',
-      ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
+      ignores: ['dist/', 'declarations/', 'node_modules/', 'coverage/', '!**/.*'],
     },
     /**
      * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
