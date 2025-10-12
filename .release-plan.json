@@ -1,18 +1,8 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "patch",
-      "oldVersion": "5.3.3",
-      "newVersion": "5.3.4",
-      "tagName": "latest",
-      "constraints": [
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        }
-      ],
-      "pkgJSONPath": "./package.json"
+      "oldVersion": "5.3.4"
     }
   },
-  "description": "## Release (2025-08-22)\n\n* @nullvoxpopuli/eslint-configs 5.3.4 (patch)\n\n#### :bug: Bug Fix\n* `@nullvoxpopuli/eslint-configs`\n  * [#717](https://github.com/NullVoxPopuli/eslint-configs/pull/717) Add declarations to node ignores ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "\n\n\n\n"
 }
