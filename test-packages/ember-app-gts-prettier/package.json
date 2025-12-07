@@ -9,8 +9,8 @@
   },
   "devDependencies": {
     "@nullvoxpopuli/eslint-configs": "workspace:../..",
-    "eslint": "9.21.0",
-    "prettier": "3.5.2",
+    "eslint": "9.39.1",
+    "prettier": "3.7.4",
     "typescript": "^5.7.3"
   },
   "engines": {
