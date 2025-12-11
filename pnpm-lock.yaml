@@ -18,8 +18,8 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0(typescript@5.9.3)
       ember-eslint:
-        specifier: ^0.5.0
-        version: 0.5.0(@babel/core@7.28.5)(@typescript-eslint/parser@8.49.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1)(typescript@5.9.3)
+        specifier: ^0.6.0
+        version: 0.6.0(@babel/core@7.28.5)(@typescript-eslint/parser@8.49.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1)(typescript@5.9.3)
       eslint-import-resolver-typescript:
         specifier: ^4.4.4
         version: 4.4.4(eslint-plugin-import@2.32.0)(eslint@9.39.1)
@@ -1329,8 +1329,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  ember-eslint@0.5.0:
-    resolution: {integrity: sha512-+HKK2C7f6eiAB+HWPr+1ZHFx/OSO5YFXC0RGN+ijJeN+45hFPxU15wAXwT3xKkuCipVx6+ExgtvBhOgzRPLMJg==}
+  ember-eslint@0.6.0:
+    resolution: {integrity: sha512-gG3tjYioGMx4JxhGIXLDPFYhE1Qy+YWDPhfVEPpkDPXm0xa7C/1TzfKIzltxPOHiYD4NoguMTXTPPecDebgxwA==}
 
   ember-rfc176-data@0.3.18:
     resolution: {integrity: sha512-JtuLoYGSjay1W3MQAxt3eINWXNYYQliK90tLwtb8aeCuQK8zKGCRbBodVIrkcTqshULMnRuTOS6t1P7oQk3g6Q==}
@@ -4234,7 +4234,7 @@ snapshots:
       - eslint
       - typescript
 
-  ember-eslint@0.5.0(@babel/core@7.28.5)(@typescript-eslint/parser@8.49.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1)(typescript@5.9.3):
+  ember-eslint@0.6.0(@babel/core@7.28.5)(@typescript-eslint/parser@8.49.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1)(typescript@5.9.3):
     dependencies:
       '@babel/eslint-parser': 7.28.5(@babel/core@7.28.5)(eslint@9.39.1)
       '@eslint/js': 9.39.1
