@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-12-11)
+
+* @nullvoxpopuli/eslint-configs 5.4.0 (minor)
+
+#### :rocket: Enhancement
+* `@nullvoxpopuli/eslint-configs`
+  * [#729](https://github.com/NullVoxPopuli/eslint-configs/pull/729) Update deps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-08-22)
 
 * @nullvoxpopuli/eslint-configs 5.3.4 (patch)
