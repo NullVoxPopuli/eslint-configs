@@ -7,9 +7,9 @@
   },
   "devDependencies": {
     "@nullvoxpopuli/eslint-configs": "workspace:../..",
-    "eslint": "9.21.0"
+    "eslint": "9.39.1"
   },
   "engines": {
-    "node": ">= 22.11"
+    "node": ">= 22.16"
   }
 }
