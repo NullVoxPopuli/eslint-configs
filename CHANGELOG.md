@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-12-14)
+
+* @nullvoxpopuli/eslint-configs 5.4.1 (patch)
+
+#### :bug: Bug Fix
+* `@nullvoxpopuli/eslint-configs`
+  * [#730](https://github.com/NullVoxPopuli/eslint-configs/pull/730) Update deps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-12-11)
 
 * @nullvoxpopuli/eslint-configs 5.4.0 (minor)
