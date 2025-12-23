@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-12-23)
+
+* @nullvoxpopuli/eslint-configs 5.5.0 (minor)
+
+#### :rocket: Enhancement
+* `@nullvoxpopuli/eslint-configs`
+  * [#737](https://github.com/NullVoxPopuli/eslint-configs/pull/737) Add util for disabling all typed lints for all TS ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-12-14)
 
 * @nullvoxpopuli/eslint-configs 5.4.1 (patch)
