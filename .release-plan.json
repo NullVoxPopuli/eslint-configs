@@ -1,18 +1,18 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "patch",
-      "oldVersion": "5.4.0",
-      "newVersion": "5.4.1",
+      "impact": "minor",
+      "oldVersion": "5.4.1",
+      "newVersion": "5.5.0",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-12-14)\n\n* @nullvoxpopuli/eslint-configs 5.4.1 (patch)\n\n#### :bug: Bug Fix\n* `@nullvoxpopuli/eslint-configs`\n  * [#730](https://github.com/NullVoxPopuli/eslint-configs/pull/730) Update deps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-12-23)\n\n* @nullvoxpopuli/eslint-configs 5.5.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#737](https://github.com/NullVoxPopuli/eslint-configs/pull/737) Add util for disabling all typed lints for all TS ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
