@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - uses: wyvox/action-setup-pnpm@v3
+      - uses: wyvox/action-setup-pnpm@v4
       - name: Formatting
         run: pnpm format
 
@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - uses: wyvox/action-setup-pnpm@v3
+      - uses: wyvox/action-setup-pnpm@v4
       - name: ESLint
         run: pnpm lint:all:js
 
@@ -42,7 +42,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - uses: wyvox/action-setup-pnpm@v3
+      - uses: wyvox/action-setup-pnpm@v4
 
   # lint_types:
   #   name: Lint Types
