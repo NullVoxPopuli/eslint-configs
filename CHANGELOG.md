@@ -1,5 +1,24 @@
 # Changelog
 
+## Release (2026-05-17)
+
+* @nullvoxpopuli/eslint-configs 6.0.0 (major)
+
+#### :boom: Breaking Change
+* `@nullvoxpopuli/eslint-configs`
+  * [#749](https://github.com/NullVoxPopuli/eslint-configs/pull/749) Upgrade deps, Drop Node < 24 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :rocket: Enhancement
+* `@nullvoxpopuli/eslint-configs`
+  * [#749](https://github.com/NullVoxPopuli/eslint-configs/pull/749) Upgrade deps, Drop Node < 24 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `@nullvoxpopuli/eslint-configs`
+  * [#750](https://github.com/NullVoxPopuli/eslint-configs/pull/750) pnpm dlx create-release-plan-setup@latest --update ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-12-23)
 
 * @nullvoxpopuli/eslint-configs 5.5.0 (minor)
