@@ -7,7 +7,7 @@ on:
       - main
       - master
   schedule:
-    - cron: '0 3 * * 0' # every Sunday at 3am
+    - cron: "0 3 * * 0" # every Sunday at 3am
 
 env:
   CI: true
@@ -20,6 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: wyvox/action-setup-pnpm@v4
+        with:
+          node-version: 24
       - name: Formatting
         run: pnpm format
 
@@ -33,6 +35,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: wyvox/action-setup-pnpm@v4
+        with:
+          node-version: 24
       - name: ESLint
         run: pnpm lint:all:js
 
@@ -43,6 +47,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: wyvox/action-setup-pnpm@v4
+        with:
+          node-version: 24
 
   # lint_types:
   #   name: Lint Types
