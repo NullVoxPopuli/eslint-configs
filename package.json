@@ -46,10 +46,10 @@
     "@types/eslint": "^9.6.1",
     "@types/node": "^25.8.0",
     "@typescript-eslint/eslint-plugin": "^8.59.3",
-    "eslint": "9.39.2",
+    "eslint": "9.39.4",
     "lint-to-the-future": "^2.6.4",
     "lint-to-the-future-eslint": "^3.3.0",
-    "prettier": "3.8.3",
+    "prettier": "3.8.4",
     "release-plan": "^0.18.0",
     "typescript": "^5.9.3",
     "vitest": "^4.1.6"
