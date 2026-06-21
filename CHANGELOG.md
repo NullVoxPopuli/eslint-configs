@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+
+
 ## Release (2026-05-17)
 
 * @nullvoxpopuli/eslint-configs 6.0.0 (major)
