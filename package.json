@@ -82,7 +82,7 @@
       "optional": true
     }
   },
-  "packageManager": "pnpm@10.34.3",
+  "packageManager": "pnpm@10.34.4",
   "engines": {
     "node": ">= v24.14.1"
   },
