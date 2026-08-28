@@ -2,17 +2,13 @@
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
       "impact": "major",
-      "oldVersion": "5.5.0",
-      "newVersion": "6.0.0",
+      "oldVersion": "6.0.0",
+      "newVersion": "7.0.0",
       "tagName": "latest",
       "constraints": [
         {
           "impact": "major",
           "reason": "Appears in changelog section :boom: Breaking Change"
-        },
-        {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
         },
         {
           "impact": "patch",
@@ -22,5 +18,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-05-17)\n\n* @nullvoxpopuli/eslint-configs 6.0.0 (major)\n\n#### :boom: Breaking Change\n* `@nullvoxpopuli/eslint-configs`\n  * [#749](https://github.com/NullVoxPopuli/eslint-configs/pull/749) Upgrade deps, Drop Node < 24 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#749](https://github.com/NullVoxPopuli/eslint-configs/pull/749) Upgrade deps, Drop Node < 24 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `@nullvoxpopuli/eslint-configs`\n  * [#750](https://github.com/NullVoxPopuli/eslint-configs/pull/750) pnpm dlx create-release-plan-setup@latest --update ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2026-08-28)\n\n* @nullvoxpopuli/eslint-configs 7.0.0 (major)\n\n#### :boom: Breaking Change\n* `@nullvoxpopuli/eslint-configs`\n  * [#760](https://github.com/NullVoxPopuli/eslint-configs/pull/760) Update eslint to v10 ([@tcjr](https://github.com/tcjr))\n\n#### :house: Internal\n* `@nullvoxpopuli/eslint-configs`\n  * [#762](https://github.com/NullVoxPopuli/eslint-configs/pull/762) Use configs.ember for Ember tests ([@tcjr](https://github.com/tcjr))\n\n#### Committers: 1\n- Tom Carter ([@tcjr](https://github.com/tcjr))\n"
 }
