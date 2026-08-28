@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2026-08-28)
+
+* @nullvoxpopuli/eslint-configs 7.0.0 (major)
+
+#### :boom: Breaking Change
+* `@nullvoxpopuli/eslint-configs`
+  * [#760](https://github.com/NullVoxPopuli/eslint-configs/pull/760) Update eslint to v10 ([@tcjr](https://github.com/tcjr))
+
+#### :house: Internal
+* `@nullvoxpopuli/eslint-configs`
+  * [#762](https://github.com/NullVoxPopuli/eslint-configs/pull/762) Use configs.ember for Ember tests ([@tcjr](https://github.com/tcjr))
+
+#### Committers: 1
+- Tom Carter ([@tcjr](https://github.com/tcjr))
+
 ## Release (2026-05-17)
 
 * @nullvoxpopuli/eslint-configs 6.0.0 (major)
