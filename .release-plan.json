@@ -1,22 +1,8 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "major",
-      "oldVersion": "6.0.0",
-      "newVersion": "7.0.0",
-      "tagName": "latest",
-      "constraints": [
-        {
-          "impact": "major",
-          "reason": "Appears in changelog section :boom: Breaking Change"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
-        }
-      ],
-      "pkgJSONPath": "./package.json"
+      "oldVersion": "7.0.0"
     }
   },
-  "description": "## Release (2026-08-28)\n\n* @nullvoxpopuli/eslint-configs 7.0.0 (major)\n\n#### :boom: Breaking Change\n* `@nullvoxpopuli/eslint-configs`\n  * [#760](https://github.com/NullVoxPopuli/eslint-configs/pull/760) Update eslint to v10 ([@tcjr](https://github.com/tcjr))\n\n#### :house: Internal\n* `@nullvoxpopuli/eslint-configs`\n  * [#762](https://github.com/NullVoxPopuli/eslint-configs/pull/762) Use configs.ember for Ember tests ([@tcjr](https://github.com/tcjr))\n\n#### Committers: 1\n- Tom Carter ([@tcjr](https://github.com/tcjr))\n"
+  "description": "\n\n\n\n"
 }
