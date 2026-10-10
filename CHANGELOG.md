@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-10-10)
+
+* @nullvoxpopuli/eslint-configs 7.1.0 (minor)
+
+#### :rocket: Enhancement
+* `@nullvoxpopuli/eslint-configs`
+  * [#767](https://github.com/NullVoxPopuli/eslint-configs/pull/767) Add a templates option to configs.ember ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
+#### Committers: 1
+- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
 ## Release (2026-08-28)
 
 * @nullvoxpopuli/eslint-configs 7.0.0 (major)
