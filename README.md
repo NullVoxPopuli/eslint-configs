@@ -71,6 +71,29 @@ export default [
 ];
 ```
 
+_linting templates_
+
+Set `templates` to lint the templates in gjs and gts files.
+The rules are the ones that ember-template-lint has in its `recommended` preset, so ember-template-lint is not necessary.
+
+```js
+// eslint.config.js
+import { configs } from '@nullvoxpopuli/eslint-configs';
+
+export default [
+    ...configs.ember(import.meta.dirname, { templates: true }),
+    {
+        files: ['**/*.{gjs,gts}'],
+        rules: {
+            // rules from .template-lintrc.* get the `ember/template-` prefix
+            'ember/template-no-inline-styles': 'off',
+        },
+    },
+];
+```
+
+To replace `template-lint-disable` comments, run `eslint --fix` one time.
+
 **Cross-Platform**
 
 This config is ESM, as ESM is the most widely supported module format across different distributions (browser, node, etc).
