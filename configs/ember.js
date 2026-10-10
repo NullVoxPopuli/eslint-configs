@@ -12,7 +12,7 @@ import { rule as typescriptRules } from './rules/typescript.js';
  * @param {import('#types').Options} [ options ]
  */
 export function ember(root, options = {}) {
-  return [
+  const config = [
     ...upstreamEmber.recommended(root),
     combine('nvp/ember:overrides', [
       forFiles('**/*.{js,ts,gjs,gts}', baseRules),
@@ -25,8 +25,13 @@ export function ember(root, options = {}) {
         ...typescriptRules.rules,
       },
     },
-    ...(options.templates ? [templates()] : []),
   ];
+
+  if (options.templates) {
+    config.push(templates());
+  }
+
+  return config;
 }
 
 /**
