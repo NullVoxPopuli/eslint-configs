@@ -1,4 +1,5 @@
 import { ember as upstreamEmber } from 'ember-eslint';
+import templateLintMigration from 'eslint-plugin-ember/configs/template-lint-migration';
 
 import { combine, forFiles } from '#utils';
 
@@ -10,8 +11,8 @@ import { rule as typescriptRules } from './rules/typescript.js';
  * @param {string} root
  * @param {import('#types').Options} [ options ]
  */
-export function ember(root) {
-  return [
+export function ember(root, options = {}) {
+  const config = [
     ...upstreamEmber.recommended(root),
     combine('nvp/ember:overrides', [
       forFiles('**/*.{js,ts,gjs,gts}', baseRules),
@@ -25,4 +26,22 @@ export function ember(root) {
       },
     },
   ];
+
+  if (options.templates) {
+    config.push(templates());
+  }
+
+  return config;
+}
+
+/**
+ * The parser and the plugin already come from the upstream config,
+ * so only the rules are taken here.
+ */
+function templates() {
+  return {
+    name: 'nvp/ember:templates',
+    files: ['**/*.{gjs,gts}'],
+    rules: templateLintMigration.at(-1).rules,
+  };
 }

@@ -18,4 +18,15 @@ export interface Options {
    * modern javascript development
    */
   prettierIntegration?: boolean;
+
+  /**
+   * Default: false
+   *
+   * Only used by `configs.ember`.
+   *
+   * when set to true, the templates in gjs and gts files are linted with
+   * the rules that ember-template-lint has in its `recommended` preset.
+   * This replaces ember-template-lint.
+   */
+  templates?: boolean;
 }
