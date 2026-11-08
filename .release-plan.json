@@ -1,18 +1,8 @@
 {
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
-      "impact": "minor",
-      "oldVersion": "7.0.0",
-      "newVersion": "7.1.0",
-      "tagName": "latest",
-      "constraints": [
-        {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        }
-      ],
-      "pkgJSONPath": "./package.json"
+      "oldVersion": "7.1.0"
     }
   },
-  "description": "## Release (2026-10-10)\n\n* @nullvoxpopuli/eslint-configs 7.1.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#767](https://github.com/NullVoxPopuli/eslint-configs/pull/767) Add a templates option to configs.ember ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n\n#### Committers: 1\n- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n"
+  "description": "\n\n\n\n"
 }

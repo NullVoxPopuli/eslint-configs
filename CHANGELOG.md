@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+
+
 ## Release (2026-10-10)
 
 * @nullvoxpopuli/eslint-configs 7.1.0 (minor)
