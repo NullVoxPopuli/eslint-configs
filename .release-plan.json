@@ -2,8 +2,8 @@
   "solution": {
     "@nullvoxpopuli/eslint-configs": {
       "impact": "minor",
-      "oldVersion": "7.0.0",
-      "newVersion": "7.1.0",
+      "oldVersion": "7.1.0",
+      "newVersion": "7.2.0",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-10-10)\n\n* @nullvoxpopuli/eslint-configs 7.1.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#767](https://github.com/NullVoxPopuli/eslint-configs/pull/767) Add a templates option to configs.ember ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n\n#### Committers: 1\n- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n"
+  "description": "## Release (2026-11-24)\n\n* @nullvoxpopuli/eslint-configs 7.2.0 (minor)\n\n#### :rocket: Enhancement\n* `@nullvoxpopuli/eslint-configs`\n  * [#774](https://github.com/NullVoxPopuli/eslint-configs/pull/774) Accept @babel/core 8 as a peer ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n\n#### Committers: 1\n- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n"
 }
