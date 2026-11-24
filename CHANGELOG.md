@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-11-24)
+
+* @nullvoxpopuli/eslint-configs 7.2.0 (minor)
+
+#### :rocket: Enhancement
+* `@nullvoxpopuli/eslint-configs`
+  * [#774](https://github.com/NullVoxPopuli/eslint-configs/pull/774) Accept @babel/core 8 as a peer ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
+#### Committers: 1
+- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
 ## Release (2026-10-10)
 
 * @nullvoxpopuli/eslint-configs 7.1.0 (minor)
